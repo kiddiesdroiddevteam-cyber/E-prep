@@ -1,147 +1,3 @@
-
-// import React, { useState, useEffect } from 'react';
-// import { useNavigate } from 'react-router-dom';
-// import Card from '../components/ui/Card';
-// import Button from '../components/ui/Button';
-// import { useAuth } from '../contexts/AuthContext';
-// import { supabase } from '@/integrations/supabase/client';
-// import Sidebar from '@/components/Sidebar';
-
-// const StatCard: React.FC<{ value: string | number; label: string; icon: string }> = ({ value, label, icon }) => (
-//   <Card className="p-6 flex-1 bg-white">
-//     <div className="flex items-center gap-4">
-//       <div className="text-4xl">{icon}</div>
-//       <div>
-//         <p className="text-3xl font-bold text-black">{value}</p>
-//         <p className="text-gray-400">{label}</p>
-//       </div>
-//     </div>
-//   </Card>
-// );
-
-// const DashboardPage = () => {
-//   const { user, signOut } = useAuth();
-//   const [profile, setProfile] = useState<any>(null);
-//   const navigate = useNavigate();
-//   const [stats, setStats] = useState({
-//     totalQuizzes: 0,
-//     averageScore: 0,
-//     streak: 0,
-//     badges: []
-//   });
-
-//   useEffect(() => {
-//     if (!user) {
-//       navigate('/auth');
-//       return;
-//     }
-
-//     loadProfile();
-//     loadStats();
-//   }, [user]);
-
-//   const loadProfile = async () => {
-//     if (!user) return;
-
-//     const { data } = await supabase
-//       .from('profiles')
-//       .select('*')
-//       .eq('id', user.id)
-//       .single();
-
-//     if (data) {
-//       setProfile(data);
-//       setStats(prev => ({
-//         ...prev,
-//         streak: data.streak_days || 0,
-//         badges: Array.isArray(data.badges) ? data.badges : []
-//       }));
-//     }
-//   };
-
-//   const loadStats = async () => {
-//     if (!user) return;
-
-//     // Load quiz statistics
-//     const { data: quizzes } = await supabase
-//       .from('quizzes')
-//       .select('score, completed')
-//       .eq('user_id', user.id)
-//       .eq('completed', true);
-
-//     if (quizzes && quizzes.length > 0) {
-//       const totalScore = quizzes.reduce((sum, quiz) => sum + (quiz.score || 0), 0);
-//       setStats(prev => ({
-//         ...prev,
-//         totalQuizzes: quizzes.length,
-//         averageScore: Math.round(totalScore / quizzes.length)
-//       }));
-//     }
-//   };
-
-//   const handleStartQuizClick = () => {
-//     navigate('/quiz'); // Use navigate to go to the quiz page
-//   };
-
-//   return (
-//     <div className='bg-slate-100'>
-//       <Sidebar screen={"dashboard"} />
-//       <div className="bg-slate-100 mx-auto px-4 py-8 space-y-8 pl-[15vw]">
-//         <div className=' w-full px-[20px] border-b border-b-slate-300'>
-//           <h1 className="text-4xl font-bold text-black">Welcome back, <span className="bg-clip-text text-black bg-gradient-to-r from-brand-primary to-brand-secondary">{profile?.full_name}</span>!</h1>
-//           <p className="text-gray-400 text-lg mt-1">Let's get some practice in today.</p>
-//         </div>
-
-//         <div className=' w-full flex items-start justify-between px-[20px]'>
-//           <div className=' w-[55%] h-full flex flex-col items-center justify-start bg-transparent rounded-2xl'>
-//             <Card className="p-8 text-center bg-white mb-[20px]">
-//               <h2 className="text-3xl font-bold mb-4 text-black">Start a New Quiz</h2>
-//               <p className="text-gray-400 max-w-2xl mx-auto mb-6">Challenge yourself with past questions or let our AI create a custom quiz just for you.</p>
-//               <Button onClick={handleStartQuizClick} className="!px-10 !py-4 text-xl">
-//                 Let's Go!
-//               </Button>
-//             </Card>
-
-//             <div className="grid md:grid-cols-3 gap-6">
-//               <StatCard value={stats?.streak} label="Day Streak" icon="🔥" />
-//               <StatCard value={stats?.averageScore} label="Avg. Score" icon="🎯" />
-//               <StatCard value={stats?.badges?.length} label="Badges Earned" icon="🏆" />
-//             </div>
-//           </div>
-
-//           <div className=' w-[40%] h-full flex items-start justify-center bg-white rounded-2xl'>
-//             <Card className="p-6 w-full bg-transparent">
-//               <h3 className="text-2xl font-bold mb-4 text-black">Your Recent Activity</h3>
-//               <ul className="space-y-4">
-//                 <li className="flex justify-between items-center p-4 bg-transparent rounded-lg">
-//                   <div>
-//                     <p className="font-semibold text-black">Quiz: Photosynthesis</p>
-//                     <p className="text-sm text-gray-400">Completed 2 hours ago</p>
-//                   </div>
-//                   <div className="text-right">
-//                     <p className="font-bold text-green-400">Score: 85%</p>
-//                   </div>
-//                 </li>
-//                 <li className="flex justify-between items-center p-4 bg-transparent rounded-lg">
-//                   <div>
-//                     <p className="font-semibold text-black">Quiz: Algebra</p>
-//                     <p className="text-sm text-gray-400">Completed yesterday</p>
-//                   </div>
-//                   <div className="text-right">
-//                     <p className="font-bold text-yellow-400">Score: 60%</p>
-//                   </div>
-//                 </li>
-//               </ul>
-//             </Card>
-//           </div>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default DashboardPage;
-
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Card from '../components/ui/Card';
@@ -158,12 +14,12 @@ import SchoolIcon from '@mui/icons-material/School';
 import Calendar from '@/components/Calendar';
 
 const StatCard: React.FC<{ value: string | number; label: string; icon: string }> = ({ value, label, icon }) => (
-  <Card className="p-6 flex items-center justify-center bg-white max-sm:w-[95vw] h-[87px]">
-    <div className="flex items-center gap-4">
+  <Card className="p-6 flex items-center justify-center gridBg mr-[10px] w-[170px] max-sm:w-[95vw] min-h-[208px]">
+    <div className="flex flex-col justify-between items-center gap-4 h-full">
       <div className="text-4xl">{icon}</div>
       <div>
-        <p className="text-[#666666]">{label}</p>
-        <p className="text-[24px] font-semibold text-black">{value}</p>
+        <p className="text-[14px] text-[#666666]">{label}</p>
+        <p className="text-[24px] font-semibold text-white text-center">{value}</p>
       </div>
     </div>
   </Card>
@@ -335,121 +191,92 @@ const DashboardPage = () => {
   }, []);
 
   return (
-    <div className=' bg-slate-100 w-[100vw] overflow-x-hidden'>
+    <div className=' bg-[#02000D] w-[100vw] overflow-x-hidden'>
       <Sidebar screen={"dashboard"} />
-      <div className="max-sm:pt-[90px] bg-slate-100 mx-auto lg:px-4 py-8 space-y-8 lg:pl-[15vw]">
-        <div className=' w-full lg:px-[20px] border-b border-b-slate-300'>
-          <h1 className="text-[24px] font-bold text-black max-sm:mx-2">Welcome back, <span className="bg-clip-text max-sm:hidden text-black bg-gradient-to-r from-brand-primary to-brand-secondary">
-            <Typewriter
-              texts={[
-                `${profile?.full_name}`,
-                `${profile?.full_name}`,
-              ]}
-              typingSpeed={100}
-              deletingSpeed={50}
-              pauseTime={2000}
-            />
-          </span>
-            <span className="bg-clip-text lg:hidden text-black bg-gradient-to-r from-brand-primary to-brand-secondary">
-              {profile?.full_name}
+      <div className="max-sm:pt-[90px] bg-gradient-to-b to-transparent via-transparent from-[#0055FF]/10 mx-auto lg:px-4 py-8 space-y-8 lg:pl-[17vw]">
+        <div className=' w-full lg:px-[20px] flex items-center justify-between'>
+          <div>
+            <h1 className="text-[24px] font-bold text-white max-sm:mx-2">Welcome back, <span className=" max-sm:hidden text-white">
+              <Typewriter
+                texts={[
+                  `${profile?.full_name}`,
+                  `${profile?.full_name}`,
+                ]}
+                typingSpeed={100}
+                deletingSpeed={50}
+                pauseTime={2000}
+              />
             </span>
-            !</h1>
-          <p className="text-gray-400 text-[16px] mt-1 max-sm:mx-2 max-sm:hidden">Let's get some practice in today.</p>
-          <p className="text-gray-400 text-lg mt-1 max-sm:mx-2 lg:hidden">
-            <Typewriter
-              texts={[
-                `Let's get some practice in today.`,
-              ]}
-              typingSpeed={100}
-              deletingSpeed={50}
-              pauseTime={2000}
-            />
-          </p>
+              <span className=" lg:hidden text-white">
+                {profile?.full_name}
+              </span>
+              !</h1>
+            <p className="text-gray-400 text-[16px] mt-1 max-sm:mx-2 max-sm:hidden">Let's get some practice in today.</p>
+            <p className="text-gray-400 text-lg mt-1 max-sm:mx-2 lg:hidden">
+              <Typewriter
+                texts={[
+                  `Let's get some practice in today.`,
+                ]}
+                typingSpeed={100}
+                deletingSpeed={50}
+                pauseTime={2000}
+              />
+            </p>
+          </div>
+
+          <div className=' flex items-center justify-center'>
+            <h1 className=' text-white text-[16px] mr-[20px]'>{profile?.full_name}</h1>
+            <div className=' h-[54px] w-[54px] rounded-full bg-white'></div>
+          </div>
         </div>
 
         <div className=' w-full flex flex-col lg:flex-row items-center lg:items-start justify-start lg:justify-between lg:px-[20px]'>
           <div className=' w-[95%] lg:w-[40%]'>
             <FadeInFromLeft>
               <div className=' w-full  h-full flex flex-col items-center justify-start bg-transparent rounded-2xl mb-[10px]'>
-                <Card className="p-[15px] text-center bg-white mb-[20px]">
-                  <h2 className="text-[24px] font-semibold mb-2 text-black text-left">Start a New Quiz</h2>
-                  <p className="text-[#666666] max-w-2xl text-left text-[16px] mx-auto mb-6">Challenge yourself with past questions or let our AI create a custom quiz just for you.</p>
-                  <Button onClick={handleStartQuizClick} className="!px-10 !py-4 text-[15px] font-semibold w-full h-[41px]">
+                <Card className="p-[15px] text-center homeDash mb-[20px]">
+                  <h2 className="text-[24px] font-semibold mb-2 text-white text-left">Start a New Quiz</h2>
+                  <p className="text-[#fff] max-w-2xl text-left text-[16px] mx-auto mb-6">Challenge yourself with past questions or let our AI create a custom quiz just for you.</p>
+                  <button onClick={handleStartQuizClick} className="!px-10 !py-4 text-[15px] font-semibold w-full h-[41px] bg-white flex items-center justify-center text-black rounded-xl hover:bg-white/60 transition-all duration-500">
                     Let's Go!
-                  </Button>
+                  </button>
                 </Card>
               </div>
             </FadeInFromLeft>
-
-            <FadeInFromBottom>
-              <Card className="p-6 w-full bg-white">
-                <h3 className="text-[18px] font-bold mb-4 text-black border-b border-b-slate-400 pb-[10px]">Upcoming Exams</h3>
-                <ul className="space-y-4 h-[15vh] overflow-y-scroll">
-                  {
-                    prevQuiz.map((quiz, index) => {
-                      const date = new Date(quiz.created_at);
-
-                      // Format hours and minutes
-                      const hours = String(date.getHours()).padStart(2, "0");
-                      const minutes = String(date.getMinutes()).padStart(2, "0");
-
-                      // Format day, month, year
-                      const day = String(date.getDate()).padStart(2, "0");
-                      const month = String(date.getMonth() + 1).padStart(2, "0"); // months are 0-indexed
-                      const year = date.getFullYear();
-
-                      const formattedDate = `${hours}:${minutes} ${day}-${month}-${year}`;
-
-                      return (
-                        <li key={index} className="flex justify-between items-center bg-transparent rounded-lg">
-                          <div>
-                            <p className="font-semibold text-black">{quiz.subject}</p>
-                            {/* <p className="text-sm text-gray-400">Completed at {formattedDate}</p> */}
-                          </div>
-                          <div className="text-right">
-                            {/* <p className={`font-bold text-green-400 ${quiz.score <= 30 ? "text-red-500" : quiz.score <= 60 ? "text-amber-500" : quiz.score > 60 && "text-green-500"}`}>Score: {quiz.score}%</p> */}
-                            <p className=' text-black'>Nov 29</p>
-                          </div>
-                        </li>
-                      )
-                    })
-                  }
-                  {/* <li className="flex justify-between items-center p-4 bg-transparent rounded-lg">
-                      <div>
-                        <p className="font-semibold text-black">Quiz: Photosynthesis</p>
-                        <p className="text-sm text-gray-400">Completed 2 hours ago</p>
-                      </div>
-                      <div className="text-right">
-                        <p className="font-bold text-green-400">Score: 85%</p>
-                      </div>
-                    </li>
-                    <li className="flex justify-between items-center p-4 bg-transparent rounded-lg">
-                      <div>
-                        <p className="font-semibold text-black">Quiz: Algebra</p>
-                        <p className="text-sm text-gray-400">Completed yesterday</p>
-                      </div>
-                      <div className="text-right">
-                        <p className="font-bold text-yellow-400">Score: 60%</p>
-                      </div>
-                    </li> */}
-                </ul>
-              </Card>
-            </FadeInFromBottom>
           </div>
 
           <div className=' w-[95%] lg:w-[57%]'>
             <FadeInFromLeft>
-              <div className="grid md:grid-cols-3 gap-6 mb-[10px]">
-                <StatCard value={stats?.streak} label="Day Streak" icon="🔥" />
+              <div className="flex items-center justify-start mb-[10px]">
+                {/* <StatCard value={stats?.streak} label="Day Streak" icon="🔥" /> */}
                 <StatCard value={stats?.averageScore} label="Avg. Score" icon="🎯" />
                 <StatCard value={stats?.badges?.length} label="Badges Earned" icon="🏆" />
+                <div className=' gridBg w-[322px] h-[208px] rounded-xl p-[20px]'>
+                  <div className="text-4xl">🔥</div>
+                  <h1 className=' text-white font-semibold text-[24px]'>You are on a 5-day streak!</h1>
+                  <p className=' text-white text-[14px]'>Incredible work! Consistency is the key to success. Keep the flame alive!</p>
+                </div>
               </div>
             </FadeInFromLeft>
+          </div>
+
+        </div>
+
+        <div className=' w-full flex flex-col lg:flex-row items-center lg:items-start justify-start lg:justify-between lg:px-[20px]'>
+          <div className=' w-[28%]'>
+            <div className=' w-[100%] rounded-md flex flex-col items-center justify-center bg-gradient-to-b from-transparent via-transparent to-[#0055FF]/10 p-[10px]'>
+              <h1 className=' w-full text-left text-[20px] text-white font-semibold'>Progress Chart</h1>
+              <p className=' w-full text-left text-white/70'>Track your progress so far 💪🏾</p>
+              <LineChart dataPoints={prevScores} />
+            </div>
+          </div>
+
+          <div className=' w-[70%]'>
             <FadeInFromBottom>
-              <div className=' w-full flex items-start justify-center bg-white rounded-2xl'>
+              <div className=' w-full  flex items-start justify-center bg-transparent gridBg rounded-2xl'>
                 <Card className="p-6 w-full bg-transparent">
-                  <h3 className="text-[18px] font-bold mb-4 text-black border-b border-b-slate-400 pb-[10px]">Your Recent Quizzes</h3>
-                  <ul className="space-y-4 h-[30vh] overflow-y-scroll">
+                  <h3 className="text-[18px] font-bold mb-4 text-white border-b border-b-slate-400 pb-[10px]">Your Recent Quizzes</h3>
+                  <ul className="space-y-4 h-[320px] overflow-y-scroll">
                     {
                       prevQuiz.map((quiz, index) => {
                         const date = new Date(quiz.created_at);
@@ -468,7 +295,7 @@ const DashboardPage = () => {
                         return (
                           <li key={index} className="flex justify-between items-center p-4 bg-transparent rounded-lg">
                             <div>
-                              <p className="font-semibold text-black">{quiz.subject}</p>
+                              <p className="font-semibold text-white">{quiz.subject}</p>
                               <p className="text-sm text-gray-400">Completed at {formattedDate}</p>
                             </div>
                             <div className="text-right">
@@ -501,34 +328,9 @@ const DashboardPage = () => {
               </div>
             </FadeInFromBottom>
           </div>
-
         </div>
 
-        {/* <div className={` w-full h-[30vh] bg-blue-400 flex items-center justify-center text-black`} style={{ backgroundImage: `url(${images[index]})` }}>
-          <h1>AD PLACEMENT</h1>
-        </div> */}
-
-        <div className='w-full flex flex-col lg:flex-row items-center lg:items-start justify-start lg:justify-between lg:px-[20px]'>
-          <div className=' w-[100%] rounded-md flex flex-col items-center justify-center bg-white p-[10px]'>
-            <h1 className=' w-full text-left text-[20px] text-black font-semibold'>Progress Chart</h1>
-            <p className=' w-full text-left text-black/70'>Track your progress so far 💪🏾</p>
-            <LineChart dataPoints={prevScores} />
-          </div>
-
-          {/* <div className=' w-[95%] lg:w-[28%]'>
-            <h1 className=' text-[18px] text-black font-semibold'>Your Calendar</h1>
-            <FadeInFromLeft>
-              <Calendar
-                highlightedDates={[
-                  "2025-11-11",
-                  "2025-11-12",
-                  "2025-11-13",
-                  "2025-11-14"
-                ]}
-              />
-            </FadeInFromLeft>
-          </div> */}
-        </div>
+        {/*  */}
 
         {/* <div>
           <InfiniteCarousel />

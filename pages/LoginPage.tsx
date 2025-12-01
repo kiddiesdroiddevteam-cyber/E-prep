@@ -107,16 +107,16 @@ const AuthPage: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center p-4 bg-grid-pattern bg-white">
-      <div className="absolute inset-0 bg-slate-100"></div>
-      <Card className="w-full max-w-md z-10 p-8 space-y-6 bg-white shadow-md shadow-slate-200/50 h-fit">
+    <div className="min-h-screen flex items-center justify-center p-4 bg-[#02000D]">
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#0055FF]/10 to-[#0055FF]/10"></div>
+      <Card className="w-full max-w-md z-10 p-8 space-y-6 bg-[#35333D]/50 h-fit">
         <div className="text-center">
 
-          <div className=" h-[70px] w-[70px] rounded-full bg-[#0099FF] mx-auto my-[10px] flex items-center justify-center">
+          <div className=" h-[70px] w-[70px] rounded-full bg-[#0055FF] mx-auto my-[10px] flex items-center justify-center">
             <SchoolOutlinedIcon fontSize='large' className="mx-auto h-[40px] w-[40px] text-white" />
           </div>
-          <h2 className="mt-4 text-3xl font-bold bg-clip-text text-black">
-            PrepLab
+          <h2 className="mt-4 text-3xl font-bold bg-clip-text text-[#0055FF]">
+            iWanPass
           </h2>
           {/* <p className="mt-2 text-gray-400">Sign in or create an account to continue your journey</p> */}
         </div>
@@ -124,14 +124,14 @@ const AuthPage: React.FC = () => {
         {/* Tab Navigation */}
         <div className="flex justify-center mb-6">
           <button
-            className={`px-4 py-2 text-sm font-medium rounded-l-md ${activeTab === 'signin' ? 'bg-[#0099FF] text-white' : 'bg-white border border-[#0099FF] text-[#0099FF] hover:bg-[#0099FF]/80 hover:text-white transition-all duration-500'}`}
+            className={`px-4 py-2 text-sm font-medium rounded-l-md ${activeTab === 'signin' ? 'bg-[#0055FF] text-white' : 'bg-white border border-[#0055FF] text-[#0055FF] hover:bg-[#0055FF]/80 hover:text-white transition-all duration-500'}`}
             onClick={() => setActiveTab('signin')}
             disabled={isLoading}
           >
             Sign In
           </button>
           <button
-            className={`px-4 py-2 text-sm font-medium rounded-r-md ${activeTab === 'signup' ? 'bg-[#0099FF] text-white' : 'bg-white border border-[#0099FF] text-[#0099FF] hover:bg-[#0099FF]/80 hover:text-white transition-all duration-500'}`}
+            className={`px-4 py-2 text-sm font-medium rounded-r-md ${activeTab === 'signup' ? 'bg-[#0055FF] text-white' : 'bg-white border border-[#0055FF] text-[#0055FF] hover:bg-[#0055FF]/80 hover:text-white transition-all duration-500'}`}
             onClick={() => setActiveTab('signup')}
             disabled={isLoading}
           >
@@ -140,7 +140,7 @@ const AuthPage: React.FC = () => {
         </div>
 
         {activeTab === 'signin' && (
-          <form className="space-y-6 text-black" onSubmit={handleSignIn}>
+          <form className="space-y-6 text-[#0055FF]" onSubmit={handleSignIn}>
             <div>
               <label htmlFor="signin-email" className="block text-sm font-medium text-slate-500">Email</label>
               <input
@@ -153,7 +153,7 @@ const AuthPage: React.FC = () => {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 disabled={isLoading}
-                className="mt-1 block w-full px-3 py-2 bg-transparent border border-slate-500 rounded-md shadow-sm placeholder-gray-500 focus:outline-none focus:ring-[#0099FF] focus:border-[#0099FF] sm:text-sm"
+                className="mt-1 block w-full px-3 py-2 bg-transparent border border-slate-500 rounded-md shadow-sm placeholder-gray-500 focus:outline-none focus:ring-[#0055FF] focus:border-[#0055FF] sm:text-sm"
               />
             </div>
             <div>
@@ -168,7 +168,7 @@ const AuthPage: React.FC = () => {
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 disabled={isLoading}
-                 className="mt-1 block w-full px-3 py-2 bg-transparent border border-slate-500 rounded-md shadow-sm placeholder-gray-500 focus:outline-none focus:ring-[#0099FF] focus:border-[#0099FF] sm:text-sm"
+                 className="mt-1 block w-full px-3 py-2 bg-transparent border border-slate-500 rounded-md shadow-sm placeholder-gray-500 focus:outline-none focus:ring-[#0055FF] focus:border-[#0055FF] sm:text-sm"
               />
             </div>
             {/* Removed local error display, using toast */}
@@ -181,7 +181,7 @@ const AuthPage: React.FC = () => {
         )}
 
         {activeTab === 'signup' && (
-          <form className="space-y-6 text-black" onSubmit={handleSignUp}>
+          <form className="space-y-6 text-[#0055FF]" onSubmit={handleSignUp}>
             <div>
               <label htmlFor="signup-fullname" className="block text-sm font-medium text-slate-500">Full Name</label>
               <input
@@ -193,7 +193,7 @@ const AuthPage: React.FC = () => {
                 value={fullName}
                 onChange={(e) => setFullName(e.target.value)}
                 disabled={isLoading}
-                className="mt-1 block w-full px-3 py-2 bg-transparent border border-slate-500 rounded-md shadow-sm placeholder-gray-500 focus:outline-none focus:ring-[#0099FF] focus:border-[#0099FF] sm:text-sm"
+                className="mt-1 block w-full px-3 py-2 bg-transparent border border-slate-500 rounded-md shadow-sm placeholder-gray-500 focus:outline-none focus:ring-[#0055FF] focus:border-[#0055FF] sm:text-sm"
               />
             </div>
             <div>
@@ -207,7 +207,7 @@ const AuthPage: React.FC = () => {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 disabled={isLoading}
-                className="mt-1 block w-full px-3 py-2 bg-transparent border border-slate-500 rounded-md shadow-sm placeholder-gray-500 focus:outline-none focus:ring-[#0099FF] focus:border-[#0099FF] sm:text-sm"
+                className="mt-1 block w-full px-3 py-2 bg-transparent border border-slate-500 rounded-md shadow-sm placeholder-gray-500 focus:outline-none focus:ring-[#0055FF] focus:border-[#0055FF] sm:text-sm"
               />
             </div>
             <div>
@@ -221,12 +221,12 @@ const AuthPage: React.FC = () => {
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 disabled={isLoading}
-                className="mt-1 block w-full px-3 py-2 bg-transparent border border-slate-500 rounded-md shadow-sm placeholder-gray-500 focus:outline-none focus:ring-[#0099FF] focus:border-[#0099FF] sm:text-sm"
+                className="mt-1 block w-full px-3 py-2 bg-transparent border border-slate-500 rounded-md shadow-sm placeholder-gray-500 focus:outline-none focus:ring-[#0055FF] focus:border-[#0055FF] sm:text-sm"
               />
             </div>
             <div>
               <label htmlFor="signup-category" className="block text-sm font-medium text-slate-500">Category</label>
-              <select value={category} required name="category" id="signin-category" onChange={(e) => setCategory(e.target.value)} disabled={isLoading} className="mt-1 block w-full px-3 py-2 bg-transparent border border-slate-500 rounded-md shadow-sm placeholder-gray-500 focus:outline-none focus:ring-[#0099FF] focus:border-[#0099FF] sm:text-sm">
+              <select value={category} required name="category" id="signin-category" onChange={(e) => setCategory(e.target.value)} disabled={isLoading} className="mt-1 block w-full px-3 py-2 bg-transparent border border-slate-500 rounded-md shadow-sm placeholder-gray-500 focus:outline-none focus:ring-[#0055FF] focus:border-[#0055FF] sm:text-sm">
                 <option value="">Enter your category</option>
                 <option value="Junior_Secondary_School">Junior Secondary School</option>
                 <option value="Senior_Secondary_School">Senior Secondary School</option>
@@ -242,7 +242,7 @@ const AuthPage: React.FC = () => {
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 disabled={isLoading}
-                 className="mt-1 block w-full px-3 py-2 bg-transparent border border-slate-500 rounded-md shadow-sm placeholder-gray-500 focus:outline-none focus:ring-[#0099FF] focus:border-[#0099FF] sm:text-sm"
+                 className="mt-1 block w-full px-3 py-2 bg-transparent border border-slate-500 rounded-md shadow-sm placeholder-gray-500 focus:outline-none focus:ring-[#0055FF] focus:border-[#0055FF] sm:text-sm"
               /> */}
             </div>
             <div>

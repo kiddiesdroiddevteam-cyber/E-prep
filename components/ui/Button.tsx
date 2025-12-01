@@ -19,11 +19,13 @@ const Button: React.FC<ButtonProps> = ({
 
   const variantClasses = {
     primary:
-      'bg-[#3A90EC] text-white shadow-glow-primary hover:bg-[#0099FF]/60 transition-all duration-500',
+      'bg-[#0055FF] text-white shadow-glow-primary hover:bg-[#0055FF]/60 transition-all duration-500',
     secondary:
       'bg-brand-surface border border-brand-border text-gray-200 hover:bg-white/10 hover:border-white/20 focus:ring-gray-400',
       tertiary:
       'bg-[#D8E9FB] text-[#3A90EC]',
+      dash:
+      "bg-white text-black"
   };
 
   return (

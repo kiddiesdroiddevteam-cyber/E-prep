@@ -49,7 +49,7 @@ export default function Typewriter({
   }, [displayText, isDeleting, textIndex, texts, typingSpeed, deletingSpeed, pauseTime]);
 
   return (
-    <span className="bg-clip-text text-black bg-gradient-to-r from-brand-primary to-brand-secondary">
+    <span className=" text-white">
       {displayText}
       <span className="animate-pulse">|</span>
     </span>
