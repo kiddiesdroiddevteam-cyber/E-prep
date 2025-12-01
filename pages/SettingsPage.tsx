@@ -68,15 +68,15 @@ const SettingsPage = () => {
         }
     };
     return (
-        <div className=' w-[100dvw] min-h-[100vh] bg-slate-100'>
+        <div className=' w-[100dvw] min-h-[100vh] bg-[#02000D]'>
             <Sidebar screen={"settings"} />
-            <div className="max-sm:pt-[90px] bg-slate-100 mx-auto lg:px-4 py-10 space-y-8 lg:pl-[15vw] flex items-center justify-center">
+            <div className="max-sm:pt-[90px] bg-gradient-to-b to-transparent via-transparent from-[#0055FF]/10 mx-auto lg:px-4 py-10 space-y-8 lg:pl-[15vw] flex items-center justify-center">
                 <div className=' w-[80%]'>
                     <FadeInFromBottom>
                         <div className=' w-[100%]'>
-                            <h1 className=' font-extrabold text-black text-4xl mb-[20px]'>Your Profile</h1>
+                            <h1 className=' font-extrabold text-white text-4xl mb-[20px]'>Your Profile</h1>
 
-                            <div className="bg-white p-8 rounded-lg shadow-sm border border-slate-200">
+                            <div className="bg-[#35333D] p-8 rounded-lg shadow-sm gridBg">
                                 <div className="flex flex-col items-center text-center pb-8 border-b border-slate-200 ">
                                     <div className="relative mb-4">
                                         <img alt="User avatar" className="w-32 h-32 rounded-full object-cover border-4 border-white shadow-md" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1Tx8Qt1LA-1QYYP09-gGRjtwh0YeVNCugVpTnm2gWylRp8XX00gVaOw6DarT5JGTdI5K7JU3M_9b3EGH4Uoe5Dpz17p76g0PlaGUl0Ca-QqmIXGONxI1JbD2e0hY_bMC15dF3pwJH0eFa1vhKlSdEwSCAmTbD3TXzLH-Wwx8XFhXzHJ-cpOSsWDizIBV0xCd1FevfgMiG-fbcjm9Fh_5MoSnXA_2Yuop1cxXkT_aSJJ9w4NOdmsqin0sWMTJZQZHQbNHLWK_o9e8" />
@@ -84,9 +84,9 @@ const SettingsPage = () => {
                                             <CreateIcon />
                                         </button>
                                     </div>
-                                    <h3 className="text-2xl font-bold text-slate-800">{profile?.full_name}</h3>
-                                    <p className="text-slate-500">10th Grade</p>
-                                    <p className="text-slate-500">{profile?.email}</p>
+                                    <h3 className="text-2xl font-bold text-white">{profile?.full_name}</h3>
+                                    <p className="text-white">10th Grade</p>
+                                    <p className="text-white">{profile?.email}</p>
                                 </div>
                                 <div className="pt-8 space-y-4">
                                     {/* <div className="flex items-center justify-between p-4 rounded-lg hover:bg-slate-50 transition-colors">
@@ -99,17 +99,17 @@ const SettingsPage = () => {
                                     <div className="w-11 h-6 bg-slate-200 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-slate-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-slate-600 peer-checked:bg-primary"></div>
                                 </label>
                             </div> */}
-                                    <a className="flex items-center justify-between p-4 rounded-lg hover:bg-slate-50 transition-colors mb-[10px]" href="#">
-                                        <div className="flex items-center gap-4 text-black">
+                                    <a className="flex items-center justify-between p-4 rounded-lg hover:bg-slate-50 text-white hover:text-[#0055FF] transition-colors mb-[10px]" href="#">
+                                        <div className="flex items-center gap-4">
                                             <LockOutlineIcon />
-                                            <span className="text-slate-700 font-medium">Change Password</span>
+                                            <span className=" font-medium">Change Password</span>
                                         </div>
                                         <ChevronRightIcon className=' text-slate-500' />
                                     </a>
-                                    <a className="flex items-center justify-between p-4 rounded-lg hover:bg-slate-50 transition-colors mb-[10px]" href="#">
-                                        <div className="flex items-center gap-4 text-black">
-                                            <HelpOutlineIcon className='text-black' />
-                                            <span className="text-slate-700 font-medium">Help &amp; Support</span>
+                                    <a className="flex items-center justify-between p-4 rounded-lg hover:bg-slate-50 text-white hover:text-[#0055FF] transition-colors mb-[10px]" href="#">
+                                        <div className="flex items-center gap-4">
+                                            <HelpOutlineIcon className='' />
+                                            <span className=" font-medium">Help &amp; Support</span>
                                         </div>
                                         <ChevronRightIcon className=' text-slate-500' />
                                     </a>

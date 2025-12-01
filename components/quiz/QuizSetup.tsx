@@ -14,7 +14,6 @@ interface QuizSetupProps {
   onStartQuiz: (settings: QuizSettings) => void;
 }
 
-
 const QuizSetup: React.FC<QuizSetupProps> = ({ onStartQuiz }) => {
   const [mode, setMode] = useState<QuizMode>(QuizMode.PAST_QUESTIONS);
   const [topics, setTopics] = useState<Topic[]>([]);
@@ -31,22 +30,22 @@ const QuizSetup: React.FC<QuizSetupProps> = ({ onStartQuiz }) => {
   const [selectedExamType, setSelectedExamType] = useState<string>('');
   const [selectedSubject, setSelectedSubject] = useState<string>('');
   const [selectedYear, setSelectedYear] = useState<string>('');
-   const [availableSubjects, setAvailableSubjects] = useState<number[]>([]);
+  const [availableSubjects, setAvailableSubjects] = useState<number[]>([]);
   const [availableYears, setAvailableYears] = useState<number[]>([]); // Changed to number[] to match quizData
 
   const uniqueExamTypes = [
-  ...new Set(quizzData?.flatMap((item) => item.examType) || [])
-];
+    ...new Set(quizzData?.flatMap((item) => item.examType) || [])
+  ];
 
-useEffect(()=> {
+  useEffect(() => {
     fetchQuizData(setQuizData);
-},[])
+  }, [])
 
-useEffect(() => {
+  useEffect(() => {
     if (!quizzData) return;
 
-    const filteredItems = quizzData.filter(item => 
-        item.examType === selectedExamType
+    const filteredItems = quizzData.filter(item =>
+      item.examType === selectedExamType
     );
 
     const subjectsForExam = filteredItems.map(item => item.subject);
@@ -54,28 +53,28 @@ useEffect(() => {
     let activeSubject = selectedSubject;
 
     if (selectedSubject && !subjectsForExam.includes(selectedSubject)) {
-        setSelectedSubject('');
-        setSelectedYear('');
-        setAvailableYears([]);
-        activeSubject = '';
+      setSelectedSubject('');
+      setSelectedYear('');
+      setAvailableYears([]);
+      activeSubject = '';
     }
 
     if (activeSubject && selectedExamType) {
-        const subjectDetails = filteredItems.find(item => 
-            item.subject === activeSubject
-        );
+      const subjectDetails = filteredItems.find(item =>
+        item.subject === activeSubject
+      );
 
-        if (subjectDetails) {
-            setAvailableYears(subjectDetails.years);
-            if (selectedYear && !subjectDetails.years.includes(parseInt(selectedYear))) {
-                setSelectedYear('');
-            }
+      if (subjectDetails) {
+        setAvailableYears(subjectDetails.years);
+        if (selectedYear && !subjectDetails.years.includes(parseInt(selectedYear))) {
+          setSelectedYear('');
         }
+      }
     } else {
-        setAvailableYears([]);
+      setAvailableYears([]);
     }
 
-}, [selectedExamType, selectedSubject, quizzData]);
+  }, [selectedExamType, selectedSubject, quizzData]);
 
   const handleExamTypeChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     setSelectedExamType(e.target.value);
@@ -130,7 +129,7 @@ useEffect(() => {
         throw new Error(errorData.message || 'PDF upload failed');
       }
 
-      const uploadData = await uploadResponse.json(); 
+      const uploadData = await uploadResponse.json();
       const contentId = uploadData.contentId;
       setPdfContentId(contentId);
 
@@ -143,10 +142,10 @@ useEffect(() => {
         throw new Error(errorData.message || 'Failed to retrieve extracted text');
       }
 
-      const textData = await textResponse.json(); 
+      const textData = await textResponse.json();
       console.log('Extracted text:', textData.pdfText);
 
-      setExtractedPdfText(textData.pdfText); 
+      setExtractedPdfText(textData.pdfText);
       alert('PDF text extracted successfully! You can now generate questions.');
 
     } catch (error: any) {
@@ -182,7 +181,7 @@ useEffect(() => {
         alert('Please upload a PDF and select the number of questions.');
         return;
       }
- 
+
       onStartQuiz({ id: quizId, mode, numQuestions, pdfContentId, pdfExtractedText });
     }
   };
@@ -204,12 +203,12 @@ useEffect(() => {
         }
       }}
       className={`flex-1 p-4 rounded-lg transition-all duration-300 flex flex-col items-center gap-2 border-2 ${mode === value
-        ? 'bg-[#0099FF]/20 border-[#0099FF]'
-        : 'bg-white border-[#0099FF] hover:bg-[#0099FF]/20'
+        ? 'bg-[#0055FF]/20 border-[#0055FF]'
+        : 'bg-transparent border-[#0055FF] hover:bg-[#0055FF]/20'
         }`}
     >
       {icon}
-      <span className="font-semibold text-[#0099FF]">{label}</span>
+      <span className="font-semibold text-[#0055FF]">{label}</span>
     </button>
   );
 
@@ -232,73 +231,73 @@ useEffect(() => {
   }, []);
 
   return (
-    <div className=' '>
+    <div className=' bg-[#02000D]'>
       <Sidebar screen={"quiz"} />
-      <div className=' min-h-[100vh] w-[100vw] flex flex-col-reverse lg:flex-row items-center justify-between max-sm:pt-[100px] px-[2.5%]'>
+      <div className=' min-h-[100vh] w-[100vw] flex flex-col-reverse lg:flex-row items-center justify-between max-sm:pt-[100px] px-[2.5%] bg-gradient-to-b to-transparent via-transparent from-[#0055FF]/10'>
         <div className=' w-[100%] lg:w-[70%] flex flex-row items-end justify-end'>
           <div className=' lg:w-[60%]'>
             <FadeInFromBottom>
-              <Card className="w-full h-fit my-auto max-w-2xl mx-auto p-6 md:p-8 bg-white">
-                <h2 className="text-3xl font-bold text-center mb-2 bg-clip-text text-black">
+              <Card className="w-full h-fit my-auto max-w-2xl mx-auto p-6 md:p-8 gridBg">
+                <h2 className="text-3xl font-bold text-center mb-2 bg-clip-text text-white">
                   Create a New Quiz
                 </h2>
                 <p className="text-center text-gray-400 mb-8">Choose your challenge and prove your knowledge.</p>
 
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div>
-                    <label className="block text-lg font-semibold mb-3 text-black">1. Select Quiz Mode</label>
+                    <label className="block text-lg font-semibold mb-3 text-white">1. Select Quiz Mode</label>
                     <div className="flex gap-4">
-                      <ModeButton value={QuizMode.PAST_QUESTIONS} icon={<BookOpenIcon className="w-8 h-8 text-[#0099FF]" />} label="Past Questions" />
-                      <ModeButton value={QuizMode.AI_GENERATED} icon={<BrainCircuitIcon className="w-8 h-8 text-[#0099FF]" />} label="AI Generated" />
-                      <ModeButton value={QuizMode.PDF_UPLOAD} icon={<CloudUploadIcon className="w-8 h-8 text-[#0099FF]" />} label="PDF Upload" />
+                      <ModeButton value={QuizMode.PAST_QUESTIONS} icon={<BookOpenIcon className="w-8 h-8 text-[#0055FF]" />} label="Past Questions" />
+                      <ModeButton value={QuizMode.AI_GENERATED} icon={<BrainCircuitIcon className="w-8 h-8 text-[#0055FF]" />} label="AI Generated" />
+                      <ModeButton value={QuizMode.PDF_UPLOAD} icon={<CloudUploadIcon className="w-8 h-8 text-[#0055FF]" />} label="PDF Upload" />
                     </div>
                   </div>
 
                   {mode === QuizMode.PAST_QUESTIONS && (
                     <div className="space-y-4">
                       <div>
-                        <label onClick={()=> console.log(quizzData)} htmlFor="examType" className="block text-lg font-semibold mb-3 text-black">2. Choose an Exam Type</label>
-                         <select
-        id="examType"
-        value={selectedExamType}
-        onChange={handleExamTypeChange}
-        className="w-full p-3 bg-transparent text-[#0099FF] border border-[#0099FF] rounded-lg focus:ring-2 focus:ring-[#0099FF] focus:border-none outline-none"
-      >
-        <option value="" disabled>Select Exam Type</option>
-        
-        {uniqueExamTypes.map((type) => (
-          <option key={type} value={type}>
-            {type}
-          </option>
-        ))}
-      </select>
+                        <label onClick={() => console.log(quizzData)} htmlFor="examType" className="block text-lg font-semibold mb-3 text-white">2. Choose an Exam Type</label>
+                        <select
+                          id="examType"
+                          value={selectedExamType}
+                          onChange={handleExamTypeChange}
+                          className="w-full p-3 bg-transparent text-[#0055FF] border border-[#0055FF] rounded-lg focus:ring-2 focus:ring-[#0055FF] focus:border-none outline-none"
+                        >
+                          <option value="" disabled>Select Exam Type</option>
+
+                          {uniqueExamTypes.map((type) => (
+                            <option key={type} value={type}>
+                              {type}
+                            </option>
+                          ))}
+                        </select>
                       </div>
 
                       <div>
-                        <label htmlFor="subject" className="block text-lg font-semibold mb-3 text-black">3. Choose a Subject</label>
-                        <select     
-                   className="w-full p-3 bg-transparent text-[#0099FF] border border-[#0099FF] rounded-lg focus:ring-2 focus:ring-[#0099FF] focus:border-none outline-none"
-  value={selectedSubject} 
-  onChange={(e) => setSelectedSubject(e.target.value)}
-  disabled={!selectedExamType} // Disable if no exam type is selected
->
-  <option value="">Select Subject</option>
-  
-  {availableSubjects.map((subjectName) => (
-    <option key={subjectName} value={subjectName}>
-      {subjectName}
-    </option>
-  ))}
-</select>
+                        <label htmlFor="subject" className="block text-lg font-semibold mb-3 text-white">3. Choose a Subject</label>
+                        <select
+                          className="w-full p-3 bg-transparent text-[#0055FF] border border-[#0055FF] rounded-lg focus:ring-2 focus:ring-[#0055FF] focus:border-none outline-none"
+                          value={selectedSubject}
+                          onChange={(e) => setSelectedSubject(e.target.value)}
+                          disabled={!selectedExamType} // Disable if no exam type is selected
+                        >
+                          <option value="">Select Subject</option>
+
+                          {availableSubjects.map((subjectName) => (
+                            <option key={subjectName} value={subjectName}>
+                              {subjectName}
+                            </option>
+                          ))}
+                        </select>
                       </div>
 
                       <div>
-                        <label htmlFor="year" className="block text-lg font-semibold mb-3 text-black">4. Choose a Year</label>
+                        <label htmlFor="year" className="block text-lg font-semibold mb-3 text-white">4. Choose a Year</label>
                         <select
                           id="year"
                           value={selectedYear}
                           onChange={handleYearChange}
-                          className="w-full p-3 bg-transparent text-[#0099FF] border border-[#0099FF] rounded-lg focus:ring-2 focus:ring-[#0099FF] focus:border-none outline-none"
+                          className="w-full p-3 bg-transparent text-[#0055FF] border border-[#0055FF] rounded-lg focus:ring-2 focus:ring-[#0055FF] focus:border-none outline-none"
                         >
                           <option value="" disabled>Select Year</option>
                           {availableYears.length > 0 ? (
@@ -315,7 +314,7 @@ useEffect(() => {
 
                   {mode === QuizMode.AI_GENERATED && (
                     <div>
-                      <label htmlFor="topic" className="block text-lg font-semibold mb-3 text-black">2. Choose a Subject/Topic</label>
+                      <label htmlFor="topic" className="block text-lg font-semibold mb-3 text-white">2. Choose a Subject/Topic</label>
                       {isLoading ? (
                         <div className="w-full h-12 bg-gray-200 rounded-lg animate-pulse"></div>
                       ) : (
@@ -323,7 +322,7 @@ useEffect(() => {
                           id="topic"
                           value={selectedTopic}
                           onChange={(e) => setSelectedTopic(e.target.value)}
-                          className="w-full p-3 bg-transparent text-[#0099FF] border border-[#0099FF] rounded-lg focus:ring-2 focus:ring-[#0099FF] focus:border-none outline-none"
+                          className="w-full p-3 bg-transparent text-[#0055FF] border border-[#0055FF] rounded-lg focus:ring-2 focus:ring-[#0055FF] focus:border-none outline-none"
                         >
                           {topics.map(topic => (
                             <option key={topic.id} value={topic.id}>{topic.name}</option>
@@ -338,14 +337,14 @@ useEffect(() => {
 
                   {mode === QuizMode.PDF_UPLOAD && (
                     <div>
-                      <label htmlFor="pdfUpload" className="block text-lg font-semibold mb-3 text-black">2. Upload your PDF</label>
+                      <label htmlFor="pdfUpload" className="block text-lg font-semibold mb-3 text-white">2. Upload your PDF</label>
                       <input
                         type="file"
                         id="pdfUpload"
                         accept=".pdf"
                         onChange={handlePdfUpload}
                         disabled={isUploadingPdf}
-                        className="w-full p-3 bg-transparent text-[#0099FF] border border-[#0099FF] rounded-lg focus:ring-2 focus:ring-[#0099FF] focus:border-none outline-none file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-[#0099FF] file:text-white hover:file:bg-[#0099FF]/80"
+                        className="w-full p-3 bg-transparent text-[#0055FF] border border-[#0055FF] rounded-lg focus:ring-2 focus:ring-[#0055FF] focus:border-none outline-none file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-[#0055FF] file:text-white hover:file:bg-[#0055FF]/80"
                       />
                       {isUploadingPdf && <p className="mt-2 text-sm text-gray-500">Uploading "{uploadedFileName}"...</p>}
                       {!isUploadingPdf && uploadedFileName && pdfContentId && (
@@ -359,7 +358,7 @@ useEffect(() => {
 
                   {/* Number of Questions slider - now for all modes */}
                   <div className={`${mode === QuizMode.PAST_QUESTIONS && "hidden"}`}>
-                    <label htmlFor="numQuestions" className="block text-lg font-semibold mb-3 text-black">Number of Questions: <span className="text-[#0099FF] font-bold">{numQuestions}</span></label>
+                    <label htmlFor="numQuestions" className="block text-lg font-semibold mb-3 text-white">Number of Questions: <span className="text-[#0055FF] font-bold">{numQuestions}</span></label>
                     <input
                       type="range"
                       id="numQuestions"
@@ -368,7 +367,7 @@ useEffect(() => {
                       step="1"
                       value={numQuestions}
                       onChange={(e) => setNumQuestions(parseInt(e.target.value, 10))}
-                      className="w-full h-2 bg-gray-400 rounded-lg appearance-none cursor-pointer accent-[#0099FF]"
+                      className="w-full h-2 bg-gray-400 rounded-lg appearance-none cursor-pointer accent-[#0055FF]"
                     />
                   </div>
 
