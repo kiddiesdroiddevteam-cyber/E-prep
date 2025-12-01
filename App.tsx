@@ -34,7 +34,7 @@ const AppContent: React.FC = () => {
   };
 
   return (
-    <main className="min-h-[100dvh] bg-slate-100">
+    <main className="min-h-[100dvh] bg-[#02000D]">
       {/* {user && (
          <header className="bg-brand-surface/80 backdrop-blur-lg border-b border-brand-border sticky top-0 z-50">
            <nav className="container mx-auto px-4 py-3 flex justify-between items-center">

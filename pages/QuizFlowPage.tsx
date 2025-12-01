@@ -195,7 +195,7 @@ const QuizFlowPage: React.FC<QuizFlowPageProps> = ({ onBackToDashboard }) => {
       case 'loading':
         return (
           <div className="flex flex-col items-center justify-center h-96">
-            <LoaderIcon className="w-16 h-16 animate-spin text-[#0099FF]" />
+            <LoaderIcon className="w-16 h-16 animate-spin text-[#0055FF]" />
             <p className="mt-4 text-xl text-gray-700">Generating your quiz...</p>
           </div>
         );
@@ -209,9 +209,9 @@ const QuizFlowPage: React.FC<QuizFlowPageProps> = ({ onBackToDashboard }) => {
   };
 
   return (
-    <div className=" ">
+    <div className=" bg-gradient-to-b to-transparent via-transparent from-[#0055FF]/10">
       {flowState !== 'setup' && (
-        <button onClick={handleBackToDashboard} className="mb-6 text-[#0099FF] hover:text-[#0099FF]/60 transition-colors">
+        <button onClick={handleBackToDashboard} className="mb-6 text-[#0055FF] hover:text-[#0055FF]/60 transition-colors">
           &larr; Back to Dashboard
         </button>
       )}

@@ -72,25 +72,25 @@ const QuizPlayer: React.FC<QuizPlayerProps> = ({ quiz, onSubmit }) => {
   };
 
   return (
-    <Card className="w-full max-w-4xl mx-auto p-6 md:p-8 bg-white">
+    <Card className="w-full max-w-4xl mx-auto p-6 md:p-8 bg-[#02000D] gridBg">
         <div className="flex justify-between items-center mb-6">
             <div>
-                <span className="text-[#0099FF]">{quiz.settings.mode}</span>
+                <span className="text-[#0055FF]">{quiz.settings.mode}</span>
                 {
                   quiz.settings.mode === "Past Questions" ? 
-                  <h2 className="text-2xl font-bold text-black">{quiz.settings?.selectedSubject}</h2>:
-                  <h2 className="text-2xl font-bold text-black"></h2>
+                  <h2 className="text-2xl font-bold text-white">{quiz.settings?.selectedSubject}</h2>:
+                  <h2 className="text-2xl font-bold text-white"></h2>
                 }
             </div>
             <div className="text-right">
-                <div className="text-lg font-semibold text-[#0099FF]">{formatTime(timeLeft)}</div>
+                <div className="text-lg font-semibold text-[#0055FF]">{formatTime(timeLeft)}</div>
                 <div className="text-sm text-gray-400">Time Left</div>
             </div>
         </div>
 
         <div className="mb-6">
             <p className="text-gray-400 mb-2">Question {currentQuestionIndex + 1} of {quiz.questions.length}</p>
-            <h3 className="text-2xl font-semibold text-black">{currentQuestion.prompt}</h3>
+            <h3 className="text-2xl font-semibold text-white">{currentQuestion.prompt}</h3>
         </div>
         
         <div className="space-y-4 mb-8">
@@ -98,13 +98,13 @@ const QuizPlayer: React.FC<QuizPlayerProps> = ({ quiz, onSubmit }) => {
                 <button
                     key={index}
                     onClick={() => handleAnswerSelect(index)}
-                    className={`w-full text-left p-4 border-2 rounded-lg transition-all text-lg text-black ${
+                    className={`w-full text-left p-4 border-2 rounded-lg transition-all text-lg text-white ${
                         selectedAnswer === index
-                        ? 'border-[#0099FF]'
-                        : 'border-brand-border hover:border-[#0099FF]'
+                        ? 'border-[#0055FF]'
+                        : 'border-brand-border hover:border-[#0055FF]'
                     }`}
                 >
-                    <span className={`font-mono mr-4 ${selectedAnswer === index ? 'text-[#0099FF]' : 'text-black'}`}>{String.fromCharCode(65 + index)}</span>
+                    <span className={`font-mono mr-4 ${selectedAnswer === index ? 'text-[#0055FF]' : 'text-white'}`}>{String.fromCharCode(65 + index)}</span>
                     {choice}
                 </button>
             ))}
@@ -123,7 +123,7 @@ const QuizPlayer: React.FC<QuizPlayerProps> = ({ quiz, onSubmit }) => {
             )}
         </div>
         <div className="w-full bg-brand-surface rounded-full h-2.5 mt-6">
-            <div className="bg-[#0099FF] h-2.5 rounded-full" style={{ width: `${((currentQuestionIndex + 1) / quiz.questions.length) * 100}%` }}></div>
+            <div className="bg-[#0055FF] h-2.5 rounded-full" style={{ width: `${((currentQuestionIndex + 1) / quiz.questions.length) * 100}%` }}></div>
         </div>
     </Card>
   );
