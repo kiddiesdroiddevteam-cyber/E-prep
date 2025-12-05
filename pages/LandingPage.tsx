@@ -239,8 +239,8 @@ const LandingPage = () => {
                             </div>
 
                             {/* Footer */}
-                            <div className=' w-[100vw] text-white min-h-[100vh] bg-gradient-to-b from-transparent via-[#0055FF]/10 to-[#0055FF]/10 px-[5%] flex flex-col items-center justify-center pt-[10vh]'>
-                                <div className=' w-[95%] h-[50vh] bg-[#0055FF] rounded-xl mx-auto flex items-center justify-between px-[2.5%] mb-[10vh]'>
+                            <div className=' w-[100vw] text-white h-fit bg-gradient-to-b from-transparent via-[#0055FF]/10 to-[#0055FF]/10 px-[5%] flex flex-col items-center justify-center pt-[10vh]'>
+                                <div className=' w-[95%] h-[50vh] rounded-xl mx-auto flex items-center justify-between px-[2.5%] mb-[10vh]'>
                                     <div className=' max-sm:w-full w-[40%]'>
                                         <h1 className=' text-white text-[48px] mb-[20px]'>Start Studying Smarter Today</h1>
                                         <Link
@@ -250,7 +250,7 @@ const LandingPage = () => {
                                             Get Started
                                         </Link>
                                     </div>
-                                    <img src="/girl.png" alt="" className=' h-full max-sm:hidden' />
+                                    <img src="/girl.png" alt="" className=' hidden h-full max-sm:hidden' />
                                 </div>
                             </div>
                         </div>
