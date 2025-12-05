@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, Links, useNavigate } from 'react-router-dom';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 import { useAuth } from '../contexts/AuthContext';
@@ -225,10 +225,10 @@ const DashboardPage = () => {
             </p>
           </div>
 
-          <div className=' flex items-center justify-center'>
+          <Link to={'/settings'} className=' flex items-center justify-center'>
             <h1 className=' text-white text-[16px] mr-[20px]'>{profile?.full_name}</h1>
             <div className=' h-[54px] w-[54px] rounded-full bg-white'></div>
-          </div>
+          </Link>
         </div>
 
         <div className=' w-full flex flex-col lg:flex-row items-center lg:items-start justify-start lg:justify-between lg:px-[20px]'>

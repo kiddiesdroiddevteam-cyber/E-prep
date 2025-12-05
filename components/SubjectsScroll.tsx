@@ -14,33 +14,33 @@ export default function SubjectsScroll() {
     { id: 9, content: <div className="w-full h-full physics flex items-center justify-center text-white text-2xl">
         PHYSICS
     </div> },
-    // { id: 3, content: <div className="w-full h-full maths flex items-center justify-center text-white text-2xl">
-    //     WAEC
-    // </div> },
-    // { id: 4, content: <div className="w-full h-full maths flex items-center justify-center text-white text-2xl">
-    //     WAEC
-    // </div> },
-    // { id: 10, content: <div className="w-full h-full maths flex items-center justify-center text-white text-2xl">
-    //     WAEC
-    // </div> },
-    // { id: 5, content: <div className="w-full h-full maths flex items-center justify-center text-white text-2xl">
-    //     WAEC
-    // </div> },
-    // { id: 6, content: <div className="w-full h-full maths flex items-center justify-center text-white text-2xl">
-    //     WAEC
-    // </div> },
-    // { id: 11, content: <div className="w-full h-full maths flex items-center justify-center text-white text-2xl">
-    //     WAEC
-    // </div> },
-    // { id: 7, content: <div className="w-full h-full maths flex items-center justify-center text-white text-2xl">
-    //     WAEC
-    // </div> },
-    // { id: 8, content: <div className="w-full h-full maths flex items-center justify-center text-white text-2xl">
-    //     WAEC
-    // </div> },
-    // { id: 12, content: <div className="w-full h-full maths flex items-center justify-center text-white text-2xl">
-    //     WAEC
-    // </div> },
+        // { id: 3, content: <div className="w-full h-full maths flex items-center justify-center text-white text-2xl">
+        //     WAEC
+        // </div> },
+        // { id: 4, content: <div className="w-full h-full maths flex items-center justify-center text-white text-2xl">
+        //     WAEC
+        // </div> },
+        // { id: 10, content: <div className="w-full h-full maths flex items-center justify-center text-white text-2xl">
+      //     WAEC
+        // </div> },
+        // { id: 5, content: <div className="w-full h-full maths flex items-center justify-center text-white text-2xl">
+        //     WAEC
+        // </div> },
+        // { id: 6, content: <div className="w-full h-full maths flex items-center justify-center text-white text-2xl">
+        //     WAEC
+        // </div> },
+        // { id: 11, content: <div className="w-full h-full maths flex items-center justify-center text-white text-2xl">
+        //     WAEC
+        // </div> },
+        // { id: 7, content: <div className="w-full h-full maths flex items-center justify-center text-white text-2xl">
+        //     WAEC
+        // </div> },
+        // { id: 8, content: <div className="w-full h-full maths flex items-center justify-center text-white text-2xl">
+        //     WAEC
+        // </div> },
+        // { id: 12, content: <div className="w-full h-full maths flex items-center justify-center text-white text-2xl">
+        //     WAEC
+        // </div> },
   ];
 
   const [index, setIndex] = useState(0);
