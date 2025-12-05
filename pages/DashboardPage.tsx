@@ -253,7 +253,7 @@ const DashboardPage = () => {
                 <StatCard value={stats?.badges?.length} label="Badges Earned" icon="🏆" />
                 <div className=' gridBg w-[322px] h-[208px] rounded-xl p-[20px]'>
                   <div className="text-4xl">🔥</div>
-                  <h1 className=' text-white font-semibold text-[24px]'>You are on a 5-day streak!</h1>
+                  <h1 className=' text-white font-semibold text-[24px]'>You are on a {stats?.streak}-day streak!</h1>
                   <p className=' text-white text-[14px]'>Incredible work! Consistency is the key to success. Keep the flame alive!</p>
                 </div>
               </div>

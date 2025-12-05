@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
 import InsertChartIcon from '@mui/icons-material/InsertChart';
 import AutoStoriesOutlinedIcon from '@mui/icons-material/AutoStoriesOutlined';
+import SubjectsScroll from '@/components/SubjectsScroll';
 
 const LandingPage = () => {
     const [isLoading, setIsLoading] = useState(true);
@@ -44,39 +45,7 @@ const LandingPage = () => {
                                 <div className=' h-[40vh] w-[95%] lg:w-[70%] bg-[#CDE7FF] rounded-md'></div>
                             </div>
 
-                            <div className=' w-[100vw] min-h-[100vh] bg-gradient-to-b to-transparent via-[#0055FF]/10 from-[#0055FF]/10 px-[5%] flex flex-col items-center justify-center pt-[10vh]'>
-
-
-                                <div className=' w-full flex items-center justify-between flex-col lg:flex-row'>
-                                    <div className=' p-[30px] rounded-2xl lg:w-[48%] text-white bg-[#35333D]/50 mb-[20px] gridBg'>
-                                        <img src="/pq-vec.png" alt="" className=' mb-[10px] block' />
-                                        <h1 className=' mb-[5px] mt-[10px]'>Access Past Questions (WAEC, JAMB, NECO)</h1>
-                                        <p>Get well-organized, updated, past questions for your external examinations</p>
-                                    </div>
-
-                                    <div className=' p-[30px] rounded-2xl lg:w-[48%] text-white bg-[#35333D]/50 mb-[20px] gridBg'>
-                                        <img src="/pq-vec2.png" alt="" className=' mb-[10px] block' />
-                                        <h1 className=' mb-[5px] mt-[10px]'>Instant AI-Generated Questions</h1>
-                                        <p>Get AI generated questions for any subject or topic for instant practice</p>
-                                    </div>
-                                </div>
-
-                                <div className=' w-full flex items-center justify-between flex-col lg:flex-row'>
-                                    <div className=' p-[30px] rounded-2xl lg:w-[48%] text-white bg-[#35333D]/50 mb-[20px] gridBg'>
-                                        <img src="/pq-vec3.png" alt="" className=' mb-[10px] block' />
-                                        <h1 className=' mb-[5px] mt-[10px]'>Smart Performance Insights</h1>
-                                        <p>Track and visualize your strengths, weaknesses, and progress automatically.</p>
-                                    </div>
-
-                                    <div className=' p-[30px] rounded-2xl lg:w-[48%] text-white bg-[#35333D]/50 mb-[20px] gridBg'>
-                                        <img src="/pq-vec4.png" alt="" className=' mb-[10px] block' />
-                                        <h1 className=' mb-[5px] mt-[10px]'>Upload note</h1>
-                                        <p>Upload your note to generate questions instantly</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div className=' w-[100vw] text-white min-h-[100vh] bg-gradient-to-b from-transparent via-[#0055FF]/10 to-[#0055FF]/10 px-[5%] flex flex-col items-center justify-center pt-[10vh]'>
+                            <div className=' w-[100vw] text-white min-h-[100vh] bg-gradient-to-b to-transparent via-[#0055FF]/10 from-[#0055FF]/10 px-[5%] flex flex-col items-center justify-center pt-[10vh]'>
                                 <div className=' w-full flex flex-col items-center justify-center'>
                                     <h1 className=' text-white bg-[#0055FF] px-2 py-1 rounded-full mb-[10px]'>About</h1>
                                     <h1 className=' text-[48px] text-white mb-[5px]'>About iWanPass</h1>
@@ -90,62 +59,60 @@ const LandingPage = () => {
                                         </p>
                                     </div>
 
-                                    <div className=' w-[45%] h-full about'></div>
+                                    <div className=' w-[45%] h-full flex items-center justify-center'>
+                                        <video
+                                            src="/test-vid.mp4"
+                                            controls
+                                            loop
+                                            muted
+                                            className="w-full h-auto rounded-xl border border-[#0055FF]"
+                                        />
+                                    </div>
                                 </div>
                             </div>
 
-                            <div className=' w-[100vw] text-white min-h-[100vh] bg-gradient-to-b to-transparent via-[#0055FF]/10 from-[#0055FF]/10 px-[5%] flex flex-col items-center justify-center pt-[10vh]'>
+                            {/* Features to boost your study */}
+                            <div className=' w-[100vw] min-h-[100vh] bg-gradient-to-b from-transparent via-[#0055FF]/10 to-[#0055FF]/10 px-[5%] flex flex-col items-center justify-center pt-[10vh]'>
                                 <div className=' w-full flex flex-col items-center justify-center mb-[10px]'>
                                     <h1 className=' text-white bg-[#0055FF] px-2 py-1 rounded-full mb-[10px]'>Features</h1>
                                     <h1 className=' text-[48px] text-white mb-[5px]'>Features To Boost Your Study</h1>
-                                    <p>Everything you need to practice and prepare for your exam</p>
+                                    <p className=' text-white'>Everything you need to practice and prepare for your exam</p>
                                 </div>
-                                <div className=' w-[90%] flex items-center justify-center mb-[10px]'>
-                                    <div className=' bg-[#35333D]/50 flex items-center justify-between max-w-fit px-[30px] py-[20px] rounded-2xl mx-[10px]'>
-                                        <div className=' h-[60px] w-[60px] rounded-xl bg-[#0055FF] flex items-center justify-center mr-[20px]'>
-                                            <AutoStoriesOutlinedIcon />
+                                <div className=' w-[100vw] min-h-[60vh] px-[5%] flex flex-col items-center justify-center pt-[10vh]'>
+
+
+                                    <div className=' w-full flex items-center justify-between flex-col lg:flex-row'>
+                                        <div className=' p-[30px] rounded-2xl lg:w-[48%] text-white bg-[#35333D]/50 mb-[20px] gridBg'>
+                                            <img src="/pq-vec.png" alt="" className=' mb-[10px] block' />
+                                            <h1 className=' mb-[5px] mt-[10px]'>Access Past Questions (WAEC, JAMB, NECO)</h1>
+                                            <p>Get well-organized, updated, past questions for your external examinations</p>
                                         </div>
 
-                                        <h1 className=' text-[16px]'>AI question generator</h1>
+                                        <div className=' p-[30px] rounded-2xl lg:w-[48%] text-white bg-[#35333D]/50 mb-[20px] gridBg'>
+                                            <img src="/pq-vec2.png" alt="" className=' mb-[10px] block' />
+                                            <h1 className=' mb-[5px] mt-[10px]'>Instant AI-Generated Questions</h1>
+                                            <p>Get AI generated questions for any subject or topic for instant practice</p>
+                                        </div>
                                     </div>
 
-                                    <div className=' bg-[#35333D]/50 flex items-center justify-between max-w-fit px-[30px] py-[20px] rounded-2xl mx-[10px]'>
-                                        <div className=' h-[60px] w-[60px] rounded-xl bg-[#0055FF] flex items-center justify-center mr-[20px]'>
-                                            <AutoStoriesOutlinedIcon />
+                                    <div className=' w-full flex items-center justify-between flex-col lg:flex-row'>
+                                        <div className=' p-[30px] rounded-2xl lg:w-[48%] text-white bg-[#35333D]/50 mb-[20px] gridBg'>
+                                            <img src="/pq-vec3.png" alt="" className=' mb-[10px] block' />
+                                            <h1 className=' mb-[5px] mt-[10px]'>Smart Performance Insights</h1>
+                                            <p>Track and visualize your strengths, weaknesses, and progress automatically.</p>
                                         </div>
 
-                                        <h1 className=' text-[16px]'>Upload notes → <b>auto questions</b></h1>
-                                    </div>
-
-                                    <div className=' bg-[#35333D]/50 flex items-center justify-between max-w-fit px-[30px] py-[20px] rounded-2xl mx-[10px]'>
-                                        <div className=' h-[60px] w-[60px] rounded-xl bg-[#0055FF] flex items-center justify-center mr-[20px]'>
-                                            <AutoStoriesOutlinedIcon />
+                                        <div className=' p-[30px] rounded-2xl lg:w-[48%] text-white bg-[#35333D]/50 mb-[20px] gridBg'>
+                                            <img src="/pq-vec4.png" alt="" className=' mb-[10px] block' />
+                                            <h1 className=' mb-[5px] mt-[10px]'>Upload note</h1>
+                                            <p>Upload your note to generate questions instantly</p>
                                         </div>
-
-                                        <h1 className=' text-[16px]'>Past questions for all exams</h1>
-                                    </div>
-                                </div>
-
-                                <div className=' w-[90%] flex items-center justify-center mb-[10px]'>
-                                    <div className=' bg-[#35333D]/50 flex items-center justify-between max-w-fit px-[30px] py-[20px] rounded-2xl mx-[10px]'>
-                                        <div className=' h-[60px] w-[60px] rounded-xl bg-[#0055FF] flex items-center justify-center mr-[20px]'>
-                                            <AutoStoriesOutlinedIcon />
-                                        </div>
-
-                                        <h1 className=' text-[16px]'>Study streak system</h1>
-                                    </div>
-
-                                    <div className=' bg-[#35333D]/50 flex items-center justify-between max-w-fit px-[30px] py-[20px] rounded-2xl mx-[10px]'>
-                                        <div className=' h-[60px] w-[60px] rounded-xl bg-[#0055FF] flex items-center justify-center mr-[20px]'>
-                                            <AutoStoriesOutlinedIcon />
-                                        </div>
-
-                                        <h1 className=' text-[16px]'>Performance analytics</h1>
                                     </div>
                                 </div>
                             </div>
 
-                            <div className=' w-[100vw] text-white min-h-[100vh] bg-gradient-to-b from-transparent via-[#0055FF]/10 to-[#0055FF]/10 px-[5%] flex flex-col items-center justify-center pt-[10vh]'>
+                            {/* Get Startes in three simple steps */}
+                            <div className=' w-[100vw] text-white min-h-[100vh] bg-gradient-to-b to-transparent via-[#0055FF]/10 from-[#0055FF]/10 px-[5%] flex flex-col items-center justify-center pt-[10vh]'>
                                 <div className=' w-full flex flex-col items-center justify-center mb-[10px]'>
                                     <h1 className=' text-white bg-[#0055FF] px-2 py-1 rounded-full mb-[10px]'>How It Works</h1>
                                     <h1 className=' text-[48px] text-white mb-[5px]'>Get Started in Three Simple Steps</h1>
@@ -175,7 +142,71 @@ const LandingPage = () => {
                                 </div>
                             </div>
 
+                            {/* Dashboard Preview */}
+                            <div className=' w-[100vw] text-white min-h-[100vh] bg-gradient-to-b from-transparent via-[#0055FF]/10 to-[#0055FF]/10 px-[5%] flex flex-col items-center justify-center pt-[10vh]'>
+                                <div className=' w-full flex flex-col items-center justify-center mb-[20px]'>
+                                    <h1 className=' text-white bg-[#0055FF] px-2 py-1 rounded-full mb-[10px]'>Dashboard</h1>
+                                    <h1 className=' text-[48px] text-white mb-[5px]'>Your Personal Study Hub</h1>
+                                    <p>Track Progress, weak topics and past tests.</p>
+                                </div>
+                                <div>
+                                    <img src="/preview.png" alt="" className=' block mt-[10px]' />
+                                </div>
+                            </div>
+
+                            {/* Benefits */}
                             <div className=' w-[100vw] text-white min-h-[100vh] bg-gradient-to-b to-transparent via-[#0055FF]/10 from-[#0055FF]/10 px-[5%] flex flex-col items-center justify-center pt-[10vh]'>
+                                <div className=' w-full flex flex-col items-center justify-center mb-[25px]'>
+                                    <h1 className=' text-white bg-[#0055FF] px-2 py-1 rounded-full mb-[10px]'>Benefits</h1>
+                                    <h1 className=' text-[48px] text-white mb-[5px]'>Benefits Of Using iWanPass</h1>
+                                    <p>Everything you need to practice and prepare for your exam</p>
+                                </div>
+                                <div className=' w-[90%] flex items-center justify-center mb-[10px]'>
+                                    <div className=' bg-[#35333D]/50 flex items-center justify-between max-w-fit px-[30px] py-[20px] rounded-2xl mx-[10px]'>
+                                        <div className=' h-[60px] w-[60px] rounded-xl bg-[#0055FF] flex items-center justify-center mr-[20px]'>
+                                            <AutoStoriesOutlinedIcon />
+                                        </div>
+
+                                        <h1 className=' text-[16px]'>Instant Corrections</h1>
+                                    </div>
+
+                                    <div className=' bg-[#35333D]/50 flex items-center justify-between max-w-fit px-[30px] py-[20px] rounded-2xl mx-[10px]'>
+                                        <div className=' h-[60px] w-[60px] rounded-xl bg-[#0055FF] flex items-center justify-center mr-[20px]'>
+                                            <AutoStoriesOutlinedIcon />
+                                        </div>
+
+                                        <h1 className=' text-[16px]'>Unlimited AI Tests</h1>
+                                    </div>
+
+                                    <div className=' bg-[#35333D]/50 flex items-center justify-between max-w-fit px-[30px] py-[20px] rounded-2xl mx-[10px]'>
+                                        <div className=' h-[60px] w-[60px] rounded-xl bg-[#0055FF] flex items-center justify-center mr-[20px]'>
+                                            <AutoStoriesOutlinedIcon />
+                                        </div>
+
+                                        <h1 className=' text-[16px]'>Past Question Library</h1>
+                                    </div>
+                                </div>
+                                <div className=' w-[90%] flex items-center justify-center mb-[10px]'>
+                                    <div className=' bg-[#35333D]/50 flex items-center justify-between max-w-fit px-[30px] py-[20px] rounded-2xl mx-[10px]'>
+                                        <div className=' h-[60px] w-[60px] rounded-xl bg-[#0055FF] flex items-center justify-center mr-[20px]'>
+                                            <AutoStoriesOutlinedIcon />
+                                        </div>
+
+                                        <h1 className=' text-[16px]'>Smart Analytics</h1>
+                                    </div>
+
+                                    {/* <div className=' bg-[#35333D]/50 flex items-center justify-between max-w-fit px-[30px] py-[20px] rounded-2xl mx-[10px]'>
+                                        <div className=' h-[60px] w-[60px] rounded-xl bg-[#0055FF] flex items-center justify-center mr-[20px]'>
+                                            <AutoStoriesOutlinedIcon />
+                                        </div>
+
+                                        <h1 className=' text-[16px]'>Performance analytics</h1>
+                                    </div> */}
+                                </div>
+                            </div>
+
+                            {/* Subjects You Can Study */}
+                            <div className=' w-[100vw] text-white min-h-[100vh] bg-gradient-to-b from-transparent via-[#0055FF]/10 to-[#0055FF]/10 px-[5%] flex flex-col items-center justify-center pt-[10vh]'>
                                 <div className=' w-full flex flex-col items-center justify-center mb-[10px]'>
                                     <h1 className=' text-white bg-[#0055FF] px-2 py-1 rounded-full mb-[10px]'>Our Subjects</h1>
                                     <h1 className=' text-[48px] text-white mb-[5px]'>Subjects You Can Study</h1>
@@ -184,23 +215,29 @@ const LandingPage = () => {
                                 <div className=' w-[95%] h-[80vh] flex items-center justify-between mb-[10px]'>
                                     <div className=' w-[35%] h-full flex-col flex items-center justify-center text-[24px]'>
                                         <div>
-                                            <h1>Mathematics</h1>
-                                            <h1>English</h1>
-                                            <h1>Biology</h1>
-                                            <h1>Chemistry</h1>
-                                            <h1>Physics</h1>
-                                            <h1>Government</h1>
-                                            <h1>Literature</h1>
-                                            <h1>Commerce</h1>
-                                            <h1>Accounting</h1>
+                                            <h1>WAEC</h1>
+                                            <h1>NECO</h1>
+                                            <h1>JAMB</h1>
+                                            <h1>Common Entrance</h1>
+                                            <h1>And so much more...</h1>
                                         </div>
                                     </div>
                                     <div className=' w-[70%] h-full flex items-center justify-center'>
-                                        <div className=' w-[80%] h-[70%] bg-[#35333D]/50 rounded-2xl'></div>
+                                        <div className=' w-[80%] h-[70%] bg-[#35333D]/50 rounded-2xl'>
+                                            <SubjectsScroll />
+                                        </div>
                                     </div>
                                 </div>
                             </div>
 
+                            {/* Banner */}
+                            <div className=' w-[100vw] text-white lg:min-h-[100vh] bg-gradient-to-b to-transparent via-[#0055FF]/10 from-[#0055FF]/10 px-[5%] flex flex-col items-center justify-center pt-[10vh]'>
+                                <div>
+                                    <img src="/banner.png" alt="" />
+                                </div>
+                            </div>
+
+                            {/* Footer */}
                             <div className=' w-[100vw] text-white min-h-[100vh] bg-gradient-to-b from-transparent via-[#0055FF]/10 to-[#0055FF]/10 px-[5%] flex flex-col items-center justify-center pt-[10vh]'>
                                 <div className=' w-[95%] h-[50vh] bg-[#0055FF] rounded-xl mx-auto flex items-center justify-between px-[2.5%] mb-[10vh]'>
                                     <div className=' w-[40%]'>
@@ -209,7 +246,7 @@ const LandingPage = () => {
                                             to={"/dashboard"}
                                             className=' text-[#000] bg-white px-[40px] py-[7px] rounded-full'
                                         >
-                                           Get Started
+                                            Get Started
                                         </Link>
                                     </div>
                                     <img src="/girl.png" alt="" className=' h-full' />
