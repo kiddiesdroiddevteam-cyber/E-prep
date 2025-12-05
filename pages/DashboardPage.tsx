@@ -30,6 +30,7 @@ const DashboardPage = () => {
   const [profile, setProfile] = useState<any>(null);
   const navigate = useNavigate();
   const [prevScores, setPrevScores] = useState<number[]>([])
+  const [scoreColor, setScoreColor] = useState("")
   const [prevQuiz, setQuiz] = useState<{
     score: number;
     completed: boolean;
@@ -292,6 +293,14 @@ const DashboardPage = () => {
 
                         const formattedDate = `${hours}:${minutes} ${day}-${month}-${year}`;
 
+                        const getScoreColor = (score) => {
+                          if (score >= 70) return '#2ECC71';   // green
+                          else if (score >= 60) return '#A3E4D7'; // mint green
+                          else if (score >= 50) return '#F39C12'; // yellow
+                          else if (score >= 40) return '#D35400'; // orange
+                          else return '#E74C3C';               // red
+                        };
+
                         return (
                           <li key={index} className="flex justify-between items-center p-4 bg-transparent rounded-lg">
                             <div>
@@ -299,7 +308,9 @@ const DashboardPage = () => {
                               <p className="text-sm text-gray-400">Completed at {formattedDate}</p>
                             </div>
                             <div className="text-right">
-                              <p className={`font-bold text-green-400 ${quiz.score <= 30 ? "text-red-500" : quiz.score <= 60 ? "text-amber-500" : quiz.score > 60 && "text-green-500"}`}>Score: {quiz.score}%</p>
+                              <p className="font-bold" style={{ color: getScoreColor(quiz.score) }}>
+                                Score: {quiz.score}%
+                              </p>
                             </div>
                           </li>
                         )
