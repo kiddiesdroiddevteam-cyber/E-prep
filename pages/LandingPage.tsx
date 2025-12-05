@@ -46,11 +46,11 @@ const LandingPage = () => {
                             </div>
 
                             {/* About */}
-                            <div className=' w-[100vw] text-white min-h-[100vh] bg-gradient-to-b to-transparent via-[#0055FF]/10 from-[#0055FF]/10 px-[5%] flex flex-col items-center justify-center pt-[10vh] pb-[30px]'>
+                            <div className=' w-[100vw] text-white min-h-[100vh] bg-gradient-to-b to-transparent via-[#0055FF]/10 from-[#0055FF]/10 px-[5%] flex flex-col items-center justify-center pt-[10vh] max-sm:pb-[30px]'>
                                 <div className=' w-full flex flex-col items-center justify-center mb-[30px]'>
                                     <h1 className=' text-white bg-[#0055FF] px-2 py-1 rounded-full mb-[10px] text-center'>About</h1>
                                     <h1 className=' max-sm:text-[30px] font-semibold text-[48px] text-white mb-[5px] text-center'>About iWanPass</h1>
-                                    <p>Everything you need to know about iWanPass</p>
+                                    <p className="text-center">Everything you need to know about iWanPass</p>
                                 </div>
                                 <div className=' w-[100vw] h-[60vh]  flex flex-col lg:flex-row items-center justify-between px-[2.5%]'>
                                     <div className=' max-sm:w-[95%] mb-[10px] w-[45%]'>
@@ -77,7 +77,7 @@ const LandingPage = () => {
                                 <div className=' w-full flex flex-col items-center justify-center mb-[10px]'>
                                     <h1 className=' text-white bg-[#0055FF] px-2 py-1 rounded-full mb-[10px]'>Features</h1>
                                     <h1 className=' max-sm:text-[30px] font-semibold text-[48px] text-white mb-[5px] text-center'>Features To Boost Your Study</h1>
-                                    <p className=' text-white'>Everything you need to practice and prepare for your exam</p>
+                                    <p className=' text-white className="text-center"'>Everything you need to practice and prepare for your exam</p>
                                 </div>
                                 <div className=' w-[100vw] min-h-[60vh] px-[5%] flex flex-col items-center justify-center pt-[10vh]'>
 
@@ -117,7 +117,7 @@ const LandingPage = () => {
                                 <div className=' w-full flex flex-col items-center justify-center mb-[10px]'>
                                     <h1 className=' text-white bg-[#0055FF] px-2 py-1 rounded-full mb-[10px]'>How It Works</h1>
                                     <h1 className=' max-sm:text-[30px] font-semibold text-[48px] text-white mb-[5px] text-center'>Get Started in Three Simple Steps</h1>
-                                    <p>Three steps to show how to use IwanPass</p>
+                                    <p className="text-center">Three steps to show how to use IwanPass</p>
                                 </div>
                                 <div className=' w-[95%] flex max-sm:flex-col items-center justify-center mb-[10px]'>
                                     <div className=' gridBg bg-[#35333D]/50 flex flex-col items-start justify-between px-[30px] py-[20px] rounded-2xl mx-[10px] h-fit max-sm:w-[95%] mb-[10px] w-[33%] rounded-2xl'>
@@ -148,7 +148,7 @@ const LandingPage = () => {
                                 <div className=' w-full flex flex-col items-center justify-center mb-[20px]'>
                                     <h1 className=' text-white bg-[#0055FF] px-2 py-1 rounded-full mb-[10px]'>Dashboard</h1>
                                     <h1 className=' max-sm:text-[30px] font-semibold text-[48px] text-white mb-[5px] text-center'>Your Personal Study Hub</h1>
-                                    <p>Track Progress, weak topics and past tests.</p>
+                                    <p className="text-center">Track Progress, weak topics and past tests.</p>
                                 </div>
                                 <div>
                                     <img src="/preview.png" alt="" className=' block mt-[10px]' />
@@ -160,7 +160,7 @@ const LandingPage = () => {
                                 <div className=' w-full flex flex-col items-center justify-center mb-[25px]'>
                                     <h1 className=' text-white bg-[#0055FF] px-2 py-1 rounded-full mb-[10px]'>Benefits</h1>
                                     <h1 className=' max-sm:text-[30px] font-semibold text-[48px] text-white mb-[5px] text-center'>Benefits Of Using iWanPass</h1>
-                                    <p>Everything you need to practice and prepare for your exam</p>
+                                    <p className="text-center">Everything you need to practice and prepare for your exam</p>
                                 </div>
                                 <div className=' w-[90%] flex max-sm:flex-col items-center justify-center lg:mb-[10px]'>
                                     <div className=' bg-[#35333D]/50 flex items-center justify-between lg:max-w-fit px-[30px] py-[20px] rounded-2xl mx-[10px] mb-[10px] max-sm:w-[95%]'>
@@ -211,7 +211,7 @@ const LandingPage = () => {
                                 <div className=' w-full flex flex-col items-center justify-center mb-[10px]'>
                                     <h1 className=' text-white bg-[#0055FF] px-2 py-1 rounded-full mb-[10px]'>Our Subjects</h1>
                                     <h1 className=' max-sm:text-[30px] font-semibold text-[48px] text-white mb-[5px] text-center'>Subjects You Can Study</h1>
-                                    <p>Subjects From Waec, Neco, Jamb and more</p>
+                                    <p className="text-center">Subjects From Waec, Neco, Jamb and more</p>
                                 </div>
                                 <div className=' w-[95%] h-[80vh] flex max-sm:flex-col items-center justify-between mb-[10px]'>
                                     <div className=' max-sm:w-[95%] w-[35%] h-full flex-col flex items-center justify-center text-[24px]'>
