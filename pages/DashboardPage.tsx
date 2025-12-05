@@ -30,6 +30,7 @@ const DashboardPage = () => {
   const [profile, setProfile] = useState<any>(null);
   const navigate = useNavigate();
   const [prevScores, setPrevScores] = useState<number[]>([])
+  const [scoreColor, setScoreColor] = useState("")
   const [prevQuiz, setQuiz] = useState<{
     id: string;
     score: number;
@@ -259,7 +260,7 @@ const DashboardPage = () => {
                 <StatCard value={stats?.badges?.length} label="Badges Earned" icon="🏆" />
                 <div className=' gridBg w-[322px] h-[208px] rounded-xl p-[20px]'>
                   <div className="text-4xl">🔥</div>
-                  <h1 className=' text-white font-semibold text-[24px]'>You are on a 5-day streak!</h1>
+                  <h1 className=' text-white font-semibold text-[24px]'>You are on a {stats?.streak}-day streak!</h1>
                   <p className=' text-white text-[14px]'>Incredible work! Consistency is the key to success. Keep the flame alive!</p>
                 </div>
               </div>
@@ -298,6 +299,14 @@ const DashboardPage = () => {
 
                         const formattedDate = `${hours}:${minutes} ${day}-${month}-${year}`;
 
+                        const getScoreColor = (score) => {
+                          if (score >= 70) return '#2ECC71';   // green
+                          else if (score >= 60) return '#A3E4D7'; // mint green
+                          else if (score >= 50) return '#F39C12'; // yellow
+                          else if (score >= 40) return '#D35400'; // orange
+                          else return '#E74C3C';               // red
+                        };
+
                         return (
                           <li
   onClick={() => handleRoute(quiz)}
@@ -309,9 +318,11 @@ const DashboardPage = () => {
     <p className="text-sm text-gray-400">Completed at {formattedDate}</p>
   </div>
   <div className="text-right">
-    <p className={`font-bold text-green-400 ${quiz.score <= 30 ? "text-red-500" : quiz.score <= 60 ? "text-amber-500" : quiz.score > 60 && "text-green-500"}`}>
+    <p className="font-bold" style={{ color: getScoreColor(quiz.score) }}>
+                                
       Score: {quiz.score}%
-    </p>
+    
+                              </p>
   </div>
 </li>
 

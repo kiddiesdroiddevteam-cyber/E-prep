@@ -56,3 +56,31 @@ body {
     background-size: cover;
     background-blend-mode: multiply;
 }
+
+.maths{
+    background-image: linear-gradient(rgba(12, 13, 17, 0.7), rgba(15, 18, 29, 0.7)), url('/maths.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.english{
+    background-image: linear-gradient(rgba(12, 13, 17, 0.7), rgba(15, 18, 29, 0.7)), url('/english.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.physics{
+    background-image: linear-gradient(rgba(12, 13, 17, 0.7), rgba(15, 18, 29, 0.7)), url('/physics.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.banner{
+    background-image: linear-gradient(rgba(12, 13, 17, 0.7), rgba(15, 18, 29, 0.7)), url('/banner.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
