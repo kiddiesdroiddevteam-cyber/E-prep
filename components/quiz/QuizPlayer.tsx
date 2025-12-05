@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Quiz, UserAnswer } from '../../types';
 import Button from '../ui/Button';
@@ -20,7 +19,6 @@ const QuizPlayer: React.FC<QuizPlayerProps> = ({ quiz, onSubmit }) => {
         if (prev > 0) {
           return prev - 1;
         } else {
-          // Time has run out, automatically submit the quiz
           handleSubmit(); // Call handleSubmit when time is 0
           clearInterval(timer); // Stop the timer
           return 0;

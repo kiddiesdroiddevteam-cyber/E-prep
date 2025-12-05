@@ -31,6 +31,7 @@ const DashboardPage = () => {
   const navigate = useNavigate();
   const [prevScores, setPrevScores] = useState<number[]>([])
   const [prevQuiz, setQuiz] = useState<{
+    id: string;
     score: number;
     completed: boolean;
     created_at: string;
@@ -79,7 +80,7 @@ const DashboardPage = () => {
     // Load quiz statistics
     const { data: quizzes } = await supabase
       .from('quizzes')
-      .select('score, completed, created_at, subject') // Select created_at to check quiz completion date
+      .select('id, score, completed, created_at, subject') // Select created_at to check quiz completion date
       .eq('user_id', user.id)
       .eq('completed', true)
       .order('created_at', { ascending: false }); // Order by most recent quiz
@@ -170,6 +171,11 @@ const DashboardPage = () => {
 
   const handleStartQuizClick = () => {
     navigate('/quiz'); // Use navigate to go to the quiz page
+  };
+
+  const handleRoute = (quiz) => {
+    console.log(quiz?.id)
+    navigate(`/quiz?quizId=${quiz?.id}`); // Use navigate to go to the quiz page
   };
 
   const images = [
@@ -293,15 +299,31 @@ const DashboardPage = () => {
                         const formattedDate = `${hours}:${minutes} ${day}-${month}-${year}`;
 
                         return (
-                          <li key={index} className="flex justify-between items-center p-4 bg-transparent rounded-lg">
-                            <div>
-                              <p className="font-semibold text-white">{quiz.subject}</p>
-                              <p className="text-sm text-gray-400">Completed at {formattedDate}</p>
-                            </div>
-                            <div className="text-right">
-                              <p className={`font-bold text-green-400 ${quiz.score <= 30 ? "text-red-500" : quiz.score <= 60 ? "text-amber-500" : quiz.score > 60 && "text-green-500"}`}>Score: {quiz.score}%</p>
-                            </div>
-                          </li>
+                          <li
+  onClick={() => handleRoute(quiz)}
+  key={index}
+  className="flex cursor-pointer justify-between items-center p-4 bg-transparent rounded-lg"
+>
+  <div>
+    <p className="font-semibold text-white">{quiz.subject}</p>
+    <p className="text-sm text-gray-400">Completed at {formattedDate}</p>
+  </div>
+  <div className="text-right">
+    <p className={`font-bold text-green-400 ${quiz.score <= 30 ? "text-red-500" : quiz.score <= 60 ? "text-amber-500" : quiz.score > 60 && "text-green-500"}`}>
+      Score: {quiz.score}%
+    </p>
+  </div>
+</li>
+
+                          // <li onClick={handleRoute} key={index} className="flex cursor-pointer justify-between items-center p-4 bg-transparent rounded-lg">
+                          //   <div>
+                          //     <p className="font-semibold text-white">{quiz.subject}</p>
+                          //     <p className="text-sm text-gray-400">Completed at {formattedDate}</p>
+                          //   </div>
+                          //   <div className="text-right">
+                          //     <p className={`font-bold text-green-400 ${quiz.score <= 30 ? "text-red-500" : quiz.score <= 60 ? "text-amber-500" : quiz.score > 60 && "text-green-500"}`}>Score: {quiz.score}%</p>
+                          //   </div>
+                          // </li>
                         )
                       })
                     }

@@ -5,9 +5,7 @@ import { getRecommendations, analyzeQuizResults } from '../../services/geminiSer
 import Card from '../ui/Card';
 import Button from '../ui/Button';
 import { BookOpenIcon, VideoCameraIcon, ChartBarIcon, SparklesIcon } from './../icons/icons';
-import analysisResult from '../../analysis.json'
 import Spinner from './Spinner';
-import recommendationResult from '../../recommendation.json'
 
 interface QuizResultsProps {
   quiz: Quiz;

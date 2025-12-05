@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { v4 as uuidv4 } from 'uuid';
 import QuizSetup from '../components/quiz/QuizSetup';
@@ -8,9 +8,7 @@ import { Quiz, QuizSettings, UserAnswer, QuizResult, QuizMode, Question } from '
 import { transformQuestions } from '@/helper/transformQuestions';
 // Updated to import both AI generation functions
 import { generateQuizQuestionsFromPdf, generateQuizQuestionsFromTopic } from '../services/geminiService'; // Assuming you put both functions here
-// Removed static JSON imports as we're dynamically fetching
-// import aiQuestions from '../questions-ai.json';
-// import pstQuestions from '../questions.json';
+import { useSearchParams } from "react-router-dom";
 import LoaderIcon from '../components/icons/LoaderIcon';
 import { fetchAlocQuestions } from '../services/alocApiService';
 import { supabase } from '../integrations/supabase/client';
@@ -27,6 +25,126 @@ const QuizFlowPage: React.FC<QuizFlowPageProps> = ({ onBackToDashboard }) => {
   const [quizResult, setQuizResult] = useState<QuizResult | null>(null);
   const [error, setError] = useState<string | null>(null);
   const navigate = useNavigate();
+ const [searchParams] = useSearchParams();
+const quizId = searchParams.get("quizId");
+
+const handleLoadHistory = async (quizAttemptId: string) => {
+  try {
+    // Get user once
+    const { data: userData, error: userError } = await supabase.auth.getUser();
+    if (userError || !userData?.user) throw new Error("User not authenticated");
+
+    const userId = userData.user.id;
+
+    // 1. Fetch attempt data
+    const { data: attempt, error: attemptError } = await supabase
+      .from<any, any>("quiz_attempts")
+      .select("*")
+      .eq("quiz_id", quizAttemptId)
+      .eq("user_id", userId)
+      .single();
+
+    if (attemptError) throw attemptError;
+
+    // 2. Fetch result data
+    const { data: resultData, error: resultError } = await supabase
+      .from<any, any>("quiz_results")
+      .select("*")
+      .eq("quiz_id", quizAttemptId)   // <-- FIXED (results table should reference attempt_id)
+      .eq("user_id", userId)
+      .single();
+
+    if (resultError) throw resultError;
+
+    console.log(attempt, "fetched attempt");
+    console.log(resultData, "fetched result");
+
+    // 3. Rehydrate result
+    const rehydratedResult: QuizResult = {
+      score: resultData.score,
+      answers: resultData.answers,
+      topicPerformance: resultData.topic_performance
+    };
+
+    // 4. Rehydrate quiz
+    const rehydratedQuiz = {
+      questions: attempt.questions,
+      settings: {
+        mode: attempt.mode,
+        selectedSubject: attempt.subject,
+        examType: attempt.exam,
+        numQuestions: attempt.total_questions
+      }
+    };
+
+    console.log(rehydratedQuiz, "rehydratedQuiz");
+    console.log(rehydratedResult, "rehydratedResult");
+
+    // 5. Update context
+    setCurrentQuiz(rehydratedQuiz);
+    setQuizResult(rehydratedResult);
+
+    // 6. Navigate
+    setFlowState("results");
+
+  } catch (error) {
+    console.error("Error loading history:", error);
+    alert("Could not load quiz details.");
+  }
+};
+
+
+//   const handleLoadHistory = async (quizAttemptId: string) => {
+//   try {
+//     // 1. Fetch the attempt data
+//     const { data: attempt, error } = await supabase
+//       .from('quiz_attempts')
+//       .select('*')
+//       .eq('id', quizAttemptId)
+//       .eq('user_id', (await supabase.auth.getUser()).data.user?.id)
+//       .single();
+
+//     if (error) throw error;
+//     const { data: resultData, resultError } = await supabase
+//       .from('quiz_results')
+//       .select('*')
+//       .eq('id', quizAttemptId)
+//       .eq('user_id', (await supabase.auth.getUser()).data.user?.id)
+//       .single();
+
+//     if (resultError) throw resultError;
+//    console.log(attempt, 'fetched attempt');
+//    console.log(resultData, 'fetched attempt');
+//     const rehydratedResult: QuizResult = {
+//       score: attempt.score,
+//       answers: attempt?.answers,
+//       topicPerformance: attempt?.topic_performance
+//     };
+
+//     const rehydratedQuiz = {
+//       questions: attempt?.questions,
+//       settings: {
+//         mode: attempt.mode,
+//         selectedSubject: attempt.subject,
+//         examType: attempt.exam,
+//         numQuestions: attempt.total_questions
+//       }
+//     };
+   
+//     console.log(rehydratedQuiz, 'rehydratedQuiz');
+//     console.log(rehydratedResult, 'rehydratedResult');
+//     // 4. Update Context API
+//     setCurrentQuiz(rehydratedQuiz); 
+//     setQuizResult(rehydratedResult);
+    
+//     // 5. Navigate
+//     setFlowState('results'); 
+
+//   } catch (error) {
+//     console.error('Error loading history:', error);
+//     alert('Could not load quiz details.');
+//   }
+// };
 
   const handleStartQuiz = useCallback(async (settings: QuizSettings) => {
     setFlowState('loading');
@@ -144,28 +262,76 @@ const QuizFlowPage: React.FC<QuizFlowPageProps> = ({ onBackToDashboard }) => {
     try {
       const user = (await supabase.auth.getUser()).data.user;
 
-      const { data, error } = await supabase
-        .from('quizzes')
-        .insert({
-          user_id: user?.id,
-          mode: modeForDB,
-          subject: subjectNameForDB,
-          exam: examTypeForDB, // Storing exam type for past questions
-          score: score,
-          question_ids: [], // You might want to store actual question IDs here if available
-          total_questions: currentQuiz.questions.length,
-          completed: true,
-          time_limit_seconds: currentQuiz.settings.numQuestions * 60, // Assuming 1 minute per question as a rough estimate for time limit
-          created_at: new Date().toISOString(),
-          completed_at: new Date().toISOString()
-        })
-        .select();
+if (!user) {
+  throw new Error("User not authenticated");
+}
 
-      if (error) throw error;
+// 1. Insert into quizzes table
+const { data: quizData, error: quizError } = await supabase
+  .from('quizzes')
+  .insert({
+    user_id: user.id,
+    mode: modeForDB,
+    subject: subjectNameForDB,
+    exam: examTypeForDB,
+    score: score,
+    question_ids: [],
+    total_questions: currentQuiz.questions.length,
+    completed: true,
+    time_limit_seconds: currentQuiz.settings.numQuestions * 60,
+    created_at: new Date().toISOString(),
+    completed_at: new Date().toISOString()
+  })
+  .select()
+  .single(); // Use .single() to get one object instead of an array
 
-      console.log('✅ Quiz inserted:', data);
-      setFlowState('results');
-    } catch (err) {
+if (quizError) throw quizError;
+
+// Capturing the ID from the first insert
+const newQuizId = quizData.id;
+
+// 2. Insert into quiz_attempts table (Linking via quiz_id)
+const { data: attemptData, error: attemptError } = await supabase
+  .from('quiz_attempts')
+  .insert({
+    quiz_id: newQuizId, // <--- Linked here
+    user_id: user.id,
+    mode: modeForDB,
+    subject: subjectNameForDB,
+    exam: examTypeForDB,
+    score: score,
+    questions: currentQuiz.questions,
+    total_questions: currentQuiz.questions.length,
+    completed: true,
+    time_limit_seconds: currentQuiz.settings.numQuestions * 60,
+    created_at: new Date().toISOString(),
+    completed_at: new Date().toISOString()
+  })
+  .select();
+
+if (attemptError) throw attemptError;
+
+// 3. Insert into quiz_results table (Linking via quiz_id)
+const { data: resulttData, error: resultError } = await supabase
+  .from('quiz_results')
+  .insert({
+    quiz_id: newQuizId, // <--- Linked here
+    user_id: user.id,
+    score: result?.score,
+    answers: result?.answers,
+    topic_performance: result?.topicPerformance
+  })
+  .select();
+
+if (resultError) throw resultError;
+
+console.log("✅ Quiz inserted:", quizData);
+console.log("✅ Attempt inserted:", attemptData);
+console.log("✅ Attempt inserted:", resulttData);
+
+setFlowState("results");
+    }
+    catch (err) {
       console.error('Error submitting quiz:', err);
       setError('Failed to save quiz results. Please try again.');
       setFlowState('results'); // Still show results, but indicate save failure
@@ -208,6 +374,11 @@ const QuizFlowPage: React.FC<QuizFlowPageProps> = ({ onBackToDashboard }) => {
     }
   };
 
+  useEffect(() => {
+  if (quizId) {
+    handleLoadHistory(quizId);
+  }
+}, [quizId]);
   return (
     <div className=" bg-gradient-to-b to-transparent via-transparent from-[#0055FF]/10">
       {flowState !== 'setup' && (
