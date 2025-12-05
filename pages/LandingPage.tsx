@@ -46,7 +46,7 @@ const LandingPage = () => {
                             </div>
 
                             {/* About */}
-                            <div className=' w-[100vw] text-white min-h-[100vh] bg-gradient-to-b to-transparent via-[#0055FF]/10 from-[#0055FF]/10 px-[5%] flex flex-col items-center justify-center pt-[10vh]'>
+                            <div className=' w-[100vw] text-white min-h-[100vh] bg-gradient-to-b to-transparent via-[#0055FF]/10 from-[#0055FF]/10 px-[5%] flex flex-col items-center justify-center pt-[10vh] pb-[30px]'>
                                 <div className=' w-full flex flex-col items-center justify-center mb-[30px]'>
                                     <h1 className=' text-white bg-[#0055FF] px-2 py-1 rounded-full mb-[10px] text-center'>About</h1>
                                     <h1 className=' max-sm:text-[30px] font-semibold text-[48px] text-white mb-[5px] text-center'>About iWanPass</h1>
