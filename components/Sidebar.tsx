@@ -1,7 +1,8 @@
 import SchoolIcon from '@mui/icons-material/School';
 import LogoutIcon from '@mui/icons-material/Logout';
 import { useAuth } from '@/contexts/AuthContext';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
+import { Link } from '@tanstack/react-router';
 import HomeRoundedIcon from '@mui/icons-material/HomeRounded';
 import QuizRoundedIcon from '@mui/icons-material/QuizRounded';
 import BarChartRoundedIcon from '@mui/icons-material/BarChartRounded';

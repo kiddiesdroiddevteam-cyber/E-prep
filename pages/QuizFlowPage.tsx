@@ -1,14 +1,13 @@
 import React, { useState, useCallback, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from '@tanstack/react-router';
 import { v4 as uuidv4 } from 'uuid';
 import QuizSetup from '../components/quiz/QuizSetup';
 import QuizPlayer from '../components/quiz/QuizPlayer';
 import QuizResults from '../components/quiz/QuizResults';
 import { Quiz, QuizSettings, UserAnswer, QuizResult, QuizMode, Question } from '../types';
 import { transformQuestions } from '@/helper/transformQuestions';
-// Updated to import both AI generation functions
+import { quizRoute } from '@/router';
 import { generateQuizQuestionsFromPdf, generateQuizQuestionsFromTopic } from '../services/geminiService'; // Assuming you put both functions here
-import { useSearchParams } from "react-router-dom";
 import LoaderIcon from '../components/icons/LoaderIcon';
 import { fetchAlocQuestions } from '../services/alocApiService';
 import { supabase } from '../integrations/supabase/client';
@@ -25,8 +24,8 @@ const QuizFlowPage: React.FC<QuizFlowPageProps> = ({ onBackToDashboard }) => {
   const [quizResult, setQuizResult] = useState<QuizResult | null>(null);
   const [error, setError] = useState<string | null>(null);
   const navigate = useNavigate();
- const [searchParams] = useSearchParams();
-const quizId = searchParams.get("quizId");
+ const { quizId } = quizRoute.useSearch();
+// const quizId = searchParams.get("quizId");
 
 const handleLoadHistory = async (quizAttemptId: string) => {
   try {
@@ -93,58 +92,6 @@ const handleLoadHistory = async (quizAttemptId: string) => {
   }
 };
 
-
-//   const handleLoadHistory = async (quizAttemptId: string) => {
-//   try {
-//     // 1. Fetch the attempt data
-//     const { data: attempt, error } = await supabase
-//       .from('quiz_attempts')
-//       .select('*')
-//       .eq('id', quizAttemptId)
-//       .eq('user_id', (await supabase.auth.getUser()).data.user?.id)
-//       .single();
-
-//     if (error) throw error;
-//     const { data: resultData, resultError } = await supabase
-//       .from('quiz_results')
-//       .select('*')
-//       .eq('id', quizAttemptId)
-//       .eq('user_id', (await supabase.auth.getUser()).data.user?.id)
-//       .single();
-
-//     if (resultError) throw resultError;
-//    console.log(attempt, 'fetched attempt');
-//    console.log(resultData, 'fetched attempt');
-//     const rehydratedResult: QuizResult = {
-//       score: attempt.score,
-//       answers: attempt?.answers,
-//       topicPerformance: attempt?.topic_performance
-//     };
-
-//     const rehydratedQuiz = {
-//       questions: attempt?.questions,
-//       settings: {
-//         mode: attempt.mode,
-//         selectedSubject: attempt.subject,
-//         examType: attempt.exam,
-//         numQuestions: attempt.total_questions
-//       }
-//     };
-   
-//     console.log(rehydratedQuiz, 'rehydratedQuiz');
-//     console.log(rehydratedResult, 'rehydratedResult');
-//     // 4. Update Context API
-//     setCurrentQuiz(rehydratedQuiz); 
-//     setQuizResult(rehydratedResult);
-    
-//     // 5. Navigate
-//     setFlowState('results'); 
-
-//   } catch (error) {
-//     console.error('Error loading history:', error);
-//     alert('Could not load quiz details.');
-//   }
-// };
 
   const handleStartQuiz = useCallback(async (settings: QuizSettings) => {
     setFlowState('loading');
@@ -351,7 +298,7 @@ setFlowState("results");
   }, []);
 
   const handleBackToDashboard = () => {
-    navigate('/');
+    navigate({to: '/dashboard'});
   }
 
   const renderContent = () => {

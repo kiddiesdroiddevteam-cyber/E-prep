@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+// import { useNavigate } from 'react-router-dom';
+import { useNavigate } from '@tanstack/react-router';
 import { toast } from 'sonner'; // Assuming you have sonner for toasts
 import { z } from 'zod'; // For schema validation
 import { useAuth } from '../contexts/AuthContext'; // Assuming AuthContext is in this path
@@ -37,7 +38,10 @@ const AuthPage: React.FC = () => {
 
   // Redirect if already logged in
   if (user) {
-    navigate('/dashboard'); // Navigate to dashboard or home page after successful login
+      navigate(
+        {
+            to: '/dashboard',
+          })
     return null;
   }
 

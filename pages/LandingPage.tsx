@@ -1,6 +1,6 @@
 import BookOpenIcon from '@/components/icons/BookOpenIcon';
 import React, { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom';
+import { Link } from '@tanstack/react-router'
 import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
 import InsertChartIcon from '@mui/icons-material/InsertChart';
 import AutoStoriesOutlinedIcon from '@mui/icons-material/AutoStoriesOutlined';

@@ -1,710 +1,641 @@
-{
-    "subject": "english",
-    "status": 200,
-    "total": 37,
-    "data": [
-        {
-            "id": 1303,
-            "question": "If James fails his examination, his teachers, his parents, his friends, or I ______ to be blame.",
-            "option": {
-                "a": "are",
-                "b": "is",
-                "c": "am",
-                "d": "not"
-            },
-            "section": "Fill in the gap with the option that best completes the sentence.",
-            "image": "",
-            "answer": "c",
-            "solution": "When there is a list of nouns or pronouns at the level of the subject, it is the nearest noun or pronoun to the position of the verb that will determine the choice of the verb.",
-            "examtype": "utme",
-            "examyear": "2022",
-            "questionNub": 50,
-            "hasPassage": 0,
-            "category": "others"
-        },
-        {
-            "id": 1259,
-            "question": "What is Ummi's Occupation?",
-            "option": {
-                "a": "Trader",
-                "b": "Teacher",
-                "c": "Business woman",
-                "d": "Nurse"
-            },
-            "section": "This question is based on Khadijat Abubakar Jalli's novel, \"The Life Changer\"",
-            "image": "",
-            "answer": "b",
-            "solution": "",
-            "examtype": "utme",
-            "examyear": "2022",
-            "questionNub": 6,
-            "hasPassage": 0,
-            "category": "others"
-        },
-        {
-            "id": 1288,
-            "question": "Choose the option that has the same consonant sound as the one represented by the letter(s) underlined.\n\nNa<u>t</u>ional\n\n\n",
-            "option": {
-                "a": "sugar",
-                "b": "raise",
-                "c": "glass",
-                "d": "tree"
-            },
-            "section": "",
-            "image": "",
-            "answer": "a",
-            "solution": "Both have the /ʃ/ sound.",
-            "examtype": "utme",
-            "examyear": "2022",
-            "questionNub": 35,
-            "hasPassage": 0,
-            "category": "others"
-        },
-        {
-            "id": 1289,
-            "question": "Identify the word that has the stress on the first syllable",
-            "option": {
-                "a": "Hotel",
-                "b": "Esteem",
-                "c": "Police",
-                "d": "Table"
-            },
-            "section": "",
-            "image": "",
-            "answer": "d",
-            "solution": "Only table is stressed on the first syllable.",
-            "examtype": "utme",
-            "examyear": "2022",
-            "questionNub": 36,
-            "hasPassage": 0,
-            "category": "others"
-        },
-        {
-            "id": 1307,
-            "question": "Bankole is upset as his wife does not understand his <u>predicament</u> .",
-            "option": {
-                "a": "sadness",
-                "b": "dilemma",
-                "c": "deadlock",
-                "d": "happiness"
-            },
-            "section": "From the options lettered A-D, choose the option that is nearest in meaning to the underlined word.\n",
-            "image": "",
-            "answer": "b",
-            "solution": "Both words mean a situation in which a difficult choice has to be made between two different things you could do.",
-            "examtype": "utme",
-            "examyear": "2022",
-            "questionNub": 54,
-            "hasPassage": 0,
-            "category": "others"
-        },
-        {
-            "id": 1287,
-            "question": "Aderonke STATED she had a right to her privacy.",
-            "option": {
-                "a": " Did Aderonke lament she had a right to her privacy?",
-                "b": "Did Omowunmi state she had a right to her privacy?",
-                "c": " Did Aderonke state she had a right to his privacy?",
-                "d": "Did Aderonke state she had a right to her openness?"
-            },
-            "section": "In each of the following sentences, the word that receives the emphatic stress is written in capital letters. From the options lettered A to D, choose the appropriate answer.",
-            "image": "",
-            "answer": "a",
-            "solution": "When answering emphatic stress questions, the option that does not have the \"stressed word\" becomes the correct answer.",
-            "examtype": "utme",
-            "examyear": "2022",
-            "questionNub": 34,
-            "hasPassage": 0,
-            "category": "others"
-        },
-        {
-            "id": 1313,
-            "question": "Choose the option that has the same stress pattern as the given word.\n\nStudent",
-            "option": {
-                "a": "Refuse(N)",
-                "b": "Propose",
-                "c": "Rebel(V)",
-                "d": "Superb"
-            },
-            "section": "",
-            "image": "",
-            "answer": "a",
-            "solution": "Refuse(N) and student are both stressed on the first syllable unlike other options stressed on the second syllable.",
-            "examtype": "utme",
-            "examyear": "2022",
-            "questionNub": 60,
-            "hasPassage": 0,
-            "category": "others"
-        },
-        {
-            "id": 1290,
-            "question": "From the options lettered A-D, choose the option that is most nearly opposite in meaning to the underlined word.\n\nTwice, he was <u>repulsed</u> with heavy losses",
-            "option": {
-                "a": "repelled",
-                "b": "gratified",
-                "c": "irated",
-                "d": "shocked"
-            },
-            "section": "",
-            "image": "",
-            "answer": "b",
-            "solution": "Repulsed means to be filled with disgust. The most nearly opposite option is gratified.",
-            "examtype": "utme",
-            "examyear": "2022",
-            "questionNub": 37,
-            "hasPassage": 0,
-            "category": "others"
-        },
-        {
-            "id": 1284,
-            "question": "Choose the option that has the same consonant sound as the one represented by the letter(s) underlined.\n\nWatch<u>ed</u>",
-            "option": {
-                "a": "lived",
-                "b": "address",
-                "c": "letter",
-                "d": "match"
-            },
-            "section": "",
-            "image": "",
-            "answer": "c",
-            "solution": "Both have the /t/ sound.",
-            "examtype": "utme",
-            "examyear": "2022",
-            "questionNub": 31,
-            "hasPassage": 0,
-            "category": "others"
-        },
-        {
-            "id": 1310,
-            "question": "Choose the option that has the same consonant sound as the one represented by the letter(s) underlined.\n\nMo<u>th</u>er",
-            "option": {
-                "a": "think",
-                "b": "teacher",
-                "c": "breathe",
-                "d": "watched"
-            },
-            "section": "",
-            "image": "",
-            "answer": "c",
-            "solution": "Both words have the /ð/ sound.",
-            "examtype": "utme",
-            "examyear": "2022",
-            "questionNub": 57,
-            "hasPassage": 0,
-            "category": "others"
-        },
-        {
-            "id": 1292,
-            "question": "My father is <u>parsimonious</u>",
-            "option": {
-                "a": "thrifty",
-                "b": "ungenerous",
-                "c": "frugal",
-                "d": "generous"
-            },
-            "section": "From the options lettered A-D, choose the option that is most nearly opposite in meaning to the underlined word.\n",
-            "image": "",
-            "answer": "d",
-            "solution": "Parsimonious means to be very unwilling to spend money or use resources. The nearly opposite word is generous.",
-            "examtype": "utme",
-            "examyear": "2022",
-            "questionNub": 39,
-            "hasPassage": 0,
-            "category": "others"
-        },
-        {
-            "id": 1257,
-            "question": "Ummi's husband wanted to study law but the providence chose that he study _____",
-            "option": {
-                "a": "commerce",
-                "b": "accounting",
-                "c": "law",
-                "d": "history"
-            },
-            "section": "This question is based on Khadijat Abubakar Jalli's novel, \"The Life Changer\"",
-            "image": "",
-            "answer": "b",
-            "solution": "",
-            "examtype": "utme",
-            "examyear": "2022",
-            "questionNub": 4,
-            "hasPassage": 0,
-            "category": "others"
-        },
-        {
-            "id": 1295,
-            "question": "Choose the option that has the same consonant sound as the one represented by the letter(s) underlined.\n\n<u>F</u>oot",
-            "option": {
-                "a": "live",
-                "b": "vegetable",
-                "c": "traffic",
-                "d": "of"
-            },
-            "section": "",
-            "image": "",
-            "answer": "c",
-            "solution": "Both words have the /f/ sound. Others have the /v/ sound.",
-            "examtype": "utme",
-            "examyear": "2022",
-            "questionNub": 42,
-            "hasPassage": 0,
-            "category": "others"
-        },
-        {
-            "id": 1285,
-            "question": "John's watch is made of GOLD.",
-            "option": {
-                "a": "Whose watch is made of gold?",
-                "b": "What is made of gold?",
-                "c": "Is John's watch made of silver?",
-                "d": "Is John's necklace made of gold?"
-            },
-            "section": "In each of the following sentences, the word that receives the emphatic stress is written in capital letters. From the options lettered A to D, choose the appropriate answer.",
-            "image": "",
-            "answer": "c",
-            "solution": "When answering emphatic stress questions, the option that does not have the \"stressed word\" becomes the correct answer.",
-            "examtype": "utme",
-            "examyear": "2022",
-            "questionNub": 32,
-            "hasPassage": 0,
-            "category": "others"
-        },
-        {
-            "id": 1274,
-            "question": "One reason the narrator had the habit of entering her children's room unannounced was because",
-            "option": {
-                "a": "to monitor their hygiene and tidiness",
-                "b": "to monitor their prayer life",
-                "c": "to check on their welfare",
-                "d": " to keep them studying their books"
-            },
-            "section": "This question is based on Khadijat Abubakar Jalli's novel, \"The Life Changer\"",
-            "image": "",
-            "answer": "a",
-            "solution": "",
-            "examtype": "utme",
-            "examyear": "2022",
-            "questionNub": 21,
-            "hasPassage": 0,
-            "category": "others"
-        },
-        {
-            "id": 1300,
-            "question": "My account with the bank is in the red. This means that my account is",
-            "option": {
-                "a": "heavy",
-                "b": "in danger",
-                "c": "overdrawn",
-                "d": " written in red ink"
-            },
-            "section": "",
-            "image": "",
-            "answer": "c",
-            "solution": "Self-explanatory.",
-            "examtype": "utme",
-            "examyear": "2022",
-            "questionNub": 47,
-            "hasPassage": 0,
-            "category": "others"
-        },
-        {
-            "id": 1309,
-            "question": "Now that the company is <u>insolvent</u> , it will shut down.",
-            "option": {
-                "a": "overworked",
-                "b": "unstable",
-                "c": "bankrupt",
-                "d": "affluent"
-            },
-            "section": "From the options lettered A-D, choose the option that is nearest in meaning to the underlined word.\n",
-            "image": "",
-            "answer": "c",
-            "solution": "Both mean to be unable to pay what you owe because you do not have enough money.",
-            "examtype": "utme",
-            "examyear": "2022",
-            "questionNub": 56,
-            "hasPassage": 0,
-            "category": "others"
-        },
-        {
-            "id": 1272,
-            "question": "\"Nothing happened, My friend didn't feel like giving you her number so she gave you mine instead\" Who is the friend?",
-            "option": {
-                "a": "Salma",
-                "b": "Ada",
-                "c": "Tomiwa",
-                "d": "Ngozi"
-            },
-            "section": "This question is based on Khadijat Abubakar Jalli's novel, \"The Life Changer\"",
-            "image": "",
-            "answer": "a",
-            "solution": "",
-            "examtype": "utme",
-            "examyear": "2022",
-            "questionNub": 19,
-            "hasPassage": 0,
-            "category": "others"
-        },
-        {
-            "id": 1293,
-            "question": "Last Easter was an <u>austere</u> period.",
-            "option": {
-                "a": "harsh",
-                "b": "severe",
-                "c": "prosperous",
-                "d": "sour"
-            },
-            "section": "From the options lettered A-D, choose the option that is most nearly opposite in meaning to the underlined word.\n",
-            "image": "",
-            "answer": "c",
-            "solution": "Austere stresses absence of warmth, color, or feeling and may apply to rigorous restraint, simplicity, or self-denial. The most nearest in meaning is prosperous.",
-            "examtype": "utme",
-            "examyear": "2022",
-            "questionNub": 40,
-            "hasPassage": 0,
-            "category": "others"
-        },
-        {
-            "id": 1273,
-            "question": "It might be said that there is some kind of sibling rivalry between",
-            "option": {
-                "a": "Teemah and Bint",
-                "b": "Teemah and Omar",
-                "c": "Jamila and Omar",
-                "d": "Jamila and Teemah"
-            },
-            "section": "This question is based on Khadijat Abubakar Jalli's novel, \"The Life Changer\"",
-            "image": "",
-            "answer": "b",
-            "solution": "",
-            "examtype": "utme",
-            "examyear": "2022",
-            "questionNub": 20,
-            "hasPassage": 0,
-            "category": "others"
-        },
-        {
-            "id": 1294,
-            "question": "Choose the word that has a different stress pattern",
-            "option": {
-                "a": "Project(V)",
-                "b": "Basic",
-                "c": "Suspect(V)",
-                "d": "Neglect"
-            },
-            "section": "",
-            "image": "",
-            "answer": "b",
-            "solution": "All other options are stressed on the second syllable except basic that is stressed on the first syllable.",
-            "examtype": "utme",
-            "examyear": "2022",
-            "questionNub": 41,
-            "hasPassage": 0,
-            "category": "others"
-        },
-        {
-            "id": 1308,
-            "question": "It is wise not to depend on <u>mundane</u> things.",
-            "option": {
-                "a": "imported",
-                "b": "material",
-                "c": "attractive",
-                "d": "expensive"
-            },
-            "section": "From the options lettered A-D, choose the option that is nearest in meaning to the underlined word.\n",
-            "image": "",
-            "answer": "b",
-            "solution": "Both means things that are of this earthly world rather than a heavenly or spiritual one.",
-            "examtype": "utme",
-            "examyear": "2022",
-            "questionNub": 55,
-            "hasPassage": 0,
-            "category": "others"
-        },
-        {
-            "id": 1262,
-            "question": "What is the full name of Salma?",
-            "option": {
-                "a": " Salma Mohammed",
-                "b": "Salma Johnson",
-                "c": "Salma Samuel",
-                "d": "Salma Ahmed"
-            },
-            "section": "This question is based on Khadijat Abubakar Jalli's novel, \"The Life Changer\"",
-            "image": "",
-            "answer": "a",
-            "solution": "",
-            "examtype": "utme",
-            "examyear": "2022",
-            "questionNub": 9,
-            "hasPassage": 0,
-            "category": "others"
-        },
-        {
-            "id": 1283,
-            "question": "Choose the word that has a different stress pattern",
-            "option": {
-                "a": "embrace",
-                "b": "suspect(V)",
-                "c": "member",
-                "d": "project(V)"
-            },
-            "section": "",
-            "image": "",
-            "answer": "c",
-            "solution": "All the other options are stressed on the second syllable except suspend that is stressed on the first syllable.",
-            "examtype": "utme",
-            "examyear": "2022",
-            "questionNub": 30,
-            "hasPassage": 0,
-            "category": "others"
-        },
-        {
-            "id": 1256,
-            "question": "Who was Omar's immediate sister? ",
-            "option": {
-                "a": "Ummi",
-                "b": "Omar",
-                "c": "Salma",
-                "d": "Teemah"
-            },
-            "section": "This question is based on Khadijat Abubakar Jalli's novel, \"The Life Changer\"",
-            "image": "",
-            "answer": "d",
-            "solution": "",
-            "examtype": "utme",
-            "examyear": "2022",
-            "questionNub": 3,
-            "hasPassage": 0,
-            "category": "others"
-        },
-        {
-            "id": 1291,
-            "question": "I only visited Chidi. This means that",
-            "option": {
-                "a": "None of the above",
-                "b": "I didn't do anything asides visiting Chidi",
-                "c": " I didn't go with anyone to visit Chidi",
-                "d": "I visited Chidi and his friends"
-            },
-            "section": "",
-            "image": "",
-            "answer": "b",
-            "solution": "The general rule is adverbs should be placed next to the thing they modify. Here, the adverb is modifying visited .",
-            "examtype": "utme",
-            "examyear": "2022",
-            "questionNub": 38,
-            "hasPassage": 0,
-            "category": "others"
-        },
-        {
-            "id": 1270,
-            "question": "What is the full meaning of the acronym EMAL",
-            "option": {
-                "a": "Examination Malpractice",
-                "b": "Examination misconduct",
-                "c": "Examination management",
-                "d": "Examination Manners"
-            },
-            "section": "This question is based on Khadijat Abubakar Jalli's novel, \"The Life Changer\"",
-            "image": "",
-            "answer": "a",
-            "solution": "",
-            "examtype": "utme",
-            "examyear": "2022",
-            "questionNub": 17,
-            "hasPassage": 0,
-            "category": "others"
-        },
-        {
-            "id": 1301,
-            "question": "Between you and _____, he is a liar.",
-            "option": {
-                "a": "all of the above",
-                "b": "me",
-                "c": "i",
-                "d": "none of the above"
-            },
-            "section": "Fill in the gap with the option that best completes the sentence.",
-            "image": "",
-            "answer": "b",
-            "solution": "Use the pronoun \"me\" when the person speaking is receiving the action of the verb in some way, either directly or indirectly.",
-            "examtype": "utme",
-            "examyear": "2022",
-            "questionNub": 48,
-            "hasPassage": 0,
-            "category": "others"
-        },
-        {
-            "id": 1305,
-            "question": "We ought to stay away ______ the robbers come back",
-            "option": {
-                "a": "provided",
-                "b": "should in case",
-                "c": "although",
-                "d": "in case"
-            },
-            "section": "Fill in the gap with the option that best completes the sentence.",
-            "image": "",
-            "answer": "d",
-            "solution": "When you go to a meeting, or to your workplace you are on business, similarly if you go on an overseas trip for work you are on business.",
-            "examtype": "utme",
-            "examyear": "2022",
-            "questionNub": 52,
-            "hasPassage": 0,
-            "category": "others"
-        },
-        {
-            "id": 1258,
-            "question": "The full meaning of IPO is ______",
-            "option": {
-                "a": " Independent Police Officer",
-                "b": " International Police Officer",
-                "c": "Investigating Police Officer",
-                "d": " Investigative Police Officer"
-            },
-            "section": "This question is based on Khadijat Abubakar Jalli's novel, \"The Life Changer\"",
-            "image": "",
-            "answer": "c",
-            "solution": "See page 25",
-            "examtype": "utme",
-            "examyear": "2022",
-            "questionNub": 5,
-            "hasPassage": 0,
-            "category": "others"
-        },
-        {
-            "id": 1260,
-            "question": "What is Ummi Matric Number?  ",
-            "option": {
-                "a": "UG0001",
-                "b": "UG00001",
-                "c": "UG001",
-                "d": "UG0011"
-            },
-            "section": "This question is based on Khadijat Abubakar Jalli's novel, \"The Life Changer\"",
-            "image": "",
-            "answer": "a",
-            "solution": "See page 17",
-            "examtype": "utme",
-            "examyear": "2022",
-            "questionNub": 7,
-            "hasPassage": 0,
-            "category": "others"
-        },
-        {
-            "id": 1297,
-            "question": "Choose the option that has a different vowel sound from the others",
-            "option": {
-                "a": "beach",
-                "b": "ski",
-                "c": "be",
-                "d": "been"
-            },
-            "section": "",
-            "image": "",
-            "answer": "c",
-            "solution": "Only been has the /ɪ/ sound. Others have the /i:/ sound.",
-            "examtype": "utme",
-            "examyear": "2022",
-            "questionNub": 44,
-            "hasPassage": 0,
-            "category": "others"
-        },
-        {
-            "id": 1265,
-            "question": " What question did Bint ask her teacher?",
-            "option": {
-                "a": "How to say good morning",
-                "b": "How to say what is your name",
-                "c": " How to say you're welcome",
-                "d": "How to say that's very good"
-            },
-            "section": "This question is based on Khadijat Abubakar Jalli's novel, \"The Life Changer\"",
-            "image": "",
-            "answer": "d",
-            "solution": "",
-            "examtype": "utme",
-            "examyear": "2022",
-            "questionNub": 12,
-            "hasPassage": 0,
-            "category": "others"
-        },
-        {
-            "id": 1261,
-            "question": "What is full meaning of EMEC",
-            "option": {
-                "a": "Examination Malpractice and Ethics Committee",
-                "b": "Examining Malpractice and Ethics Committee",
-                "c": "Examination Malpractice and Ethics Convention",
-                "d": "Examination Management and Ethics Committee"
-            },
-            "section": "This question is based on Khadijat Abubakar Jalli's novel, \"The Life Changer\"",
-            "image": "",
-            "answer": "a",
-            "solution": "",
-            "examtype": "utme",
-            "examyear": "2022",
-            "questionNub": 8,
-            "hasPassage": 0,
-            "category": "others"
-        },
-        {
-            "id": 1296,
-            "question": "Choose the option that has a different vowel sound from the others",
-            "option": {
-                "a": "here",
-                "b": "beer",
-                "c": "idea",
-                "d": "head"
-            },
-            "section": "",
-            "image": "",
-            "answer": "d",
-            "solution": "All options have /ɪə/ except head that has the /e/ sound.",
-            "examtype": "utme",
-            "examyear": "2022",
-            "questionNub": 43,
-            "hasPassage": 0,
-            "category": "others"
-        },
-        {
-            "id": 1263,
-            "question": "Who was the narrator of the life changer?",
-            "option": {
-                "a": "Salma",
-                "b": "Ummi",
-                "c": "Omar",
-                "d": "Bint"
-            },
-            "section": "This question is based on Khadijat Abubakar Jalli's novel, \"The Life Changer\"",
-            "image": "",
-            "answer": "b",
-            "solution": "",
-            "examtype": "utme",
-            "examyear": "2022",
-            "questionNub": 10,
-            "hasPassage": 0,
-            "category": "others"
-        },
-        {
-            "id": 1264,
-            "question": "How old is Bint ?",
-            "option": {
-                "a": "6 years old",
-                "b": "4 years old",
-                "c": "5 years old",
-                "d": "7 years old"
-            },
-            "section": "This question is based on Khadijat Abubakar Jalli's novel, \"The Life Changer\"",
-            "image": "",
-            "answer": "c",
-            "solution": "",
-            "examtype": "utme",
-            "examyear": "2022",
-            "questionNub": 11,
-            "hasPassage": 0,
-            "category": "others"
-        }
-    ]
-}
+[
+  {
+    "questionText": "Which of the following substances is an example of a fine chemical?",
+    "options": [
+      "Sodium hydroxide",
+      "Hydrochloric acid",
+      "Ethylene",
+      "Ammonia"
+    ],
+    "correctAnswer": "Ethylene",
+    "examType": "WAEC",
+    "examYear": "2020",
+    "subject": "Chemistry"
+  },
+  {
+    "questionText": "The IUPAC name of the compound represented by the structure below is ?",
+    "options": [
+      "2-chloro but-1,3-diene",
+      "But-1,3-chlorodiene",
+      "2-chloro but-diene",
+      "3-chloro but-1,3-diene"
+    ],
+    "correctAnswer": "3-chloro but-1,3-diene",
+    "examType": "WAEC",
+    "examYear": "2020",
+    "subject": "Chemistry"
+  },
+  {
+    "questionText": "Which of the following substances is a polypeptide?",
+    "options": [
+      "Starch",
+      "Glycogen",
+      "Protein",
+      "Fats"
+    ],
+    "correctAnswer": "Protein",
+    "examType": "WAEC",
+    "examYear": "2020",
+    "subject": "Chemistry"
+  },
+  {
+    "questionText": "Which of the following products could be formed during incomplete combustion of a hydrocarbon?",
+    "options": [
+      "I only",
+      "I and II only",
+      "I and III only",
+      "II and III only"
+    ],
+    "correctAnswer": "I and III only",
+    "examType": "WAEC",
+    "examYear": "2020",
+    "subject": "Chemistry"
+  },
+  {
+    "questionText": "What quantity of electrons is lost when one mole of iron (II) ions is oxidized to iron (III)?",
+    "options": [
+      "0 mole",
+      "3 moles",
+      "1 mole",
+      "2 moles"
+    ],
+    "correctAnswer": "1 mole",
+    "examType": "WAEC",
+    "examYear": "2020",
+    "subject": "Chemistry"
+  },
+  {
+    "questionText": "What is the mass of silver deposited when 24,125 C of electricity is passed through a solution of silver salt? [Ag = 108, F = 96,500 C]",
+    "options": [
+      "432g",
+      "108g",
+      "54g",
+      "27g"
+    ],
+    "correctAnswer": "27g",
+    "examType": "WAEC",
+    "examYear": "2020",
+    "subject": "Chemistry"
+  },
+  {
+    "questionText": "Equal masses of calcium trioxocarbonate(IV) were added to dilute hydrochloric acid at the temperature specified. Under which of the following conditions would the reaction be slowest?",
+    "options": [
+      "Calcium trioxocarbonate(IV) chips at 20°C",
+      "Calcium trioxocarbonate(IV) chips at 40°C",
+      "Calcium trioxocarbonate(IV) powder at 20°C",
+      "Calcium trioxocarbonate(IV) powder at 40°C"
+    ],
+    "correctAnswer": "Calcium trioxocarbonate(IV) chips at 20°C",
+    "examType": "WAEC",
+    "examYear": "2020",
+    "subject": "Chemistry"
+  },
+  {
+    "questionText": "The high solubility of ethanol in water is due to?",
+    "options": [
+      "its low boiling point",
+      "its low freezing point",
+      "its covalent nature",
+      "hydrogen bonding"
+    ],
+    "correctAnswer": "hydrogen bonding",
+    "examType": "WAEC",
+    "examYear": "2020",
+    "subject": "Chemistry"
+  },
+  {
+    "questionText": "Which of the following pairs of properties of alkali metals decreases down the group?",
+    "options": [
+      "First ionization energy and reactivity",
+      "Melting point and atomic radius",
+      "Reactivity and electronegativity",
+      "First ionization energy and melting point"
+    ],
+    "correctAnswer": "First ionization energy and melting point",
+    "examType": "WAEC",
+    "examYear": "2020",
+    "subject": "Chemistry"
+  },
+  {
+    "questionText": "The most suitable process of obtaining water from an aqueous solution of sugar is",
+    "options": [
+      "Crystallization",
+      "Distillation",
+      "Filtration",
+      "Decantation"
+    ],
+    "correctAnswer": "Distillation",
+    "examType": "WAEC",
+    "examYear": "2020",
+    "subject": "Chemistry"
+  },
+  {
+    "questionText": "Group VII elements in their combined states are called?",
+    "options": [
+      "Halogens",
+      "Anions",
+      "Halide",
+      "Cations"
+    ],
+    "correctAnswer": "Halide",
+    "examType": "WAEC",
+    "examYear": "2020",
+    "subject": "Chemistry"
+  },
+  {
+    "questionText": "When an ionic bond is broken, bonding electrons are",
+    "options": [
+      "shared between participating atoms",
+      "gained by the most electropositive atom",
+      "gained by the most electronegative atom",
+      "lost by both participating atoms"
+    ],
+    "correctAnswer": "gained by the most electronegative atom",
+    "examType": "WAEC",
+    "examYear": "2020",
+    "subject": "Chemistry"
+  },
+  {
+    "questionText": "The oxidation state of chlorine in NaClO3 is?",
+    "options": [
+      "+1",
+      "+3",
+      "+5",
+      "+6"
+    ],
+    "correctAnswer": "+5",
+    "examType": "WAEC",
+    "examYear": "2020",
+    "subject": "Chemistry"
+  },
+  {
+    "questionText": "A balanced chemical equation is based on the law of?",
+    "options": [
+      "Periodicity",
+      "Constant composition",
+      "Multiple proportion",
+      "Conservation of mass"
+    ],
+    "correctAnswer": "Conservation of mass",
+    "examType": "WAEC",
+    "examYear": "2020",
+    "subject": "Chemistry"
+  },
+  {
+    "questionText": "Which of the following pairs of elements has the greatest difference in electronegativity?",
+    "options": [
+      "Na and F",
+      "Na and Cl",
+      "Na and Br",
+      "Na and I"
+    ],
+    "correctAnswer": "Na and F",
+    "examType": "WAEC",
+    "examYear": "2020",
+    "subject": "Chemistry"
+  },
+  {
+    "questionText": "A factor that is considered most important when siting a chemical industry is?",
+    "options": [
+      "nearness to other industrial establishments",
+      "nearness to raw materials",
+      "favourable climate conditions",
+      "availability of storage facilities"
+    ],
+    "correctAnswer": "nearness to raw materials",
+    "examType": "WAEC",
+    "examYear": "2020",
+    "subject": "Chemistry"
+  },
+  {
+    "questionText": "The boiling point of pentane is higher than that of propane because?",
+    "options": [
+      "carbon-carbon single bonds are stronger than carbon-hydrogen bonds",
+      "Pentane has more covalent bonds to break",
+      "Pentane does not burn easily as propane",
+      "The intermolecular forces in pentane are stronger than those of propane"
+    ],
+    "correctAnswer": "The intermolecular forces in pentane are stronger than those of propane",
+    "examType": "WAEC",
+    "examYear": "2020",
+    "subject": "Chemistry"
+  },
+  {
+    "questionText": "Which of the following solids would not decompose on heating?",
+    "options": [
+      "Ammonium chloride",
+      "Lead(I) trioxonitrate(V)",
+      "Potassium trioxocarbonate(IV)",
+      "Sodium hydrogen trioxocarbonate(IV)"
+    ],
+    "correctAnswer": "Lead(I) trioxonitrate(V)",
+    "examType": "WAEC",
+    "examYear": "2020",
+    "subject": "Chemistry"
+  },
+  {
+    "questionText": "The following molecules have double covalent bonds between two atoms except?",
+    "options": [
+      "oxygen",
+      "carbon(IV)oxide",
+      "ethene",
+      "water"
+    ],
+    "correctAnswer": "water",
+    "examType": "WAEC",
+    "examYear": "2020",
+    "subject": "Chemistry"
+  },
+  {
+    "questionText": "The type of isomerism exhibited by cis and trans isomers is?",
+    "options": [
+      "positional",
+      "geometrical",
+      "functional",
+      "optical"
+    ],
+    "correctAnswer": "geometrical",
+    "examType": "WAEC",
+    "examYear": "2020",
+    "subject": "Chemistry"
+  },
+  {
+    "questionText": "Which of the following compounds has the lowest boiling point?",
+    "options": [
+      "C4H10",
+      "CH3COOH",
+      "H2O",
+      "C2H5OH"
+    ],
+    "correctAnswer": "C4H10",
+    "examType": "WAEC",
+    "examYear": "2020",
+    "subject": "Chemistry"
+  },
+  {
+    "questionText": "An alkanol containing 60% carbon by mass would have a molecular formula [H=1.0, C=12.0, O=16.0]",
+    "options": [
+      "CH3OH",
+      "C2H5OH",
+      "C3H7OH",
+      "C4H9OH"
+    ],
+    "correctAnswer": "C2H5OH",
+    "examType": "WAEC",
+    "examYear": "2020",
+    "subject": "Chemistry"
+  },
+  {
+    "questionText": "Which of the following compounds would release hydrogen when reacted with sodium metal? \nI. CH3COOH\nII. CH3CH2OH\nIII. CH3COOCH3",
+    "options": [
+      "I only",
+      "I and II only",
+      "II and III only",
+      "I and III only"
+    ],
+    "correctAnswer": "I and II only",
+    "examType": "WAEC",
+    "examYear": "2020",
+    "subject": "Chemistry"
+  },
+  {
+    "questionText": "Which of the following substances is not a reducing agent?",
+    "options": [
+      "C",
+      "CO",
+      "O2",
+      "H2"
+    ],
+    "correctAnswer": "O2",
+    "examType": "WAEC",
+    "examYear": "2020",
+    "subject": "Chemistry"
+  },
+  {
+    "questionText": "Which of the following statements is correct for a reaction at equilibrium?",
+    "options": [
+      "All reactions cease to occur",
+      "The reaction has gone to completion",
+      "The rates of the forward and backward reactions are equal",
+      "The amount of product equals the amount of reactants"
+    ],
+    "correctAnswer": "The rates of the forward and backward reactions are equal",
+    "examType": "WAEC",
+    "examYear": "2020",
+    "subject": "Chemistry"
+  },
+  {
+    "questionText": "Which of the following reactions are always exothermic? 1. Neutralization  II. Decomposition  III. Combustion",
+    "options": [
+      "I and II only",
+      "I and III only",
+      "II and III only",
+      "I, II and III"
+    ],
+    "correctAnswer": "I and III only",
+    "examType": "WAEC",
+    "examYear": "2020",
+    "subject": "Chemistry"
+  },
+  {
+    "questionText": "Which of the following standard conditions is not correct about energy changes?",
+    "options": [
+      "Standard temperature is 298K",
+      "Standard pressure is 1 atm",
+      "Concentration of solution must be 1 mol/dm³",
+      "ΔH at 298 K is the activation energy"
+    ],
+    "correctAnswer": "ΔH at 298 K is the activation energy",
+    "examType": "WAEC",
+    "examYear": "2020",
+    "subject": "Chemistry"
+  },
+  {
+    "questionText": "If 5.0 cm³ of 0.200 mol/dm³ Na2CO3 was diluted to 250 cm³ solution, what would be the concentration of the resulting solution?",
+    "options": [
+      "0.004 mol/dm³",
+      "0.020 mol/dm³",
+      "0.200 mol/dm³",
+      "0.400 mol/dm³"
+    ],
+    "correctAnswer": "0.004 mol/dm³",
+    "examType": "WAEC",
+    "examYear": "2020",
+    "subject": "Chemistry"
+  },
+  {
+    "questionText": "The initial volume and pressure of a given mass of gas is V and 3P. What is its pressure if its volume is increased to 2V at constant temperature?",
+    "options": [
+      "3P",
+      "2P",
+      "3/2 P",
+      "2/3 P"
+    ],
+    "correctAnswer": "3/2 P",
+    "examType": "WAEC",
+    "examYear": "2020",
+    "subject": "Chemistry"
+  },
+  {
+    "questionText": "What volume of oxygen at s.t.p is required to burn completely 7.5 dm³ of methane according to CH4 + 2O2 → CO2 + 2H2O?",
+    "options": [
+      "3.75 dm³",
+      "7.5 dm³",
+      "15.0 dm³",
+      "30.0 dm³"
+    ],
+    "correctAnswer": "15.0 dm³",
+    "examType": "WAEC",
+    "examYear": "2020",
+    "subject": "Chemistry"
+  },
+  {
+    "questionText": "When 250 cm³ of a saturated solution of CuSO4 at 30°C was evaporated to dryness, 5.0 g of the salt was obtained. What is the solubility of the salt at 30°C? [CuSO4 = 160]",
+    "options": [
+      "0.031",
+      "0.125",
+      "0.640",
+      "1.560"
+    ],
+    "correctAnswer": "0.640",
+    "examType": "WAEC",
+    "examYear": "2020",
+    "subject": "Chemistry"
+  },
+  {
+    "questionText": "The bond between NH3 and H+ in NH4+ is?",
+    "options": [
+      "dative",
+      "covalent",
+      "hydrogen",
+      "electrovalent"
+    ],
+    "correctAnswer": "dative",
+    "examType": "WAEC",
+    "examYear": "2020",
+    "subject": "Chemistry"
+  },
+  {
+    "questionText": "Which of the following oxides has a giant covalent structure?",
+    "options": [
+      "Al2O3",
+      "Na2O",
+      "P4O10",
+      "SiO2"
+    ],
+    "correctAnswer": "SiO2",
+    "examType": "WAEC",
+    "examYear": "2020",
+    "subject": "Chemistry"
+  },
+  {
+    "questionText": "Which of the following hydroxides is not readily soluble in water?",
+    "options": [
+      "NH4OH",
+      "Ca(OH)2",
+      "NaOH",
+      "KOH"
+    ],
+    "correctAnswer": "Ca(OH)2",
+    "examType": "WAEC",
+    "examYear": "2020",
+    "subject": "Chemistry"
+  },
+  {
+    "questionText": "Which of the following statements about the solubility of a salt is correct?",
+    "options": [
+      "A salt whose solubility increases with temperature would not crystallize easily on cooling",
+      "A salt whose solubility is independent of temperature would normally crystallize out on cooling",
+      "Crystallization would be efficient in separating out a salt whose solubility increases considerably with temperature",
+      "Solubility of a solid does not affect its crystallization"
+    ],
+    "correctAnswer": "Crystallization would be efficient in separating out a salt whose solubility increases considerably with temperature",
+    "examType": "WAEC",
+    "examYear": "2020",
+    "subject": "Chemistry"
+  },
+  {
+    "questionText": "How many moles of H2SO4 are there in 50 cm³ of 0.108 mol/dm³ solution of the acid?",
+    "options": [
+      "5.4 x 10",
+      "5.4 x 10−3",
+      "5.4 x 10−2",
+      "5.4 x 10−1"
+    ],
+    "correctAnswer": "5.4 x 10−3",
+    "examType": "WAEC",
+    "examYear": "2020",
+    "subject": "Chemistry"
+  },
+  {
+    "questionText": "If 20 cm³ of sodium hydroxide was neutralized by 20 cm³ of 0.01 mol/dm³ tetraoxosulphate(VI) acid, what is the concentration of the sodium hydroxide solution?",
+    "options": [
+      "0.010",
+      "0.020",
+      "0.100",
+      "0.150"
+    ],
+    "correctAnswer": "0.010",
+    "examType": "WAEC",
+    "examYear": "2020",
+    "subject": "Chemistry"
+  },
+  {
+    "questionText": "\"Electrons always occupy the lowest empty energy level\" is a statement of",
+    "options": [
+      "Aufbau Principle",
+      "Hund's rule",
+      "Pauli Exclusion Principle",
+      "Periodic law"
+    ],
+    "correctAnswer": "Aufbau Principle",
+    "examType": "WAEC",
+    "examYear": "2020",
+    "subject": "Chemistry"
+  },
+  {
+    "questionText": "Which of the following metals does not react with water to produce hydrogen?",
+    "options": [
+      "Copper",
+      "Potassium",
+      "Sodium",
+      "Zinc"
+    ],
+    "correctAnswer": "Copper",
+    "examType": "WAEC",
+    "examYear": "2020",
+    "subject": "Chemistry"
+  },
+  {
+    "questionText": "Which of the following arrangement of elements is in decreasing order of electronegativity?",
+    "options": [
+      "Na, Mg, Al, Si, P",
+      "Na, Al, Mg, P, Si",
+      "P, Mg, Na, Si, Al",
+      "P, Si, Al, Mg, Na"
+    ],
+    "correctAnswer": "P, Si, Al, Mg, Na",
+    "examType": "WAEC",
+    "examYear": "2020",
+    "subject": "Chemistry"
+  },
+  {
+    "questionText": "The metallic bond in magnesium is stronger than that in calcium because magnesium has a",
+    "options": [
+      "larger atomic size",
+      "smaller atomic size",
+      "greater number of valence electrons",
+      "lower melting point"
+    ],
+    "correctAnswer": "smaller atomic size",
+    "examType": "WAEC",
+    "examYear": "2020",
+    "subject": "Chemistry"
+  },
+  {
+    "questionText": "Consider the reaction represented by the following equation: AgNO3 + NaCl → AgCl + NaNO3. The steps that could be taken to obtain pure dry sample of AgCl (s) from the mixture include",
+    "options": [
+      "heating to saturation and drying",
+      "filtering and evaporation to dryness",
+      "filtering, washing and drying",
+      "crystallizing and allowing to cool"
+    ],
+    "correctAnswer": "filtering, washing and drying",
+    "examType": "WAEC",
+    "examYear": "2020",
+    "subject": "Chemistry"
+  },
+  {
+    "questionText": "How many electrons does P3− contain?",
+    "options": [
+      "12",
+      "15",
+      "16",
+      "18"
+    ],
+    "correctAnswer": "18",
+    "examType": "WAEC",
+    "examYear": "2020",
+    "subject": "Chemistry"
+  },
+  {
+    "questionText": "The atomic number of an atom would be equal to its mass number if it",
+    "options": [
+      "has a totally filled valence shell",
+      "has a high charge to mass ratio",
+      "does not contain neutrons",
+      "exhibits isotopy"
+    ],
+    "correctAnswer": "does not contain neutrons",
+    "examType": "WAEC",
+    "examYear": "2020",
+    "subject": "Chemistry"
+  },
+  {
+    "questionText": "Which of the following processes is not exhibited by atoms in order to attain more stable electron configuration?",
+    "options": [
+      "Gaining of electrons",
+      "Hybridization of orbitals",
+      "Losing electrons",
+      "Sharing electrons"
+    ],
+    "correctAnswer": "Hybridization of orbitals",
+    "examType": "WAEC",
+    "examYear": "2020",
+    "subject": "Chemistry"
+  },
+  {
+    "questionText": "Which of the following quantities is a molar quantity?",
+    "options": [
+      "Molarity",
+      "Molar mass",
+      "Mass concentration",
+      "Molality"
+    ],
+    "correctAnswer": "Molar mass",
+    "examType": "WAEC",
+    "examYear": "2020",
+    "subject": "Chemistry"
+  },
+  {
+    "questionText": "Dilution factor is the?",
+    "options": [
+      "amount of distilled water that is added to the concentrated solution to dilute it",
+      "Quantity of distilled water added to 1 dm³ of the concentrated solution to give the dilute solution",
+      "number of times the volume of the concentrated solution is diluted to give the dilute solution",
+      "act of diluting the concentrated solution to obtain the dilute solution"
+    ],
+    "correctAnswer": "number of times the volume of the concentrated solution is diluted to give the dilute solution",
+    "examType": "WAEC",
+    "examYear": "2020",
+    "subject": "Chemistry"
+  },
+  {
+    "questionText": "Calcium chloride is an ionic compound. Which of the following statements account for its ionic character? \nI. Calcium has high ionization energy. II. Calcium has low ionization energy. III. Chlorine has high electron affinity. IV. Chlorine has high ionization energy.",
+    "options": [
+      "I and II only",
+      "I, II and IV only",
+      "II, III and IV only",
+      "I, II, III and IV"
+    ],
+    "correctAnswer": "II and III only",
+    "examType": "WAEC",
+    "examYear": "2020",
+    "subject": "Chemistry"
+  },
+  {
+    "questionText": "An example of a biodegradable pollutant is?",
+    "options": [
+      "plastic",
+      "sewage",
+      "carbon(II) oxide",
+      "hydrogen sulphide"
+    ],
+    "correctAnswer": "sewage",
+    "examType": "WAEC",
+    "examYear": "2020",
+    "subject": "Chemistry"
+  }
+]
+
+

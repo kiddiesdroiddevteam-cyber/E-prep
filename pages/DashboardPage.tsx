@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from '@tanstack/react-router';
+// import { useNavigate } from 'react-router-dom';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 import { useAuth } from '../contexts/AuthContext';
@@ -171,13 +172,20 @@ const DashboardPage = () => {
   };
 
   const handleStartQuizClick = () => {
-    navigate('/quiz'); // Use navigate to go to the quiz page
+      navigate(
+        {to: '/quiz'})
   };
 
   const handleRoute = (quiz) => {
-    console.log(quiz?.id)
-    navigate(`/quiz?quizId=${quiz?.id}`); // Use navigate to go to the quiz page
-  };
+  console.log(quiz?.id);
+
+  navigate({
+    to: "/quiz",
+    search: {
+      quizId: quiz?.id,
+    },
+  });
+};
 
   const images = [
     "/img1.jpg",

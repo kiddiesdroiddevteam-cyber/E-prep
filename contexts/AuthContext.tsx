@@ -1,7 +1,8 @@
 import { createContext, useContext, useEffect, useState, ReactNode } from 'react';
 import { User, Session } from '@supabase/supabase-js';
 import { supabase } from '@/integrations/supabase/client';
-import { useNavigate } from 'react-router-dom';
+// import { useNavigate } from 'react-router-dom';
+import { useNavigate } from '@tanstack/react-router';
 import { toast } from 'sonner';
 
 interface AuthContextType {
@@ -80,7 +81,10 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
   const signOut = async () => {
     await supabase.auth.signOut();
     toast.info("Signed out successfully");
-    navigate('/landingPage');
+    navigate(
+        {
+            to: '/',
+          })
   };
 
   return (
