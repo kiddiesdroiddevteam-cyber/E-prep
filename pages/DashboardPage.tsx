@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate } from '@tanstack/react-router';
+import { useNavigate, Link } from '@tanstack/react-router';
 // import { useNavigate } from 'react-router-dom';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
@@ -48,7 +48,7 @@ const DashboardPage = () => {
 
   useEffect(() => {
     if (!user) {
-      navigate('/auth');
+      navigate({to:'/auth'});
       return;
     }
 
