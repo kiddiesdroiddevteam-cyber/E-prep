@@ -4,7 +4,8 @@ import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
 import { useAuth } from '../contexts/AuthContext';
 import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+// import { useNavigate } from 'react-router-dom';
+import { useNavigate } from '@tanstack/react-router';
 import { supabase } from '@/integrations/supabase/client';
 import CreateIcon from '@mui/icons-material/Create';
 import LogoutIcon from '@mui/icons-material/Logout';
@@ -41,7 +42,7 @@ const SettingsPage = () => {
 
     useEffect(() => {
         if (!user) {
-            navigate('/auth');
+            navigate({to:'/auth'});
             return;
         }
 
