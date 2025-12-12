@@ -89,7 +89,7 @@ const DashboardPage = () => {
 
     const scores = quizzes.map(item => item.score);
     console.log(scores)
-    console.log(quizzes)
+    console.log(quizzes, "quizzes")
     setQuiz(quizzes)
     setPrevScores(scores)
     if (quizzes && quizzes.length > 0) {

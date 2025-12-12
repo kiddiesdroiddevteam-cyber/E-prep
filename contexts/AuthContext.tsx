@@ -58,7 +58,8 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
 
     if (!error) {
       toast.success("Account created successfully!");
-      setTimeout(() => navigate('/dashboard'), 1000);
+       toast.success("Please check your email and confirm your account!");
+      setTimeout(() => navigate({to:'/dashboard'}), 1000);
     }
 
     return { error };
@@ -72,7 +73,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
 
     if (!error) {
       toast.success("Welcome back!");
-      navigate('/dashboard');
+      navigate({to:'/dashboard'});
     }
 
     return { error };
