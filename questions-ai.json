@@ -1,0 +1,702 @@
+[
+  {
+    "questionNumber": 1,
+    "questionText": "Which of the following is a non-renewable natural resource?",
+    "options": [
+      "Rubber",
+      "Oil palm",
+      "Coal",
+      "Cocoa"
+    ],
+    "correctAnswer": "Coal",
+    "examType": "WAEC",
+    "examYear": "2023",
+    "subject": "Economics"
+  },
+  {
+    "questionNumber": 2,
+    "questionText": "The demand for a factor input as a result of the demand for its output is known as",
+    "options": [
+      "market demand",
+      "complementary demand",
+      "competitive demand",
+      "derived demand"
+    ],
+    "correctAnswer": "derived demand",
+    "examType": "WAEC",
+    "examYear": "2023",
+    "subject": "Economics"
+  },
+  {
+    "questionNumber": 3,
+    "questionText": "If the government stops subsidy on cocoa production, the supply curve of cocoa will",
+    "options": [
+      "become vertical",
+      "remain unchanged",
+      "shift to the left",
+      "shift to the right"
+    ],
+    "correctAnswer": "shift to the left",
+    "examType": "WAEC",
+    "examYear": "2023",
+    "subject": "Economics"
+  },
+  {
+    "questionNumber": 4,
+    "questionText": "A monopolist may enjoy abnormal profit only if its",
+    "options": [
+      "marginal cost exceeds marginal revenue",
+      "demand curve is perfectly elastic",
+      "expenditure on advertisement increases",
+      "price exceeds average total cost"
+    ],
+    "correctAnswer": "price exceeds average total cost",
+    "examType": "WAEC",
+    "examYear": "2023",
+    "subject": "Economics"
+  },
+  {
+    "questionNumber": 5,
+    "questionText": "The supply of light could be met using a candle, lantern and gas lamp. This is an example of a",
+    "options": [
+      "complementary supply",
+      "abnormal supply",
+      "joint supply",
+      "composite supply"
+    ],
+    "correctAnswer": "composite supply",
+    "examType": "WAEC",
+    "examYear": "2023",
+    "subject": "Economics"
+  },
+  {
+    "questionNumber": 6,
+    "questionText": "Industries are sometimes located in areas which are not profitable so as to",
+    "options": [
+      "encourage rural-urban migration",
+      "be able to even-out development",
+      "bring about external economies of scale",
+      "be able to reap internal economies of scale"
+    ],
+    "correctAnswer": "be able to even-out development",
+    "examType": "WAEC",
+    "examYear": "2023",
+    "subject": "Economics"
+  },
+  {
+    "questionNumber": 7,
+    "questionText": "A government may cause a favourable change in her invisible trade account by",
+    "options": [
+      "developing tourism and other services",
+      "imposing high tariff on exports",
+      "encouraging people to go for medical treatment abroad",
+      "increasing the export of her primary products"
+    ],
+    "correctAnswer": "developing tourism and other services",
+    "examType": "WAEC",
+    "examYear": "2023",
+    "subject": "Economics"
+  },
+  {
+    "questionNumber": 8,
+    "questionText": "To overcome the problem of double counting under the expenditure approach,",
+    "options": [
+      "spending on intermediate goods and inputs are considered",
+      "value added method is used",
+      "proper accounting standards must be used",
+      "only spending on final goods are considered"
+    ],
+    "correctAnswer": "only spending on final goods are considered",
+    "examType": "WAEC",
+    "examYear": "2023",
+    "subject": "Economics"
+  },
+  {
+    "questionNumber": 9,
+    "questionText": "At what point on the total product curve shown above will marginal product be negative?",
+    "options": [
+      "Q",
+      "S",
+      "R",
+      "D"
+    ],
+    "correctAnswer": "S",
+    "examType": "WAEC",
+    "examYear": "2023",
+    "subject": "Economics"
+  },
+  {
+    "questionNumber": 10,
+    "questionText": "National income is calculated mainly to",
+    "options": [
+      "determine how income is to be shared",
+      "help firms generate more funds",
+      "determine aid to be received from other nations",
+      "determine the level of sectoral performance"
+    ],
+    "correctAnswer": "determine the level of sectoral performance",
+    "examType": "WAEC",
+    "examYear": "2023",
+    "subject": "Economics"
+  },
+  {
+    "questionNumber": 11,
+    "questionText": "Assisting members to solve temporary balance of payments problems is the reason for the establishment of the",
+    "options": [
+      "International Monetary Fund",
+      "Economic Commission for Africa",
+      "World Bank",
+      "African Development Bank"
+    ],
+    "correctAnswer": "International Monetary Fund",
+    "examType": "WAEC",
+    "examYear": "2023",
+    "subject": "Economics"
+  },
+  {
+    "questionNumber": 12,
+    "questionText": "Money is able to function more as a medium of exchange when",
+    "options": [
+      "there is a fall in production",
+      "more people engage in subsistence production",
+      "individuals and nations are self-sufficient",
+      "there is specialization of labour"
+    ],
+    "correctAnswer": "there is specialization of labour",
+    "examType": "WAEC",
+    "examYear": "2023",
+    "subject": "Economics"
+  },
+  {
+    "questionNumber": 13,
+    "questionText": "An economy system is mainly concerned with",
+    "options": [
+      "studying the relationship between ends and means",
+      "the allocation of scarce resources between alternative ends",
+      "handling situations of abundant resources",
+      "the establishment of economic laws"
+    ],
+    "correctAnswer": "the allocation of scarce resources between alternative ends",
+    "examType": "WAEC",
+    "examYear": "2023",
+    "subject": "Economics"
+  },
+  {
+    "questionNumber": 14,
+    "questionText": "When the marginal utility from the consumption of commodity X (Mux) is greater than the price of commodity X (Px), a rational consumer should",
+    "options": [
+      "strive to remain in disequilibrium",
+      "consume the same quantity of commodity X",
+      "consume more of commodity X",
+      "reduce consumption of commodity X"
+    ],
+    "correctAnswer": "consume more of commodity X",
+    "examType": "WAEC",
+    "examYear": "2023",
+    "subject": "Economics"
+  },
+  {
+    "questionNumber": 15,
+    "questionText": "Which of the following items is not classified as working capital?",
+    "options": [
+      "Fuel",
+      "Money to pay wages",
+      "Semi-finished goods",
+      "Equipment"
+    ],
+    "correctAnswer": "Equipment",
+    "examType": "WAEC",
+    "examYear": "2023",
+    "subject": "Economics"
+  },
+  {
+    "questionNumber": 16,
+    "questionText": "If the demand for a commodity remains constant as price increases, the commodity is said to be",
+    "options": [
+      "perfectly price inelastic",
+      "unit price elastic",
+      "price elastic",
+      "price inelastic"
+    ],
+    "correctAnswer": "perfectly price inelastic",
+    "examType": "WAEC",
+    "examYear": "2023",
+    "subject": "Economics"
+  },
+  {
+    "questionNumber": 17,
+    "questionText": "Warehousing is an economic activity that falls under",
+    "options": [
+      "secondary production",
+      "primary production",
+      "tertiary production",
+      "intermediate production"
+    ],
+    "correctAnswer": "tertiary production",
+    "examType": "WAEC",
+    "examYear": "2023",
+    "subject": "Economics"
+  },
+  {
+    "questionNumber": 18,
+    "questionText": "The study of economics is mainly concerned with how to",
+    "options": [
+      "rank individuals' wants given the abundant resources",
+      "make choice when resources are inadequate",
+      "satisfy every member of all societies",
+      "produce all the goods needed by everyone"
+    ],
+    "correctAnswer": "make choice when resources are inadequate",
+    "examType": "WAEC",
+    "examYear": "2023",
+    "subject": "Economics"
+  },
+  {
+    "questionNumber": 19,
+    "questionText": "Use the graph above to answer the question. The curve labelled W shows the ",
+    "options": [
+      "regressive tax",
+      "proportional tax",
+      "specific tax",
+      "progressive tax"
+    ],
+    "correctAnswer": "progressive tax",
+    "examType": "WAEC",
+    "examYear": "2023",
+    "subject": "Economics"
+  },
+  {
+    "questionNumber": 20,
+    "questionText": "Resources are pooled for the mutual benefit of its members mainly in a",
+    "options": [
+      "cooperative society",
+      "joint stock company",
+      "private company",
+      "partnership"
+    ],
+    "correctAnswer": "cooperative society",
+    "examType": "WAEC",
+    "examYear": "2023",
+    "subject": "Economics"
+  },
+  {
+    "questionNumber": 21,
+    "questionText": "The total fixed cost curve is",
+    "options": [
+      "horizontal",
+      "upward sloping",
+      "vertical",
+      "downward sloping"
+    ],
+    "correctAnswer": "horizontal",
+    "examType": "WAEC",
+    "examYear": "2023",
+    "subject": "Economics"
+  },
+  {
+    "questionNumber": 22,
+    "questionText": "A small scale firm located within an industrial estate will enjoy",
+    "options": [
+      "government protection and funding",
+      "technological economies of scale",
+      "financial economies of scale",
+      "external economies of scale"
+    ],
+    "correctAnswer": "external economies of scale",
+    "examType": "WAEC",
+    "examYear": "2023",
+    "subject": "Economics"
+  },
+  {
+    "questionNumber": 23,
+    "questionText": "Country M enjoys absolute advantage over country N in the production of commodities X and Y, if country M",
+    "options": [
+      "is inefficient in the production of both commodities X and Y",
+      "is more efficient than country N in producing both commodities X and Y",
+      "can produce only commodity Y cheaper than country N",
+      "and country N are efficient in the production of both goods"
+    ],
+    "correctAnswer": "is more efficient than country N in producing both commodities X and Y",
+    "examType": "WAEC",
+    "examYear": "2023",
+    "subject": "Economics"
+  },
+  {
+    "questionNumber": 24,
+    "questionText": "Commercial banks help in economic development mainly by",
+    "options": [
+      "acting as trustees and executors of wills",
+      "acting as intermediaries between government and borrowers",
+      "serving as custodians of valuables",
+      "giving financial advice to the government"
+    ],
+    "correctAnswer": "acting as intermediaries between government and borrowers",
+    "examType": "WAEC",
+    "examYear": "2023",
+    "subject": "Economics"
+  },
+  {
+    "questionNumber": 25,
+    "questionText": "When job vacancies are publicized, the government is mainly trying to solve the problem of",
+    "options": [
+      "residual unemployment",
+      "cyclical unemployment",
+      "technological unemployment",
+      "frictional unemployment"
+    ],
+    "correctAnswer": "frictional unemployment",
+    "examType": "WAEC",
+    "examYear": "2023",
+    "subject": "Economics"
+  },
+  {
+    "questionNumber": 26,
+    "questionText": "An indication that there is inflation in a country is that",
+    "options": [
+      "there is a decrease in the demand for goods and services",
+      "there are too many goods in circulation",
+      "the same amount of money buys lower quantity of goods",
+      "people prefer to lend than to borrow"
+    ],
+    "correctAnswer": "the same amount of money buys lower quantity of goods",
+    "examType": "WAEC",
+    "examYear": "2023",
+    "subject": "Economics"
+  },
+  {
+    "questionNumber": 27,
+    "questionText": "An example of government's recurrent expenditure is",
+    "options": [
+      "electrification projects in rural areas",
+      "the cost of building a school",
+      "purchase of new vehicles",
+      "paying salaries of workers"
+    ],
+    "correctAnswer": "paying salaries of workers",
+    "examType": "WAEC",
+    "examYear": "2023",
+    "subject": "Economics"
+  },
+  {
+    "questionNumber": 28,
+    "questionText": "A fall in the price of a normal commodity which has elastic demand will result in",
+    "options": [
+      "a fall in demand",
+      "a fall in quantity demanded",
+      "an increase in revenue",
+      "a decrease in revenue"
+    ],
+    "correctAnswer": "an increase in revenue",
+    "examType": "WAEC",
+    "examYear": "2023",
+    "subject": "Economics"
+  },
+  {
+    "questionNumber": 29,
+    "questionText": "The dependency ratio of a country is the",
+    "options": [
+      "the children and aged who rely on the active population for support",
+      "people who are cared for by their extended families",
+      "total active population who depend on government for survival",
+      "number of children who depend on their parents for survival"
+    ],
+    "correctAnswer": "the children and aged who rely on the active population for support",
+    "examType": "WAEC",
+    "examYear": "2023",
+    "subject": "Economics"
+  },
+  {
+    "questionNumber": 30,
+    "questionText": "When the demand for a commodity increases while supply remains unchanged, the equilibrium price and quantity will ",
+    "options": [
+      "increase",
+      "remain constant",
+      "decrease",
+      "turn negative"
+    ],
+    "correctAnswer": "increase",
+    "examType": "WAEC",
+    "examYear": "2023",
+    "subject": "Economics"
+  },
+  {
+    "questionNumber": 31,
+    "questionText": "Consumers have access to a variety of goods through the activities of the",
+    "options": [
+      "retailers",
+      "advertising agencies",
+      "mass media",
+      "wholesalers"
+    ],
+    "correctAnswer": "retailers",
+    "examType": "WAEC",
+    "examYear": "2023",
+    "subject": "Economics"
+  },
+  {
+    "questionNumber": 32,
+    "questionText": "The Malthusian theory of population is best illustrated when",
+    "options": [
+      "the size of the population and available resources are equal",
+      "both population and food supply increase at the same rate",
+      "food supply increases much faster than population growth",
+      "population increases much faster than food supply"
+    ],
+    "correctAnswer": "population increases much faster than food supply",
+    "examType": "WAEC",
+    "examYear": "2023",
+    "subject": "Economics"
+  },
+  {
+    "questionNumber": 33,
+    "questionText": "The Net National Product (NNP) of a country is $50m while the depreciation allowance is $10m. The Gross National Product (GNP) is",
+    "options": [
+      "$40m",
+      "$60m",
+      "$30m",
+      "$500m"
+    ],
+    "correctAnswer": "$60m",
+    "examType": "WAEC",
+    "examYear": "2023",
+    "subject": "Economics"
+  },
+  {
+    "questionNumber": 34,
+    "questionText": "The rate of growth of population is",
+    "options": [
+      "initial population plus number of births and net migration",
+      "the difference between birth rate and death rate",
+      "birth rate less death rate plus net migration",
+      "the number of immigrants plus number of births"
+    ],
+    "correctAnswer": "birth rate less death rate plus net migration",
+    "examType": "WAEC",
+    "examYear": "2023",
+    "subject": "Economics"
+  },
+  {
+    "questionNumber": 35,
+    "questionText": "The price level and the value of money are",
+    "options": [
+      "positively related",
+      "directly related",
+      "not related",
+      "inversely related"
+    ],
+    "correctAnswer": "inversely related",
+    "examType": "WAEC",
+    "examYear": "2023",
+    "subject": "Economics"
+  },
+  {
+    "questionNumber": 36,
+    "questionText": "One of the factors that may not promote industrial development is",
+    "options": [
+      "local firms entering into partnerships with foreign firms",
+      "granting capital to firms at reasonable interest rates",
+      "setting up industrial estates with modern amenities",
+      "granting old firms tax exemptions"
+    ],
+    "correctAnswer": "granting old firms tax exemptions",
+    "examType": "WAEC",
+    "examYear": "2023",
+    "subject": "Economics"
+  },
+  {
+    "questionNumber": 37,
+    "questionText": "If a firm retrenches some of its factory workers its",
+    "options": [
+      "average fixed cost may increase",
+      "variable cost will decline",
+      "marginal cost may increase",
+      "fixed cost is likely to increase"
+    ],
+    "correctAnswer": "variable cost will decline",
+    "examType": "WAEC",
+    "examYear": "2023",
+    "subject": "Economics"
+  },
+  {
+    "questionNumber": 38,
+    "questionText": "Many workers are employed in the agricultural sector of developing countries because",
+    "options": [
+      "labour intensive method is mostly adopted",
+      "abnormal profits are made",
+      "wages in the sector is high",
+      "they practice mechanized system of farming"
+    ],
+    "correctAnswer": "labour intensive method is mostly adopted",
+    "examType": "WAEC",
+    "examYear": "2023",
+    "subject": "Economics"
+  },
+  {
+    "questionNumber": 39,
+    "questionText": "Taxes levied on goods and services by government are called",
+    "options": [
+      "indirect taxes",
+      "direct taxes",
+      "corporate taxes",
+      "poll taxes"
+    ],
+    "correctAnswer": "indirect taxes",
+    "examType": "WAEC",
+    "examYear": "2023",
+    "subject": "Economics"
+  },
+  {
+    "questionNumber": 40,
+    "questionText": "The average revenue curve of a firm in a perfect market is the same as the ",
+    "options": [
+      "supply curve of the firm",
+      "average cost curve of the firm",
+      "demand curve of the firm",
+      "total revenue curve of the firm"
+    ],
+    "correctAnswer": "demand curve of the firm",
+    "examType": "WAEC",
+    "examYear": "2023",
+    "subject": "Economics"
+  },
+  {
+    "questionNumber": 41,
+    "questionText": "The most liquid asset among the following is",
+    "options": [
+      "bonds",
+      "cheque",
+      "cash",
+      "shares"
+    ],
+    "correctAnswer": "cash",
+    "examType": "WAEC",
+    "examYear": "2023",
+    "subject": "Economics"
+  },
+  {
+    "questionNumber": 42,
+    "questionText": "Petrol and Kerosene are jointly obtained from crude oil. If the supply of petrol increases, the",
+    "options": [
+      "cost of crude oil production has increased",
+      "supply of kerosene will rise",
+      "supply of kerosene will remain unchanged",
+      "supply of kerosene will fall"
+    ],
+    "correctAnswer": "supply of kerosene will rise",
+    "examType": "WAEC",
+    "examYear": "2023",
+    "subject": "Economics"
+  },
+  {
+    "questionNumber": 43,
+    "questionText": "The fixing of maximum prices by government is mainly on",
+    "options": [
+      "imported capital goods",
+      "inferior goods",
+      "selected essential goods",
+      "luxury goods"
+    ],
+    "correctAnswer": "selected essential goods",
+    "examType": "WAEC",
+    "examYear": "2023",
+    "subject": "Economics"
+  },
+  {
+    "questionNumber": 44,
+    "questionText": "When more of tax on a product is borne by the buyer than the seller, the commodity involved has",
+    "options": [
+      "perfectly elastic demand",
+      "perfectly inelastic demand",
+      "fairly inelastic demand",
+      "elastic demand"
+    ],
+    "correctAnswer": "fairly inelastic demand",
+    "examType": "WAEC",
+    "examYear": "2023",
+    "subject": "Economics"
+  },
+  {
+    "questionNumber": 45,
+    "questionText": "The marks obtained by 9 students in a class test are recorded below: 9, 8, 7, 5, 7, 6, 8, 9 and 7. What is the median mark?",
+    "options": [
+      "7",
+      "8.5",
+      "8",
+      "7.5"
+    ],
+    "correctAnswer": "7",
+    "examType": "WAEC",
+    "examYear": "2023",
+    "subject": "Economics"
+  },
+  {
+    "questionNumber": 46,
+    "questionText": "Tariffs, quotas and embargoes are examples of",
+    "options": [
+      "trade restriction policies",
+      "monetary policies",
+      "fiscal policies",
+      "foreign exchange policies"
+    ],
+    "correctAnswer": "trade restriction policies",
+    "examType": "WAEC",
+    "examYear": "2023",
+    "subject": "Economics"
+  },
+  {
+    "questionNumber": 47,
+    "questionText": "Trade protection will assist economic growth in developing countries if it can",
+    "options": [
+      "allow the importation of cheaper goods people want",
+      "effectively safeguard newly established firms",
+      "eliminate importation of all commodities",
+      "generate enough revenue through export duties"
+    ],
+    "correctAnswer": "effectively safeguard newly established firms",
+    "examType": "WAEC",
+    "examYear": "2023",
+    "subject": "Economics"
+  },
+  {
+    "questionNumber": 48,
+    "questionText": "A country is described as developing if",
+    "options": [
+      "the income per head is low",
+      "the contribution of tertiary sector to national income is high",
+      "the population is decreasing",
+      "there is low labour supply"
+    ],
+    "correctAnswer": "the income per head is low",
+    "examType": "WAEC",
+    "examYear": "2023",
+    "subject": "Economics"
+  },
+  {
+    "questionNumber": 49,
+    "questionText": "A joint stock company enjoys perpetual existence because",
+    "options": [
+      "there is a higher degree of specialization",
+      "it is a corporate entity",
+      "it is formed by a minimum of seven members",
+      "its shares are easily transferable"
+    ],
+    "correctAnswer": "it is a corporate entity",
+    "examType": "WAEC",
+    "examYear": "2023",
+    "subject": "Economics"
+  },
+  {
+    "questionNumber": 50,
+    "questionText": "Which of the following is not a problem facing Economic Community of West African States (ECOWAS)?",
+    "options": [
+      "Language barriers",
+      "Inadequate supply of labour",
+      "Production of the same commodities",
+      "Poor transportation and communication"
+    ],
+    "correctAnswer": "Inadequate supply of labour",
+    "examType": "WAEC",
+    "examYear": "2023",
+    "subject": "Economics"
+  }
+]
