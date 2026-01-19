@@ -73,7 +73,7 @@ const QuizPlayer: React.FC<QuizPlayerProps> = ({ quiz, onSubmit }) => {
     <Card className="w-full max-w-4xl mx-auto p-6 md:p-8 bg-[#02000D] gridBg">
         <div className="flex justify-between items-center mb-6">
             <div>
-                <span className="text-[#0055FF]">{quiz.settings.mode}</span>
+                <span className="text-[#0055FF]" onClick={()=> console.log(currentQuestion)}>{quiz.settings.mode}</span>
                 {
                   quiz.settings.mode === "Past Questions" ? 
                   <h2 className="text-2xl font-bold text-white">{quiz.settings?.selectedSubject}</h2>:
@@ -89,6 +89,11 @@ const QuizPlayer: React.FC<QuizPlayerProps> = ({ quiz, onSubmit }) => {
         <div className="mb-6">
             <p className="text-gray-400 mb-2">Question {currentQuestionIndex + 1} of {quiz.questions.length}</p>
             <h3 className="text-2xl font-semibold text-white">{currentQuestion.prompt}</h3>
+            {currentQuestion?.imageUrl && (
+                <div>
+                    <img src={currentQuestion?.imageUrl} alt="Question Image" className="max-w-full h-auto rounded-lg"/>
+                </div>
+            )}
         </div>
         
         <div className="space-y-4 mb-8">
