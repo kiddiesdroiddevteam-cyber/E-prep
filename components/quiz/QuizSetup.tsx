@@ -292,20 +292,20 @@ const QuizSetup: React.FC<QuizSetupProps> = ({ onStartQuiz }) => {
                       </div>
 
                       <div>
-                        <label htmlFor="year" className="block text-lg font-semibold mb-3 text-white">4. Choose a Year</label>
+                        <label htmlFor="year" className="block text-lg font-semibold mb-3 text-white">{selectedSubject === "General Studies"? "4. Choose a Sample": "4. Choose a Year"}</label>
                         <select
                           id="year"
                           value={selectedYear}
                           onChange={handleYearChange}
                           className="w-full p-3 bg-transparent text-[#0055FF] border border-[#0055FF] rounded-lg focus:ring-2 focus:ring-[#0055FF] focus:border-none outline-none"
                         >
-                          <option value="" disabled>Select Year</option>
+                          <option value="" disabled>{selectedSubject === "General Studies"? "Select Sample": "Select Year"}</option>
                           {availableYears.length > 0 ? (
                             availableYears.map((year) => (
-                              <option key={year} value={year}>{year}</option>
+                              <option key={year} value={year}>{selectedSubject === "General Studies"? `Sample `+year: year}</option>
                             ))
                           ) : (
-                            <option value="" disabled>Select a subject first</option>
+                            <option value="" disabled> {selectedSubject === "General Studies"? "Select a sample first": "Select a subject first"}</option>
                           )}
                         </select>
                       </div>
