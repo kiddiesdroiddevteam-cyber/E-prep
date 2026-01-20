@@ -171,6 +171,7 @@ const handleLoadHistory = async (quizAttemptId: string) => {
   const handleSubmitQuiz = useCallback(async (answers: UserAnswer[]) => {
     if (!currentQuiz) return;
     console.log(currentQuiz, 'currentQuiz on submit');
+    console.log(answers, 'answers on submit');
     const correctAnswers = answers.filter(a => a.isCorrect).length;
     const score = Math.round((correctAnswers / currentQuiz.questions.length) * 100);
 

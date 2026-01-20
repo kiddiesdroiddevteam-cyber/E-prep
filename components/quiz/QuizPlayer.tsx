@@ -48,17 +48,23 @@ const QuizPlayer: React.FC<QuizPlayerProps> = ({ quiz, onSubmit }) => {
   };
 
   const handleSubmit = () => {
-    const finalAnswers: UserAnswer[] = quiz.questions.map(q => {
-        const answer = userAnswers.get(q.id);
-        return {
-            questionId: q.id,
-            question: q.prompt,
-            answer: answer ?? -1,
-            isCorrect: answer === q.answer
-        }
+  const finalAnswers: UserAnswer[] = quiz.questions
+    .filter(q => Array.isArray(q.choices) && q.choices.length > 0)
+    .map(q => {
+      const answer = userAnswers.get(q.id);
+
+      return {
+        questionId: q.id,
+        question: q.prompt,
+        answer: answer ?? -1,
+        isCorrect: answer !== undefined && answer === q.answer
+      };
     });
-    onSubmit(finalAnswers);
-  };
+
+  console.log(finalAnswers, 'finalAnswers on submit');
+  onSubmit(finalAnswers);
+};
+
   
   const currentQuestion = quiz.questions[currentQuestionIndex];
   const selectedAnswer = userAnswers.get(currentQuestion.id);
