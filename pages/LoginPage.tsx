@@ -97,7 +97,7 @@ const AuthPage: React.FC = () => {
           toast.error(error.message || 'Failed to sign up');
         }
       } else {
-        toast.success('Account created successfully! Please sign in.');
+        toast.success('Your account has been created successfully. Please check your Gmail and verify your email address before signing in.');
         // Optionally switch to sign-in tab after successful sign-up
         setActiveTab('signin');
         // Clear sign-up specific states
