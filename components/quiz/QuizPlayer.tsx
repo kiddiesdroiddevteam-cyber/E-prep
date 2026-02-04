@@ -94,7 +94,7 @@ const QuizPlayer: React.FC<QuizPlayerProps> = ({ quiz, onSubmit }) => {
 
         <div className="mb-6">
             <p className="text-gray-400 mb-2">Question {currentQuestionIndex + 1} of {quiz.questions.length}</p>
-            <h3 className="text-2xl font-semibold text-white">{currentQuestion.prompt}</h3>
+            <h3 onClick={()=> console.log(currentQuestion)} className="text-2xl font-semibold text-white">{currentQuestion.prompt}</h3>
             {currentQuestion?.imageUrl && (
                 <div>
                     <img src={currentQuestion?.imageUrl} alt="Question Image" className="max-w-full h-auto rounded-lg"/>
