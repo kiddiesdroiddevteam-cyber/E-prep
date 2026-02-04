@@ -22,6 +22,7 @@ const questions = jsonData.data.map((q) => {
     return {
       id: uuidv4(), 
       prompt: q.questionText,
+      imageUrl: q.imageUrl,
       choices: optionsArray,
       answer: correctIndex,
       explanation: q.solution || "No explanation provided."
