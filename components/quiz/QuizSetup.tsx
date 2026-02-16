@@ -363,7 +363,7 @@ const QuizSetup: React.FC<QuizSetupProps> = ({ onStartQuiz }) => {
                       type="range"
                       id="numQuestions"
                       min="1"
-                      max="20"
+                      max="30"
                       step="1"
                       value={numQuestions}
                       onChange={(e) => setNumQuestions(parseInt(e.target.value, 10))}
