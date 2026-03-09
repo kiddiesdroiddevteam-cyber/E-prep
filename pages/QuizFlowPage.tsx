@@ -330,7 +330,7 @@ setFlowState("results");
   return (
     <div className=" bg-gradient-to-b to-transparent via-transparent from-[#0055FF]/10">
       {flowState !== 'setup' && (
-        <button onClick={handleBackToDashboard} className="mb-6 text-[#0055FF] hover:text-[#0055FF]/60 transition-colors">
+        <button onClick={handleBackToDashboard} className="mb-6 text-[#0055FF] hover:text-[#0055FF]/60 transition-colors px-[20px] py-[15px]">
           &larr; Back to Dashboard
         </button>
       )}

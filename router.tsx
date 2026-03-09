@@ -13,6 +13,7 @@ import LandingPage from './pages/LandingPage';
 import { AuthProvider, useAuth } from './contexts/AuthContext';
 import { Toaster } from 'sonner';
 import { ProtectedRoute } from './components/protectedRoute';
+import AdminPage from './pages/AdminPage';
 
 
 // 1. Define the Context Interface
@@ -69,6 +70,12 @@ const settingsRoute = createRoute({
   component: SettingsPage,
 });
 
+const adminRoute = createRoute({
+  getParentRoute: () => protectedRoute,
+  path: '/uzorisadmin',
+  component: AdminPage,
+});
+
 const authRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: '/auth',
@@ -78,7 +85,7 @@ const authRoute = createRoute({
 // 5. Build route tree
 const routeTree = rootRoute.addChildren([
   indexRoute,
-  protectedRoute.addChildren([dashboardRoute, quizRoute, settingsRoute]),
+  protectedRoute.addChildren([dashboardRoute, quizRoute, settingsRoute, adminRoute]),
   authRoute,
 ]);
 

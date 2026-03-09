@@ -6,6 +6,7 @@ import InsertChartIcon from '@mui/icons-material/InsertChart';
 import AutoStoriesOutlinedIcon from '@mui/icons-material/AutoStoriesOutlined';
 import SubjectsScroll from '@/components/SubjectsScroll';
 
+
 const LandingPage = () => {
     const [isLoading, setIsLoading] = useState(true);
     useEffect(() => {
@@ -27,10 +28,10 @@ const LandingPage = () => {
                     ) : (
                         <div className='h-[100vh] w-[100vw] bg-[#02000D] overflow-y-scroll text-black'>
                             <div className='fixed z-[10] h-[80px] w-[100vw] flex items-center justify-start px-[2.5%]'>
-                                <h1 className=' text-[#0400FF] font-extrabold text-3xl italic'>iWanPass</h1>
+                                <h1 className=' text-[#0400FF] font-extrabold text-[22px] italic flex items-center justify-center'><img src="../assets/logo.png" alt="" className=' h-[20px] mr-[10px]' /> iWanPass</h1>
                             </div>
 
-                            <div className=' w-[100vw] min-h-[100vh] bg-gradient-to-b from-transparent via-transparent to-[#0055FF]/10 bg-opacity-0 flex flex-col items-center justify-center px-[2.5%]'>
+                            <div className=' w-[100vw] min-h-[100vh] bg-gradient-to-b to-transparent via-transparent from-[#0055FF]/10 bg-opacity-0 flex flex-col items-center justify-center px-[2.5%]'>
                                 <div className=' w-full text-white text-center mb-[20px] mt-[30px]'>
                                     <h1 className=' text-[40px] lg:text-[64px] text-center'>Study Smarter <br /> with AI-Powered Practice</h1>
                                     <p className=' text-[18px] lg:text-[24px] mb-[20px]'>Get past questions, AI-generated tests, and personalized study <br /> recommendations—all in one platform</p>
@@ -42,11 +43,19 @@ const LandingPage = () => {
                                     </Link>
                                 </div>
 
-                                <div className=' h-[40vh] w-[95%] lg:w-[70%] bg-[#CDE7FF] rounded-md'></div>
+                                <div className=' min-h-[40vh] w-[95%] lg:w-[70%] bg-[#CDE7FF] rounded-xl'>
+                                    <video
+                                        src="/test-vid.mp4"
+                                        controls
+                                        loop
+                                        muted
+                                        className="w-full h-auto rounded-xl border border-[#0055FF]"
+                                    />
+                                </div>
                             </div>
 
                             {/* About */}
-                            <div className=' w-[100vw] text-white min-h-[100vh] bg-gradient-to-b to-transparent via-[#0055FF]/10 from-[#0055FF]/10 px-[5%] flex flex-col items-center justify-center pt-[10vh] max-sm:pb-[30px]'>
+                            {/* <div className=' w-[100vw] text-white min-h-[100vh] bg-gradient-to-b to-transparent via-[#0055FF]/10 from-[#0055FF]/10 px-[5%] flex flex-col items-center justify-center pt-[10vh] max-sm:pb-[30px]'>
                                 <div className=' w-full flex flex-col items-center justify-center mb-[30px]'>
                                     <h1 className=' text-white bg-[#0055FF] px-2 py-1 rounded-full mb-[10px] text-center'>About</h1>
                                     <h1 className=' max-sm:text-[30px] font-semibold text-[48px] text-white mb-[5px] text-center'>About iWanPass</h1>
@@ -55,8 +64,7 @@ const LandingPage = () => {
                                 <div className=' w-[100vw] h-[60vh]  flex flex-col lg:flex-row items-center justify-between px-[2.5%]'>
                                     <div className=' max-sm:w-[95%] mb-[10px] w-[45%]'>
                                         <p className=' text-[18px] text-[#fff] text-justify font-thin'>
-                                            iWanPass is a platform built  to help students study smarter, not harder. Preparing for exams like WAEC, JAMB and NECO can be overwhelming, especially with scattered materials and limited practice options. Our goal is to fix that. <br />
-                                            iWanPass combines past questions, AI-generated practice tests, and an innovative note-to-quiz tool that turns any uploaded note into a personalized exam. Whether you’re revising a single topic or preparing for your final exams, we give you everything you need in one place.
+                                            iWanPass is a study platform designed to help students prepare more effectively for exams like WAEC, JAMB, and NECO. It brings essential study resources into one place by combining past questions, AI-generated practice tests, and a note-to-quiz feature that converts uploaded notes into personalized exams. By organizing materials and offering targeted practice, iWanPass helps students revise specific topics and get ready for their final exams in a smarter, more efficient way.
                                         </p>
                                     </div>
 
@@ -70,13 +78,13 @@ const LandingPage = () => {
                                         />
                                     </div>
                                 </div>
-                            </div>
+                            </div> */}
 
                             {/* Features to boost your study */}
                             <div className=' w-[100vw] min-h-[100vh] bg-gradient-to-b from-transparent via-[#0055FF]/10 to-[#0055FF]/10 px-[5%] flex flex-col items-center justify-center pt-[10vh]'>
                                 <div className=' w-full flex flex-col items-center justify-center mb-[10px]'>
-                                    <h1 className=' text-white bg-[#0055FF] px-2 py-1 rounded-full mb-[10px]'>Features</h1>
-                                    <h1 className=' max-sm:text-[30px] font-semibold text-[48px] text-white mb-[5px] text-center'>Features To Boost Your Study</h1>
+                                    <h1 className=' text-white bg-[#0055FF] px-2 py-1 rounded-full mb-[10px]'>About</h1>
+                                    <h1 className=' max-sm:text-[30px] font-semibold text-[48px] text-white mb-[5px] text-center'>Multiple Features To Boost Your Study</h1>
                                     <p className=' text-white className="text-center"'>Everything you need to practice and prepare for your exam</p>
                                 </div>
                                 <div className=' w-[100vw] min-h-[60vh] px-[5%] flex flex-col items-center justify-center pt-[10vh]'>
@@ -164,7 +172,7 @@ const LandingPage = () => {
                                 </div>
                                 <div className=' w-[90%] flex max-sm:flex-col items-center justify-center lg:mb-[10px]'>
                                     <div className=' bg-[#35333D]/50 flex items-center justify-between lg:max-w-fit px-[30px] py-[20px] rounded-2xl mx-[10px] mb-[10px] max-sm:w-[95%]'>
-                                        <div className=' h-[60px] w-[60px] rounded-xl bg-[#0055FF] flex items-center justify-center mr-[20px]'>
+                                        <div className=' h-[60px] w-[60px] rounded-xl bg-red-500 flex items-center justify-center mr-[20px]'>
                                             <AutoStoriesOutlinedIcon />
                                         </div>
 
@@ -180,7 +188,7 @@ const LandingPage = () => {
                                     </div>
 
                                     <div className=' bg-[#35333D]/50 flex items-center justify-between lg:max-w-fit px-[30px] py-[20px] rounded-2xl mx-[10px] mb-[10px] max-sm:w-[95%]'>
-                                        <div className=' h-[60px] w-[60px] rounded-xl bg-[#0055FF] flex items-center justify-center mr-[20px]'>
+                                        <div className=' h-[60px] w-[60px] rounded-xl bg-green-500 flex items-center justify-center mr-[20px]'>
                                             <AutoStoriesOutlinedIcon />
                                         </div>
 
@@ -189,7 +197,7 @@ const LandingPage = () => {
                                 </div>
                                 <div className=' w-[90%] flex items-center justify-center mb-[10px]'>
                                     <div className=' bg-[#35333D]/50 flex items-center justify-between lg:max-w-fit px-[30px] py-[20px] rounded-2xl mx-[10px] max-sm:w-[95%]'>
-                                        <div className=' h-[60px] w-[60px] rounded-xl bg-[#0055FF] flex items-center justify-center mr-[20px]'>
+                                        <div className=' h-[60px] w-[60px] rounded-xl bg-amber-600 flex items-center justify-center mr-[20px]'>
                                             <AutoStoriesOutlinedIcon />
                                         </div>
 
@@ -240,17 +248,17 @@ const LandingPage = () => {
 
                             {/* Footer */}
                             <div className=' w-[100vw] text-white h-fit bg-gradient-to-b from-transparent via-[#0055FF]/10 to-[#0055FF]/10 px-[5%] flex flex-col items-center justify-center pt-[10vh]'>
-                                <div className=' w-[95%] h-[50vh] rounded-xl mx-auto flex items-center justify-between px-[2.5%] mb-[10vh]'>
-                                    <div className=' max-sm:w-full w-[40%]'>
+                                <div className=' w-[95%] h-[50vh] rounded-xl mx-auto bg-[#0055FF] flex flex-col items-center justify-center px-[2.5%] mb-[10vh]'>
+                                    {/* <div className=' w-full'> */}
                                         <h1 className=' text-white text-[48px] mb-[20px]'>Start Studying Smarter Today</h1>
                                         <Link
                                             to={"/dashboard"}
-                                            className=' text-[#000] bg-white px-[40px] py-[7px] rounded-full'
+                                            className=' text-[#000] bg-white px-[40px] py-[7px] rounded-full hover:bg-transparent hover:text-white duration-500'
                                         >
-                                            Get Started
+                                            Get Started For Free
                                         </Link>
-                                    </div>
-                                    <img src="/girl.png" alt="" className=' hidden h-full max-sm:hidden' />
+                                    {/* </div> */}
+                                    {/* <img src="/girl.png" alt="" className=' hidden h-full max-sm:hidden' /> */}
                                 </div>
                             </div>
                         </div>
