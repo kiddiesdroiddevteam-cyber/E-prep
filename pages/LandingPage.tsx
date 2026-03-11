@@ -281,16 +281,14 @@ const LandingPage = () => {
                             </div> */}
 
                             {/* Footer */}
-                            <div className=' w-[100vw] text-white h-fit bg-gradient-to-b from-transparent via-[#0055FF]/10 to-[#0055FF]/10 px-[5%] flex flex-col items-center justify-center pt-[10vh]'>
-                                <div className=' w-[95%] h-[50vh] rounded-xl mx-auto bg-[#0055FF] flex flex-col items-center justify-center px-[2.5%] mb-[10vh]'>
+                            <div className=' w-[100vw] text-white h-fit bg-[#0A0814] px-[5%] flex flex-col items-center justify-center pt-[10vh]'>
+                                <div className=' w-[95%] h-[30vh] rounded-xl mx-auto bg-transparent flex flex-col items-center justify-center px-[2.5%] mb-[10vh]'>
                                     {/* <div className=' w-full'> */}
-                                    <h1 className=' text-white text-[48px] mb-[20px]'>Start Studying Smarter Today</h1>
-                                    <Link
-                                        to={"/dashboard"}
-                                        className=' text-[#000] bg-white px-[40px] py-[7px] rounded-full hover:bg-transparent hover:text-white duration-500'
-                                    >
-                                        Get Started For Free
-                                    </Link>
+                                    <h1 className=' text-white text-[36px] mb-[20px]'>Start Studying Smarter Today</h1>
+
+                                    <p className=' text-[20px] text-white mb-[20px] text-center'>Your success begins with the right tools. Join thousands of <br /> students preparing better</p>
+
+                                    <Link to={'/dashboard'} className=' block h-[52px] w-[159px] bg-[#0055FF] rounded-2xl text-white flex items-center justify-center text-[16px]'>Get Started</Link>
                                     {/* </div> */}
                                     {/* <img src="/girl.png" alt="" className=' hidden h-full max-sm:hidden' /> */}
                                 </div>
