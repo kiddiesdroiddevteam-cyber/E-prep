@@ -162,7 +162,7 @@ const LandingPage = () => {
                                     <p className=' text-white className="text-center"'>Three steps to show how to use IwanPass</p>
                                 </div>
 
-                                <div className=' w-[85%] flex items-center justify-between'>
+                                <div className=' w-[85%] flex items-center justify-between mb-[10vh]'>
                                     <div className=' flex items-center justify-center flex-col'>
                                         <img src="/hiw1.png" alt="" className=' mb-[10px]'/>
                                         <h1 className=' mb-[5px] text-white text-[18px] text-center'>Pick Subject</h1>
@@ -213,14 +213,33 @@ const LandingPage = () => {
                             </div> */}
 
                             {/* Dashboard Preview */}
-                            <div className=' w-[100vw] text-white min-h-[100vh] bg-gradient-to-b from-transparent via-[#0055FF]/10 to-[#0055FF]/10 px-[5%] flex flex-col items-center justify-center pt-[10vh]'>
+                            <div className=' w-[100vw] text-white min-h-[100vh] bg-[#0A0814] to-[#0055FF]/10 px-[5%] flex flex-col items-center justify-center pt-[10vh]'>
                                 <div className=' w-full flex flex-col items-center justify-center mb-[20px]'>
                                     <h1 className=' text-white bg-[#0055FF] px-2 py-1 rounded-full mb-[10px]'>Dashboard</h1>
                                     <h1 className=' max-sm:text-[30px] font-semibold text-[48px] text-white mb-[5px] text-center'>Your Personal Study Hub</h1>
                                     <p className="text-center">Track Progress, weak topics and past tests.</p>
                                 </div>
                                 <div>
-                                    <img src="/preview.png" alt="" className=' block mt-[10px]' />
+                                    <img src="/dash-prev.png" alt="" className=' block mt-[10px] mb-[10vh]' />
+                                </div>
+
+                                <div className=' w-[85%] flex items-center justify-between mb-[10vh]'>
+                                    <div className=' flex items-center justify-center flex-col'>
+                                        <img src="/dash1.png" alt="" className=' mb-[10px]'/>
+                                        <h1 className=' mb-[5px] text-white text-[18px] text-center'>Instant Corrections</h1>
+                                    </div>
+                                    <div className=' flex items-center justify-center flex-col'>
+                                        <img src="/dash2.png" alt="" className=' mb-[10px]'/>
+                                        <h1 className=' mb-[5px] text-white text-[18px] text-center'>Unlimited AI Tests</h1>
+                                    </div>
+                                    <div className=' flex items-center justify-center flex-col'>
+                                        <img src="/dash3.png" alt="" className=' mb-[10px]'/>
+                                        <h1 className=' mb-[5px] text-white text-[18px] text-center'>Past Question Library</h1>
+                                    </div>
+                                    <div className=' flex items-center justify-center flex-col'>
+                                        <img src="/dash4.png" alt="" className=' mb-[10px]'/>
+                                        <h1 className=' mb-[5px] text-white text-[18px] text-center'>Smart Analytics</h1>
+                                    </div>
                                 </div>
                             </div>
 
