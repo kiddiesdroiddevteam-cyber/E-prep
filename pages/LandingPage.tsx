@@ -116,13 +116,47 @@ const LandingPage = () => {
                             </div>
 
                             {/* Features to boost your study */}
-                            <div id="features" className=' w-[100vw] min-h-[100vh] bg-[#0A0814] px-[5%] flex flex-col items-center justify-center pt-[10vh]'>
-                                <div className=' w-full flex flex-col items-center justify-center mb-[10px]'>
+                            <div id="features" className=' w-[100vw] min-h-[100vh] bg-[#0A0814] flex flex-col items-center justify-center pt-[10vh]'>
+                                <div className=' w-full flex flex-col items-center justify-center mb-[10vh] px-[5%]'>
                                     <h1 className=' text-white bg-[#0055FF] px-2 py-1 rounded-full mb-[10px]'>Features</h1>
-                                    <h1 className=' max-sm:text-[30px] font-semibold text-[48px] text-white mb-[5px] text-center'>Multiple Features To Boost Your Study</h1>
+                                    <h1 className=' max-sm:text-[30px] text-[48px] text-white mb-[5px] text-center'>Features To Boost Your Study</h1>
                                     <p className=' text-white className="text-center"'>Everything you need to practice and prepare for your exam</p>
                                 </div>
-                                <div className=' w-[100vw] min-h-[60vh] px-[5%] flex flex-col items-center justify-center pt-[10vh]'>
+                                <div className=' w-full h-[80vh] flex items-center justify-between mb-[10vh]'>
+                                    <div className=' w-[55%] h-full p-[5%]'>
+                                        <div className=' w-full h-full flex flex-col items-center justify-between'>
+                                            <div className=' w-full h-[45%] flex items-center justify-between'>
+                                                <div className=' flex items-center justify-center flex-col'>
+                                                    <img src="/fea1.png" alt="" className=' mb-[10px]' />
+                                                    <h1 className=' mb-[5px] text-white text-[18px] text-center'>Access Past Questions <br /> (WAEC, JAMB, NECO)</h1>
+                                                    <p className=' text-white text-[16px] text-center'>Get well-organized, updated, past questions for your external examinations</p>
+                                                </div>
+
+                                                <div className=' flex items-center justify-center flex-col'>
+                                                    <img src="/fea2.png" alt="" className=' mb-[10px]' />
+                                                    <h1 className=' mb-[5px] text-white text-[18px] text-center'>Smart Performance Insights</h1>
+                                                    <p className=' text-white text-[16px] text-center'>Track and visualize your strengths, weaknesses, and progress automatically.</p>
+                                                </div>
+                                            </div>
+
+                                            <div className=' w-full h-[45%] flex items-center justify-between'>
+                                                <div className=' flex items-center justify-center flex-col'>
+                                                    <img src="/fea3.png" alt="" className=' mb-[10px]' />
+                                                    <h1 className=' mb-[5px] text-white text-[18px] text-center'>Instant AI-Generated Questions</h1>
+                                                    <p className=' text-white text-[16px] text-center'>Get AI generated questions for any subject or topic for instant practice</p>
+                                                </div>
+
+                                                <div className=' flex items-center justify-center flex-col'>
+                                                    <img src="/fea4.png" alt="" className=' mb-[10px]' />
+                                                    <h1 className=' mb-[5px] text-white text-[18px] text-center'>Upload note</h1>
+                                                    <p className=' text-white text-[16px] text-center'>Upload your note to generate questions instantly</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <img src='/features.png' className=' w-[45%] h-full'></img>
+                                </div>
+                                {/* <div className=' w-[100vw] min-h-[60vh] px-[5%] flex flex-col items-center justify-center pt-[10vh]'>
 
 
                                     <div className=' w-full flex items-center justify-between flex-col lg:flex-row'>
@@ -152,7 +186,7 @@ const LandingPage = () => {
                                             <p>Upload your note to generate questions instantly</p>
                                         </div>
                                     </div>
-                                </div>
+                                </div> */}
                             </div>
                             {/* How It Works */}
                             <div id="howitworks" className=' w-[100vw] min-h-[50vh] px-[5%] flex flex-col items-center justify-center pt-[10vh]'>
@@ -164,17 +198,17 @@ const LandingPage = () => {
 
                                 <div className=' w-[85%] flex items-center justify-between mb-[10vh]'>
                                     <div className=' flex items-center justify-center flex-col'>
-                                        <img src="/hiw1.png" alt="" className=' mb-[10px]'/>
+                                        <img src="/hiw1.png" alt="" className=' mb-[10px]' />
                                         <h1 className=' mb-[5px] text-white text-[18px] text-center'>Pick Subject</h1>
                                         <p className=' text-white text-[16px] text-center'>Choose from WAEC, NECO, JAMB or any subject you want to take test on.</p>
                                     </div>
                                     <div className=' flex items-center justify-center flex-col'>
-                                        <img src="/hiw2.png" alt="" className=' mb-[10px]'/>
+                                        <img src="/hiw2.png" alt="" className=' mb-[10px]' />
                                         <h1 className=' mb-[5px] text-white text-[18px] text-center'>Select Mode</h1>
                                         <p className=' text-white text-[16px] text-center'>Select from past question, AI questions, or upload note to quiz.</p>
                                     </div>
                                     <div className=' flex items-center justify-center flex-col'>
-                                        <img src="/hiw3.png" alt="" className=' mb-[10px]'/>
+                                        <img src="/hiw3.png" alt="" className=' mb-[10px]' />
                                         <h1 className=' mb-[5px] text-white text-[18px] text-center'>Practice & Improve</h1>
                                         <p className=' text-white text-[16px] text-center'>Take timed tests and get  instant scoring and detailed explanations.</p>
                                     </div>
@@ -225,19 +259,19 @@ const LandingPage = () => {
 
                                 <div className=' w-[85%] flex items-center justify-between mb-[10vh]'>
                                     <div className=' flex items-center justify-center flex-col'>
-                                        <img src="/dash1.png" alt="" className=' mb-[10px]'/>
+                                        <img src="/dash1.png" alt="" className=' mb-[10px]' />
                                         <h1 className=' mb-[5px] text-white text-[18px] text-center'>Instant Corrections</h1>
                                     </div>
                                     <div className=' flex items-center justify-center flex-col'>
-                                        <img src="/dash2.png" alt="" className=' mb-[10px]'/>
+                                        <img src="/dash2.png" alt="" className=' mb-[10px]' />
                                         <h1 className=' mb-[5px] text-white text-[18px] text-center'>Unlimited AI Tests</h1>
                                     </div>
                                     <div className=' flex items-center justify-center flex-col'>
-                                        <img src="/dash3.png" alt="" className=' mb-[10px]'/>
+                                        <img src="/dash3.png" alt="" className=' mb-[10px]' />
                                         <h1 className=' mb-[5px] text-white text-[18px] text-center'>Past Question Library</h1>
                                     </div>
                                     <div className=' flex items-center justify-center flex-col'>
-                                        <img src="/dash4.png" alt="" className=' mb-[10px]'/>
+                                        <img src="/dash4.png" alt="" className=' mb-[10px]' />
                                         <h1 className=' mb-[5px] text-white text-[18px] text-center'>Smart Analytics</h1>
                                     </div>
                                 </div>
