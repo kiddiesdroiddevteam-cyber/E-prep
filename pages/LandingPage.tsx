@@ -26,24 +26,56 @@ const LandingPage = () => {
                             </div>
                         </div>
                     ) : (
-                        <div className='h-[100vh] w-[100vw] bg-[#02000D] overflow-y-scroll text-black'>
-                            <div className='fixed z-[10] h-[80px] w-[100vw] flex items-center justify-start px-[2.5%]'>
+                        <div className='h-[100vh] w-[100vw] bg-[#000] overflow-y-scroll text-black'>
+                            <div className='fixed z-[10] h-[70px] w-[100vw] flex items-center justify-between px-[2.5%] bg-black/50 backdrop-blur-md'>
                                 <h1 className=' text-[#0400FF] font-extrabold text-[22px] italic flex items-center justify-center'><img src="../assets/logo.png" alt="" className=' h-[20px] mr-[10px]' /> iWanPass</h1>
-                            </div>
 
-                            <div className=' w-[100vw] min-h-[100vh] bg-gradient-to-b to-transparent via-transparent from-[#0055FF]/10 bg-opacity-0 flex flex-col items-center justify-center px-[2.5%]'>
-                                <div className=' w-full text-white text-center mb-[20px] mt-[30px]'>
-                                    <h1 className=' text-[40px] lg:text-[64px] text-center'>Study Smarter <br /> with AI-Powered Practice</h1>
-                                    <p className=' text-[18px] lg:text-[24px] mb-[20px]'>Get past questions, AI-generated tests, and personalized study <br /> recommendations—all in one platform</p>
+                                <div className=' flex items-center justify-center'>
                                     <Link
-                                        className=' w-[235px] h-[66px] mx-auto flex items-center justify-center bg-[#0400FF] rounded-xl'
-                                        to={"/dashboard"}
+                                        className=' text-[18px] text-white mx-[10px]'
+                                        to={"/"}
                                     >
-                                        Get Started
+                                        Home
+                                    </Link>
+
+                                    <Link
+                                        className=' text-[18px] text-white mx-[10px]'
+                                        to={"/"}
+                                    >
+                                        About
+                                    </Link>
+
+                                    <Link
+                                        className=' text-[18px] text-white mx-[10px]'
+                                        to={"/"}
+                                    >
+                                        Features
+                                    </Link>
+
+                                    <Link
+                                        className=' text-[18px] text-white mx-[10px]'
+                                        to={"/"}
+                                    >
+                                        How It Works
                                     </Link>
                                 </div>
 
-                                <div className=' min-h-[40vh] w-[95%] lg:w-[70%] bg-[#CDE7FF] rounded-xl'>
+                                <Link to={'/dashboard'} className=' h-[50px] w-[200px] bg-[#0055FF] rounded-full text-white flex items-center justify-center text-[20px]'>Get Started</Link>
+                            </div>
+
+                            <div id="home" className=' pt-[80px] w-[100vw] min-h-[100vh] bg-black flex flex-col items-center justify-center px-[2.5%] mb-[20vh]'>
+                                <div className=' w-full text-white text-center mb-[50px] mt-[30px]'>
+                                    <h1 className=' text-[40px] lg:text-[64px] text-center'>Start Practicing For Free</h1>
+                                    <p className=' text-[18px] lg:text-[24px] mb-[20px]'>Get past questions, AI-generated tests, and personalized study <br /> recommendations all in one platform</p>
+
+                                    <div className=' w-full flex items-center justify-center'>
+                                        <Link to={'/dashboard'} className=' h-[50px] w-[200px] bg-[#0055FF] rounded-full text-white flex items-center justify-center text-[20px] mx-[10px]'>Get Started</Link>
+
+                                        <Link to={'/dashboard'} className=' h-[50px] w-[200px] bg-transparent border border-white rounded-full text-white flex items-center justify-center text-[20px] mx-[10px]'>Login</Link>
+                                    </div>
+                                </div>
+
+                                {/* <div className=' min-h-[40vh] w-[95%] lg:w-[70%] bg-[#CDE7FF] rounded-xl'>
                                     <video
                                         src="/test-vid.mp4"
                                         controls
@@ -51,7 +83,9 @@ const LandingPage = () => {
                                         muted
                                         className="w-full h-auto rounded-xl border border-[#0055FF]"
                                     />
-                                </div>
+                                </div> */}
+
+                                <img src="/hero-img.png" alt="" className=' w-[1200px] h-[640px] rounded-2xl' />
                             </div>
 
                             {/* About */}
@@ -250,13 +284,13 @@ const LandingPage = () => {
                             <div className=' w-[100vw] text-white h-fit bg-gradient-to-b from-transparent via-[#0055FF]/10 to-[#0055FF]/10 px-[5%] flex flex-col items-center justify-center pt-[10vh]'>
                                 <div className=' w-[95%] h-[50vh] rounded-xl mx-auto bg-[#0055FF] flex flex-col items-center justify-center px-[2.5%] mb-[10vh]'>
                                     {/* <div className=' w-full'> */}
-                                        <h1 className=' text-white text-[48px] mb-[20px]'>Start Studying Smarter Today</h1>
-                                        <Link
-                                            to={"/dashboard"}
-                                            className=' text-[#000] bg-white px-[40px] py-[7px] rounded-full hover:bg-transparent hover:text-white duration-500'
-                                        >
-                                            Get Started For Free
-                                        </Link>
+                                    <h1 className=' text-white text-[48px] mb-[20px]'>Start Studying Smarter Today</h1>
+                                    <Link
+                                        to={"/dashboard"}
+                                        className=' text-[#000] bg-white px-[40px] py-[7px] rounded-full hover:bg-transparent hover:text-white duration-500'
+                                    >
+                                        Get Started For Free
+                                    </Link>
                                     {/* </div> */}
                                     {/* <img src="/girl.png" alt="" className=' hidden h-full max-sm:hidden' /> */}
                                 </div>
