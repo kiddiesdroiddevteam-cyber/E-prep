@@ -258,17 +258,23 @@ const LandingPage = () => {
                                 <div className=' w-[95%] h-[80vh] flex max-sm:flex-col items-center justify-between mb-[10px]'>
                                     <div className=' max-sm:w-[95%] w-[35%] h-full flex-col flex items-center justify-center text-[24px]'>
                                         <div>
-                                            <h1>WAEC</h1>
-                                            <h1>NECO</h1>
-                                            <h1>JAMB</h1>
-                                            <h1>Common Entrance</h1>
-                                            <h1>And so much more...</h1>
+                                            <h1 className='flex items-center justify-start'><img src='/vector.png' className='mr-2'/> Mathematics</h1>
+                                            <h1 className='flex items-center justify-start'><img src='/vector.png' className='mr-2'/> English</h1>
+                                            <h1 className='flex items-center justify-start'><img src='/vector.png' className='mr-2'/> Biology</h1>
+                                            <h1 className='flex items-center justify-start'><img src='/vector.png' className='mr-2'/> Chemistry</h1>
+                                            <h1 className='flex items-center justify-start'><img src='/vector.png' className='mr-2'/> Physics</h1>
+                                            <h1 className='flex items-center justify-start'><img src='/vector.png' className='mr-2'/> Government</h1>
+                                            <h1 className='flex items-center justify-start'><img src='/vector.png' className='mr-2'/> Literature</h1>
+                                            <h1 className='flex items-center justify-start'><img src='/vector.png' className='mr-2'/> Commerce</h1>
+                                            <h1 className='flex items-center justify-start'><img src='/vector.png' className='mr-2'/> Accounting</h1>
+                                            <h1 className='flex items-center justify-start'><img src='/vector.png' className='mr-2'/> and more....</h1>
                                         </div>
                                     </div>
                                     <div className=' max-sm:w-[100%] w-[70%] h-full flex items-center justify-center'>
-                                        <div className=' w-[100%] h-[70%] bg-[#35333D]/50 rounded-2xl'>
+                                        {/* <div className=' w-[100%] h-[70%] bg-[#35333D]/50 rounded-2xl'>
                                             <SubjectsScroll />
-                                        </div>
+                                        </div> */}
+                                        <img src="/subjects.png" alt="" />
                                     </div>
                                 </div>
                             </div>
