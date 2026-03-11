@@ -26,35 +26,35 @@ const LandingPage = () => {
                             </div>
                         </div>
                     ) : (
-                        <div className='h-[100vh] w-[100vw] bg-[#000] overflow-y-scroll text-black'>
+                        <div className='h-[100vh] w-[100vw] bg-[#000] overflow-y-scroll scroll-smooth text-black'>
                             <div className='fixed z-[10] h-[70px] w-[100vw] flex items-center justify-between px-[2.5%] bg-black/50 backdrop-blur-md'>
                                 <h1 className=' text-[#0400FF] font-extrabold text-[22px] italic flex items-center justify-center'><img src="../assets/logo.png" alt="" className=' h-[20px] mr-[10px]' /> iWanPass</h1>
 
                                 <div className=' flex items-center justify-center'>
                                     <Link
                                         className=' text-[18px] text-white mx-[10px]'
-                                        to={"/"}
+                                        to={"/#home"}
                                     >
                                         Home
                                     </Link>
 
                                     <Link
                                         className=' text-[18px] text-white mx-[10px]'
-                                        to={"/"}
+                                        to={"/#about"}
                                     >
                                         About
                                     </Link>
 
                                     <Link
                                         className=' text-[18px] text-white mx-[10px]'
-                                        to={"/"}
+                                        to={"/#features"}
                                     >
                                         Features
                                     </Link>
 
                                     <Link
                                         className=' text-[18px] text-white mx-[10px]'
-                                        to={"/"}
+                                        to={"/#howitworks"}
                                     >
                                         How It Works
                                     </Link>
@@ -63,6 +63,7 @@ const LandingPage = () => {
                                 <Link to={'/dashboard'} className=' h-[50px] w-[200px] bg-[#0055FF] rounded-full text-white flex items-center justify-center text-[20px]'>Get Started</Link>
                             </div>
 
+                            {/* Hero */}
                             <div id="home" className=' pt-[80px] w-[100vw] min-h-[100vh] bg-black flex flex-col items-center justify-center px-[2.5%] mb-[20vh]'>
                                 <div className=' w-full text-white text-center mb-[50px] mt-[30px]'>
                                     <h1 className=' text-[40px] lg:text-[64px] text-center'>Start Practicing For Free</h1>
@@ -89,7 +90,7 @@ const LandingPage = () => {
                             </div>
 
                             {/* About */}
-                            {/* <div className=' w-[100vw] text-white min-h-[100vh] bg-gradient-to-b to-transparent via-[#0055FF]/10 from-[#0055FF]/10 px-[5%] flex flex-col items-center justify-center pt-[10vh] max-sm:pb-[30px]'>
+                            <div id="about" className=' w-[100vw] text-white min-h-[100vh] px-[5%] flex flex-col items-center justify-center pt-[10vh] max-sm:pb-[30px]'>
                                 <div className=' w-full flex flex-col items-center justify-center mb-[30px]'>
                                     <h1 className=' text-white bg-[#0055FF] px-2 py-1 rounded-full mb-[10px] text-center'>About</h1>
                                     <h1 className=' max-sm:text-[30px] font-semibold text-[48px] text-white mb-[5px] text-center'>About iWanPass</h1>
@@ -112,12 +113,12 @@ const LandingPage = () => {
                                         />
                                     </div>
                                 </div>
-                            </div> */}
+                            </div>
 
                             {/* Features to boost your study */}
-                            <div className=' w-[100vw] min-h-[100vh] bg-gradient-to-b from-transparent via-[#0055FF]/10 to-[#0055FF]/10 px-[5%] flex flex-col items-center justify-center pt-[10vh]'>
+                            <div id="features" className=' w-[100vw] min-h-[100vh] bg-[#0A0814] px-[5%] flex flex-col items-center justify-center pt-[10vh]'>
                                 <div className=' w-full flex flex-col items-center justify-center mb-[10px]'>
-                                    <h1 className=' text-white bg-[#0055FF] px-2 py-1 rounded-full mb-[10px]'>About</h1>
+                                    <h1 className=' text-white bg-[#0055FF] px-2 py-1 rounded-full mb-[10px]'>Features</h1>
                                     <h1 className=' max-sm:text-[30px] font-semibold text-[48px] text-white mb-[5px] text-center'>Multiple Features To Boost Your Study</h1>
                                     <p className=' text-white className="text-center"'>Everything you need to practice and prepare for your exam</p>
                                 </div>
@@ -153,9 +154,35 @@ const LandingPage = () => {
                                     </div>
                                 </div>
                             </div>
+                            {/* How It Works */}
+                            <div id="howitworks" className=' w-[100vw] min-h-[50vh] px-[5%] flex flex-col items-center justify-center pt-[10vh]'>
+                                <div className=' w-full flex flex-col items-center justify-center mb-[30px]'>
+                                    <h1 className=' text-white bg-[#0055FF] px-2 py-1 rounded-full mb-[10px]'>How It Works</h1>
+                                    <h1 className=' max-sm:text-[30px] font-semibold text-[48px] text-white mb-[5px] text-center'>Get Started in Three Simple Steps</h1>
+                                    <p className=' text-white className="text-center"'>Three steps to show how to use IwanPass</p>
+                                </div>
+
+                                <div className=' w-[85%] flex items-center justify-between'>
+                                    <div className=' flex items-center justify-center flex-col'>
+                                        <img src="/hiw1.png" alt="" className=' mb-[10px]'/>
+                                        <h1 className=' mb-[5px] text-white text-[18px] text-center'>Pick Subject</h1>
+                                        <p className=' text-white text-[16px] text-center'>Choose from WAEC, NECO, JAMB or any subject you want to take test on.</p>
+                                    </div>
+                                    <div className=' flex items-center justify-center flex-col'>
+                                        <img src="/hiw2.png" alt="" className=' mb-[10px]'/>
+                                        <h1 className=' mb-[5px] text-white text-[18px] text-center'>Select Mode</h1>
+                                        <p className=' text-white text-[16px] text-center'>Select from past question, AI questions, or upload note to quiz.</p>
+                                    </div>
+                                    <div className=' flex items-center justify-center flex-col'>
+                                        <img src="/hiw3.png" alt="" className=' mb-[10px]'/>
+                                        <h1 className=' mb-[5px] text-white text-[18px] text-center'>Practice & Improve</h1>
+                                        <p className=' text-white text-[16px] text-center'>Take timed tests and get  instant scoring and detailed explanations.</p>
+                                    </div>
+                                </div>
+                            </div>
 
                             {/* Get Startes in three simple steps */}
-                            <div className=' w-[100vw] text-white min-h-[100vh] bg-gradient-to-b to-transparent via-[#0055FF]/10 from-[#0055FF]/10 px-[5%] flex flex-col items-center justify-center pt-[10vh]'>
+                            {/* <div className=' w-[100vw] text-white min-h-[100vh] bg-gradient-to-b to-transparent via-[#0055FF]/10 from-[#0055FF]/10 px-[5%] flex flex-col items-center justify-center pt-[10vh]'>
                                 <div className=' w-full flex flex-col items-center justify-center mb-[10px]'>
                                     <h1 className=' text-white bg-[#0055FF] px-2 py-1 rounded-full mb-[10px]'>How It Works</h1>
                                     <h1 className=' max-sm:text-[30px] font-semibold text-[48px] text-white mb-[5px] text-center'>Get Started in Three Simple Steps</h1>
@@ -183,7 +210,7 @@ const LandingPage = () => {
                                         <p className=' text-[16px]'>Take timed tests and get detailed explanations and scoring</p>
                                     </div>
                                 </div>
-                            </div>
+                            </div> */}
 
                             {/* Dashboard Preview */}
                             <div className=' w-[100vw] text-white min-h-[100vh] bg-gradient-to-b from-transparent via-[#0055FF]/10 to-[#0055FF]/10 px-[5%] flex flex-col items-center justify-center pt-[10vh]'>
@@ -198,7 +225,7 @@ const LandingPage = () => {
                             </div>
 
                             {/* Benefits */}
-                            <div className=' w-[100vw] text-white min-h-[100vh] bg-gradient-to-b to-transparent via-[#0055FF]/10 from-[#0055FF]/10 px-[5%] flex flex-col items-center justify-center pt-[10vh]'>
+                            {/* <div className=' w-[100vw] text-white min-h-[100vh] bg-gradient-to-b to-transparent via-[#0055FF]/10 from-[#0055FF]/10 px-[5%] flex flex-col items-center justify-center pt-[10vh]'>
                                 <div className=' w-full flex flex-col items-center justify-center mb-[25px]'>
                                     <h1 className=' text-white bg-[#0055FF] px-2 py-1 rounded-full mb-[10px]'>Benefits</h1>
                                     <h1 className=' max-sm:text-[30px] font-semibold text-[48px] text-white mb-[5px] text-center'>Benefits Of Using iWanPass</h1>
@@ -238,15 +265,9 @@ const LandingPage = () => {
                                         <h1 className=' text-[16px]'>Smart Analytics</h1>
                                     </div>
 
-                                    {/* <div className=' bg-[#35333D]/50 flex items-center justify-between max-w-fit px-[30px] py-[20px] rounded-2xl mx-[10px]'>
-                                        <div className=' h-[60px] w-[60px] rounded-xl bg-[#0055FF] flex items-center justify-center mr-[20px]'>
-                                            <AutoStoriesOutlinedIcon />
-                                        </div>
-
-                                        <h1 className=' text-[16px]'>Performance analytics</h1>
-                                    </div> */}
+                                    
                                 </div>
-                            </div>
+                            </div> */}
 
                             {/* Subjects You Can Study */}
                             <div className=' w-[100vw] text-white min-h-[100vh] bg-gradient-to-b from-transparent via-[#0055FF]/10 to-[#0055FF]/10 px-[5%] flex flex-col items-center justify-center pt-[10vh]'>
@@ -258,16 +279,16 @@ const LandingPage = () => {
                                 <div className=' w-[95%] h-[80vh] flex max-sm:flex-col items-center justify-between mb-[10px]'>
                                     <div className=' max-sm:w-[95%] w-[35%] h-full flex-col flex items-center justify-center text-[24px]'>
                                         <div>
-                                            <h1 className='flex items-center justify-start'><img src='/vector.png' className='mr-2'/> Mathematics</h1>
-                                            <h1 className='flex items-center justify-start'><img src='/vector.png' className='mr-2'/> English</h1>
-                                            <h1 className='flex items-center justify-start'><img src='/vector.png' className='mr-2'/> Biology</h1>
-                                            <h1 className='flex items-center justify-start'><img src='/vector.png' className='mr-2'/> Chemistry</h1>
-                                            <h1 className='flex items-center justify-start'><img src='/vector.png' className='mr-2'/> Physics</h1>
-                                            <h1 className='flex items-center justify-start'><img src='/vector.png' className='mr-2'/> Government</h1>
-                                            <h1 className='flex items-center justify-start'><img src='/vector.png' className='mr-2'/> Literature</h1>
-                                            <h1 className='flex items-center justify-start'><img src='/vector.png' className='mr-2'/> Commerce</h1>
-                                            <h1 className='flex items-center justify-start'><img src='/vector.png' className='mr-2'/> Accounting</h1>
-                                            <h1 className='flex items-center justify-start'><img src='/vector.png' className='mr-2'/> and more....</h1>
+                                            <h1 className='flex items-center justify-start'><img src='/vector.png' className='mr-2' /> Mathematics</h1>
+                                            <h1 className='flex items-center justify-start'><img src='/vector.png' className='mr-2' /> English</h1>
+                                            <h1 className='flex items-center justify-start'><img src='/vector.png' className='mr-2' /> Biology</h1>
+                                            <h1 className='flex items-center justify-start'><img src='/vector.png' className='mr-2' /> Chemistry</h1>
+                                            <h1 className='flex items-center justify-start'><img src='/vector.png' className='mr-2' /> Physics</h1>
+                                            <h1 className='flex items-center justify-start'><img src='/vector.png' className='mr-2' /> Government</h1>
+                                            <h1 className='flex items-center justify-start'><img src='/vector.png' className='mr-2' /> Literature</h1>
+                                            <h1 className='flex items-center justify-start'><img src='/vector.png' className='mr-2' /> Commerce</h1>
+                                            <h1 className='flex items-center justify-start'><img src='/vector.png' className='mr-2' /> Accounting</h1>
+                                            <h1 className='flex items-center justify-start'><img src='/vector.png' className='mr-2' /> and more....</h1>
                                         </div>
                                     </div>
                                     <div className=' max-sm:w-[100%] w-[70%] h-full flex items-center justify-center'>
