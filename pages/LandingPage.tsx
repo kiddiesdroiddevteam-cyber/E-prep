@@ -274,11 +274,11 @@ const LandingPage = () => {
                             </div>
 
                             {/* Banner */}
-                            <div className=' w-[100vw] text-white lg:min-h-[100vh] bg-gradient-to-b to-transparent via-[#0055FF]/10 from-[#0055FF]/10 px-[5%] flex flex-col items-center justify-center pt-[10vh]'>
+                            {/* <div className=' w-[100vw] text-white lg:min-h-[100vh] bg-gradient-to-b to-transparent via-[#0055FF]/10 from-[#0055FF]/10 px-[5%] flex flex-col items-center justify-center pt-[10vh]'>
                                 <div>
                                     <img src="/banner.png" alt="" />
                                 </div>
-                            </div>
+                            </div> */}
 
                             {/* Footer */}
                             <div className=' w-[100vw] text-white h-fit bg-gradient-to-b from-transparent via-[#0055FF]/10 to-[#0055FF]/10 px-[5%] flex flex-col items-center justify-center pt-[10vh]'>
