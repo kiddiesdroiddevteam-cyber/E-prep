@@ -30,7 +30,7 @@ const LandingPage = () => {
                             <div className='fixed z-[10] h-[70px] w-[100vw] flex items-center justify-between px-[2.5%] bg-black/50 backdrop-blur-md'>
                                 <h1 className=' text-[#0400FF] font-extrabold text-[22px] italic flex items-center justify-center'><img src="../assets/logo.png" alt="" className=' h-[20px] mr-[10px]' /> iWanPass</h1>
 
-                                <div className=' flex items-center justify-center'>
+                                <div className=' flex items-center justify-center max-sm:hidden'>
                                     <Link
                                         className=' text-[18px] text-white mx-[10px]'
                                         to={"/#home"}
@@ -60,11 +60,11 @@ const LandingPage = () => {
                                     </Link>
                                 </div>
 
-                                <Link to={'/dashboard'} className=' h-[50px] w-[200px] bg-[#0055FF] rounded-full text-white flex items-center justify-center text-[20px]'>Get Started</Link>
+                                <Link to={'/dashboard'} className=' max-sm:h-[35px] max-sm:w-[100px] h-[50px] w-[200px] bg-[#0055FF] rounded-full text-white flex items-center justify-center max-sm:text-[14px] text-[20px]'>Get Started</Link>
                             </div>
 
                             {/* Hero */}
-                            <div id="home" className=' pt-[80px] w-[100vw] min-h-[100vh] bg-black flex flex-col items-center justify-center px-[2.5%] mb-[20vh]'>
+                            <div id="home" className=' pt-[80px] w-[100vw] max-sm:min-h-[50vh] min-h-[100vh] bg-black flex flex-col items-center justify-center px-[2.5%] mb-[20vh]'>
                                 <div className=' w-full text-white text-center mb-[50px] mt-[30px]'>
                                     <h1 className=' text-[40px] lg:text-[64px] text-center'>Start Practicing For Free</h1>
                                     <p className=' text-[18px] lg:text-[24px] mb-[20px]'>Get past questions, AI-generated tests, and personalized study <br /> recommendations all in one platform</p>
@@ -86,7 +86,7 @@ const LandingPage = () => {
                                     />
                                 </div> */}
 
-                                <img src="/hero-img.png" alt="" className=' w-[1200px] h-[640px] rounded-2xl' />
+                                <img src="/hero-img.png" alt="" className=' w-full lg:w-[1200px] lg:h-[640px] rounded-2xl' />
                             </div>
 
                             {/* About */}
@@ -122,10 +122,10 @@ const LandingPage = () => {
                                     <h1 className=' max-sm:text-[30px] text-[48px] text-white mb-[5px] text-center'>Features To Boost Your Study</h1>
                                     <p className=' text-white className="text-center"'>Everything you need to practice and prepare for your exam</p>
                                 </div>
-                                <div className=' w-full h-[80vh] flex items-center justify-between mb-[10vh]'>
-                                    <div className=' w-[55%] h-full p-[5%]'>
-                                        <div className=' w-full h-full flex flex-col items-center justify-between'>
-                                            <div className=' w-full h-[45%] flex items-center justify-between'>
+                                <div className=' w-full min-h-[80vh] flex max-sm:flex-col items-center justify-between mb-[10vh]'>
+                                    <div className=' max-sm:w-[100%] w-[55%] h-full p-[5%]'>
+                                        <div className=' w-full h-full flex flex-col max-sm:items-start items-center justify-between'>
+                                            <div className=' w-full h-[45%] flex max-sm:items-start mb-[20px] items-center justify-between'>
                                                 <div className=' flex items-center justify-center flex-col'>
                                                     <img src="/fea1.png" alt="" className=' mb-[10px]' />
                                                     <h1 className=' mb-[5px] text-white text-[18px] text-center'>Access Past Questions <br /> (WAEC, JAMB, NECO)</h1>
@@ -139,7 +139,7 @@ const LandingPage = () => {
                                                 </div>
                                             </div>
 
-                                            <div className=' w-full h-[45%] flex items-center justify-between'>
+                                            <div className=' w-full h-[45%] flex max-sm:items-start mb-[20px] items-center justify-between'>
                                                 <div className=' flex items-center justify-center flex-col'>
                                                     <img src="/fea3.png" alt="" className=' mb-[10px]' />
                                                     <h1 className=' mb-[5px] text-white text-[18px] text-center'>Instant AI-Generated Questions</h1>
@@ -154,7 +154,7 @@ const LandingPage = () => {
                                             </div>
                                         </div>
                                     </div>
-                                    <img src='/features.png' className=' w-[45%] h-full'></img>
+                                    <img src='/features.png' className=' w-[100%] lg:w-[45%] lg:h-full'></img>
                                 </div>
                                 {/* <div className=' w-[100vw] min-h-[60vh] px-[5%] flex flex-col items-center justify-center pt-[10vh]'>
 
@@ -196,18 +196,18 @@ const LandingPage = () => {
                                     <p className=' text-white className="text-center"'>Three steps to show how to use IwanPass</p>
                                 </div>
 
-                                <div className=' w-[85%] flex items-center justify-between mb-[10vh]'>
-                                    <div className=' flex items-center justify-center flex-col'>
+                                <div className=' w-[85%] flex max-sm:flex-col items-center justify-between mb-[10vh]'>
+                                    <div className=' flex items-center justify-center flex-col max-sm:mb-[10px]'>
                                         <img src="/hiw1.png" alt="" className=' mb-[10px]' />
                                         <h1 className=' mb-[5px] text-white text-[18px] text-center'>Pick Subject</h1>
                                         <p className=' text-white text-[16px] text-center'>Choose from WAEC, NECO, JAMB or any subject you want to take test on.</p>
                                     </div>
-                                    <div className=' flex items-center justify-center flex-col'>
+                                    <div className=' flex items-center justify-center flex-col max-sm:mb-[10px]'>
                                         <img src="/hiw2.png" alt="" className=' mb-[10px]' />
                                         <h1 className=' mb-[5px] text-white text-[18px] text-center'>Select Mode</h1>
                                         <p className=' text-white text-[16px] text-center'>Select from past question, AI questions, or upload note to quiz.</p>
                                     </div>
-                                    <div className=' flex items-center justify-center flex-col'>
+                                    <div className=' flex items-center justify-center flex-col max-sm:mb-[10px]'>
                                         <img src="/hiw3.png" alt="" className=' mb-[10px]' />
                                         <h1 className=' mb-[5px] text-white text-[18px] text-center'>Practice & Improve</h1>
                                         <p className=' text-white text-[16px] text-center'>Take timed tests and get  instant scoring and detailed explanations.</p>
@@ -257,20 +257,20 @@ const LandingPage = () => {
                                     <img src="/dash-prev.png" alt="" className=' block mt-[10px] mb-[10vh]' />
                                 </div>
 
-                                <div className=' w-[85%] flex items-center justify-between mb-[10vh]'>
-                                    <div className=' flex items-center justify-center flex-col'>
+                                <div className=' w-[85%] flex max-sm:flex-col items-center justify-between mb-[10vh]'>
+                                    <div className=' flex items-center justify-center flex-col mb-[10px]'>
                                         <img src="/dash1.png" alt="" className=' mb-[10px]' />
                                         <h1 className=' mb-[5px] text-white text-[18px] text-center'>Instant Corrections</h1>
                                     </div>
-                                    <div className=' flex items-center justify-center flex-col'>
+                                    <div className=' flex items-center justify-center flex-col mb-[10px]'>
                                         <img src="/dash2.png" alt="" className=' mb-[10px]' />
                                         <h1 className=' mb-[5px] text-white text-[18px] text-center'>Unlimited AI Tests</h1>
                                     </div>
-                                    <div className=' flex items-center justify-center flex-col'>
+                                    <div className=' flex items-center justify-center flex-col mb-[10px]'>
                                         <img src="/dash3.png" alt="" className=' mb-[10px]' />
                                         <h1 className=' mb-[5px] text-white text-[18px] text-center'>Past Question Library</h1>
                                     </div>
-                                    <div className=' flex items-center justify-center flex-col'>
+                                    <div className=' flex items-center justify-center flex-col mb-[10px]'>
                                         <img src="/dash4.png" alt="" className=' mb-[10px]' />
                                         <h1 className=' mb-[5px] text-white text-[18px] text-center'>Smart Analytics</h1>
                                     </div>
