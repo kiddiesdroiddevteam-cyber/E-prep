@@ -10,6 +10,7 @@ import DashboardPage from './pages/DashboardPage';
 import QuizFlowPage from './pages/QuizFlowPage';
 import SettingsPage from './pages/SettingsPage';
 import LandingPage from './pages/LandingPage';
+import SubscriptionPage from './pages/SubscriptionPage';
 import { AuthProvider, useAuth } from './contexts/AuthContext';
 import { Toaster } from 'sonner';
 import { ProtectedRoute } from './components/protectedRoute';
@@ -82,11 +83,18 @@ const authRoute = createRoute({
   component: AuthPage,
 });
 
+const subscriptionRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: '/subscription',
+  component: SubscriptionPage,
+});
+
 // 5. Build route tree
 const routeTree = rootRoute.addChildren([
   indexRoute,
   protectedRoute.addChildren([dashboardRoute, quizRoute, settingsRoute, adminRoute]),
   authRoute,
+  subscriptionRoute,
 ]);
 
 // 6. Create router

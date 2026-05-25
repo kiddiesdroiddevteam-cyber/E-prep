@@ -37,11 +37,13 @@ export async function fetchAlocQuestions({
   type 
 }: FetchQuestionsParams): Promise<AlocQuestion[]> {
   const url = `https://past-questions-api.onrender.com/api/questions?examYear=${year}&examType=${type}&subject=${subject}`
+  const bearerToken = import.meta.env.VITE_PUBLIC_BEARER_TOKEN;
   try {
     const response = await fetch(url, {
       headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json',
+        'Authorization': `Bearer ${bearerToken}`,
       },
     });
 
