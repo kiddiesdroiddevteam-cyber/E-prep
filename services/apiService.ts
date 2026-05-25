@@ -151,11 +151,13 @@ export const fetchExamYears = async (examType?: string, subject?: string): Promi
 // --- New API Call to Fetch Actual Past Questions ---
 export const fetchPastQuestions = async (subject: string, year: string, type: string): Promise<Question[]> => {
   try {
+    const bearerToken = import.meta.env.VITE_BEARER_TOKEN || import.meta.env.NEXT_PUBLIC_BEARER_TOKEN;
     const response = await axios.get<ApiResponse>(`${API_BASE_URL}/q`, {
       headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json',
         'Access-Control-Allow-Origin': '*', // CORS might be an issue, needs proper backend handling
+        'Authorization': `Bearer ${bearerToken}`,
         'Token': API_KEY,
       },
       params: {
@@ -190,10 +192,12 @@ export const fetchPastQuestions = async (subject: string, year: string, type: st
 
 export const fetchQuizData = async (setQuizData) => {
   try {
+    const bearerToken = import.meta.env.VITE_PUBLIC_BEARER_TOKEN;
     const response = await axios.get<ApiResponse>(`https://past-questions-api.onrender.com/api/questions/subjects-years`, {
       headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json',
+        'Authorization': `Bearer ${bearerToken}`,
       },
     });
 
