@@ -2,6 +2,7 @@
 import React, { useEffect, useState, useMemo } from 'react';
 import { Quiz, QuizResult, StudyRecommendation, Question, Topic } from '../../types';
 import { getRecommendations, analyzeQuizResults } from '../../services/geminiService';
+import { getDriveFileId } from '../../helper/extractId';
 import Card from '../ui/Card';
 import Button from '../ui/Button';
 import { BookOpenIcon, VideoCameraIcon, ChartBarIcon, SparklesIcon } from './../icons/icons';
@@ -155,8 +156,27 @@ const QuizResults: React.FC<QuizResultsProps> = ({ quiz, result, onRestart, onNe
 
                         return (
                             <div key={question.id} className="p-4 border border-brand-border rounded-lg">
-                                <p className="font-semibold mb-2">{index + 1}. {question.prompt}</p>
-                                <div className="space-y-2 text-sm">
+                                <p className="font-semibold mb-2">{index + 1}. {question.prompt}</p>                                {(question?.image || question?.imageUrl) && (
+                                    <div className="mb-4">
+                                        {question.image && (
+                                            <img
+                                                src={question.image}
+                                                alt="Question Image"
+                                                className="max-w-full h-auto rounded-lg"
+                                                onError={(e) => {
+                                                    e.currentTarget.style.display = 'none';
+                                                }}
+                                            />
+                                        )}
+                                        {!question.image && question.imageUrl && (
+                                            <img
+                                                src={`https://drive.google.com/thumbnail?id=${getDriveFileId(question.imageUrl)}`}
+                                                alt="Question Image"
+                                                className="max-w-full h-auto rounded-lg"
+                                            />
+                                        )}
+                                    </div>
+                                )}                                <div className="space-y-2 text-sm">
                                     <p className={isCorrect ? 'text-green-400' : 'text-red-400'}>
                                         Your answer: <span className="font-bold">{selectedChoice || 'Not answered'}</span> {isCorrect ? '✅' : '❌'}
                                     </p>
