@@ -86,8 +86,15 @@ const SubscriptionPage = () => {
     <div className='min-h-screen w-full bg-black text-white py-20 px-4 md:px-8'>
       {/* Header */}
       <div className='text-center mb-16'>
-        <h1 className='text-4xl md:text-5xl font-bold mb-4'>Choose The Perfect Plan</h1>
-        <p className='text-lg text-gray-400 max-w-2xl mx-auto'>Select the plan that best fits your study needs</p>
+        <div className='flex justify-center my-8 w-full'>
+             <Button
+                variant={'secondary'}
+                className={`p-4 text-white inline-block`}
+              >
+                Pricing
+              </Button>
+        </div>
+        <h1 className='text-5xl font-semibold mb-4'>Choose The Perfect Plan</h1>
       </div>
 
       {/* Pricing Cards Container */}
@@ -110,10 +117,10 @@ const SubscriptionPage = () => {
 
             {/* Card */}
             <div
-              className={`p-8 h-full flex flex-col rounded-2xl border transition-all duration-300 ${
+              className={`p-8  h-full flex flex-col rounded-2xl border transition-all duration-300 ${
                 hoveredCard === plan.id
                   ? 'border-2 border-[#0055FF] bg-[#0a0a1a] scale-105'
-                  : 'border border-gray-700 bg-[#1a1a2e]'
+                  : 'border border-gray-700 rounded-xl'
               }`}
             >
               <div className='flex-grow'>
