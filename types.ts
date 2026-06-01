@@ -27,6 +27,8 @@ export interface Question {
   topicId: string;
   question: string;
   options: string[];
+  image?: string; // Cloudinary image URL from API
+  imageUrl?: string; // Google Drive image URL for backward compatibility
 }
 
 export interface QuizSettings {

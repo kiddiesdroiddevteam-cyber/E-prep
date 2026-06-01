@@ -13,6 +13,7 @@ const QuizPlayer: React.FC<QuizPlayerProps> = ({ quiz, onSubmit }) => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [userAnswers, setUserAnswers] = useState<Map<string, number>>(new Map());
   const [timeLeft, setTimeLeft] = useState(quiz.questions.length * 60); // 60 seconds per question
+  const [imageFailed, setImageFailed] = useState(false);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -97,12 +98,26 @@ const QuizPlayer: React.FC<QuizPlayerProps> = ({ quiz, onSubmit }) => {
             <p className="text-gray-400 mb-2">Question {currentQuestionIndex + 1} of {quiz.questions.length}</p>
             <h3 className="text-2xl font-semibold text-white">{currentQuestion.prompt}</h3>
             {currentQuestion?.imageUrl && (
-                <div>
-                  <img
-  src={`https://drive.google.com/thumbnail?id=${getDriveFileId(currentQuestion.imageUrl)}`}
-  alt="Question Image"
-  className="max-w-full h-auto rounded-lg"
-/>
+                <div className="mt-4">
+                  {currentQuestion.imageUrl && !imageFailed && (
+  <img
+    src={currentQuestion.imageUrl}
+    alt="Question Image"
+    className="max-w-full h-auto rounded-lg"
+    onClick={() => console.log(currentQuestion.imageUrl)}
+    onError={() => setImageFailed(true)}
+  />
+)}
+
+{currentQuestion.imageUrl && imageFailed && (
+  <img
+    src={`https://drive.google.com/thumbnail?id=${getDriveFileId(
+      currentQuestion.imageUrl
+    )}`}
+    alt="Question Image"
+    className="max-w-full h-auto rounded-lg"
+  />
+)}
                 </div>
             )}
         </div>
