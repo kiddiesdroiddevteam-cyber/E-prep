@@ -1,5 +1,5 @@
 import { createContext, useContext, useEffect, useState, ReactNode } from 'react';
-import { User, Session } from '@supabase/supabase-js';
+import { User, Session, AuthError } from '@supabase/supabase-js';
 import { supabase } from '@/integrations/supabase/client';
 // import { useNavigate } from 'react-router-dom';
 import { useNavigate } from '@tanstack/react-router';
@@ -9,8 +9,10 @@ interface AuthContextType {
   user: User | null;
   session: Session | null;
   loading: boolean;
-  signUp: (email: string, password: string, fullName: string) => Promise<{ error: any }>;
-  signIn: (email: string, password: string) => Promise<{ error: any }>;
+  signUp: (email: string, password: string, fullName: string, category: string) => Promise<{ error: AuthError | null; session: Session | null }>;
+  signIn: (email: string, password: string) => Promise<{ error: AuthError | null }>;
+  sendPasswordReset: (email: string) => Promise<{ error: AuthError | null }>;
+  updatePassword: (password: string) => Promise<{ error: AuthError | null }>;
   signOut: () => Promise<void>;
 }
 
@@ -23,9 +25,13 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
   const navigate = useNavigate();
 
   useEffect(() => {
+    let active = true;
+    let receivedAuthEvent = false;
     // Set up auth state listener
     const { data: { subscription } } = supabase.auth.onAuthStateChange(
       (event, session) => {
+        if (!active) return;
+        receivedAuthEvent = true;
         setSession(session);
         setUser(session?.user ?? null);
         setLoading(false);
@@ -33,36 +39,36 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     );
 
     // Check for existing session
-    supabase.auth.getSession().then(({ data: { session } }) => {
-      setSession(session);
-      setUser(session?.user ?? null);
-      setLoading(false);
-    });
+    supabase.auth.getSession()
+      .then(({ data: { session } }) => {
+        if (!active || receivedAuthEvent) return;
+        setSession(session);
+        setUser(session?.user ?? null);
+      })
+      .catch(() => {
+        if (active && !receivedAuthEvent) toast.error('Could not restore your session. Please sign in again.');
+      })
+      .finally(() => { if (active) setLoading(false); });
 
-    return () => subscription.unsubscribe();
+    return () => {
+      active = false;
+      subscription.unsubscribe();
+    };
   }, []);
 
-  const signUp = async (email: string, password: string, fullName: string) => {
-    const redirectUrl = `${window.location.origin}/dashboard`;
-    
-    const { error } = await supabase.auth.signUp({
+  const signUp = async (email: string, password: string, fullName: string, category: string) => {
+    const { data, error } = await supabase.auth.signUp({
       email,
       password,
       options: {
-        emailRedirectTo: redirectUrl,
+        emailRedirectTo: `${window.location.origin}/auth`,
         data: {
           full_name: fullName,
+          category,
         }
       }
     });
-
-    if (!error) {
-      toast.success("Account created successfully!");
-       toast.success("Please check your email and confirm your account!");
-      setTimeout(() => navigate({to:'/dashboard'}), 1000);
-    }
-
-    return { error };
+    return { error, session: data.session };
   };
 
   const signIn = async (email: string, password: string) => {
@@ -71,16 +77,27 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
       password,
     });
 
-    if (!error) {
-      toast.success("Welcome back!");
-      navigate({to:'/dashboard'});
-    }
+    return { error };
+  };
 
+  const sendPasswordReset = async (email: string) => {
+    const { error } = await supabase.auth.resetPasswordForEmail(email, {
+      redirectTo: `${window.location.origin}/reset-password`,
+    });
+    return { error };
+  };
+
+  const updatePassword = async (password: string) => {
+    const { error } = await supabase.auth.updateUser({ password });
     return { error };
   };
 
   const signOut = async () => {
-    await supabase.auth.signOut();
+    const { error } = await supabase.auth.signOut();
+    if (error) {
+      toast.error('Could not sign out. Please try again.');
+      return;
+    }
     toast.info("Signed out successfully");
     navigate(
         {
@@ -89,7 +106,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
   };
 
   return (
-    <AuthContext.Provider value={{ user, session, loading, signUp, signIn, signOut }}>
+    <AuthContext.Provider value={{ user, session, loading, signUp, signIn, sendPasswordReset, updatePassword, signOut }}>
       {children}
     </AuthContext.Provider>
   );

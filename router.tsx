@@ -15,6 +15,7 @@ import { AuthProvider, useAuth } from './contexts/AuthContext';
 import { Toaster } from 'sonner';
 import { ProtectedRoute } from './components/protectedRoute';
 import AdminPage from './pages/AdminPage';
+import ResetPasswordPage from './pages/ResetPasswordPage';
 
 
 // 1. Define the Context Interface
@@ -80,7 +81,16 @@ const adminRoute = createRoute({
 const authRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: '/auth',
+  validateSearch: (search) => ({
+    redirect: typeof search.redirect === 'string' ? search.redirect : undefined,
+  }),
   component: AuthPage,
+});
+
+const resetPasswordRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: '/reset-password',
+  component: ResetPasswordPage,
 });
 
 const subscriptionRoute = createRoute({
@@ -94,6 +104,7 @@ const routeTree = rootRoute.addChildren([
   indexRoute,
   protectedRoute.addChildren([dashboardRoute, quizRoute, settingsRoute, adminRoute]),
   authRoute,
+  resetPasswordRoute,
   subscriptionRoute,
 ]);
 
