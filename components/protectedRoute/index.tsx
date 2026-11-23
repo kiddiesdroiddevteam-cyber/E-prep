@@ -1,27 +1,24 @@
-import { Outlet, useNavigate } from '@tanstack/react-router';
+import { Outlet } from '@tanstack/react-router';
 import { useEffect } from 'react';
 import { useAuth } from '../../contexts/AuthContext';
 
 export const ProtectedRoute: React.FC = () => {
   const { user, loading } = useAuth();
-  const navigate = useNavigate();
 
   useEffect(() => {
     // Wait until loading finishes
     if (!loading && !user) {
       // Redirect to login if not authenticated
-      navigate({
-        to: '/auth',
-        search: { redirect: window.location.pathname },
-      });
+      const authUrl = new URL('/auth', window.location.origin);
+      authUrl.searchParams.set('redirect', `${window.location.pathname}${window.location.search}`);
+      window.location.replace(authUrl.href);
     }
-  }, [loading, user, navigate]);
+  }, [loading, user]);
 
   // Optional: show spinner while auth state is loading
   if (loading) {
     return <div className="min-h-screen flex items-center justify-center">Loading...</div>;
   }
 
-  // If user exists, render child routes
-  return <Outlet />;
+  return user ? <Outlet /> : null;
 };
